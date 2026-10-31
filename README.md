@@ -40,7 +40,14 @@ Les conditions easyPROTECT couvrent plusieurs branches, seules les parties habit
 
 À COMPLÉTER APRÈS LA PREMIÈRE ÉVALUATION : nombre de questions, exactitude par classe, taux de citation correcte, faux « couvert » et faux « non couvert » comptés séparément, taux d'abstention et abstentions justifiées. Les mêmes chiffres sont dans l'onglet Évaluation de l'application, calculés par `scripts/evaluate.py` depuis `data/eval/results.json`.
 
-Ce qui a échoué en route, et ce qui a été changé : À COMPLÉTER.
+Ce qui a échoué en route, et ce qui a été changé :
+
+- Le moteur PDF par défaut de Docling s'arrêtait net, sans message, sur les conditions Lalux. Le moteur pdfium, sans OCR puisque les trois PDF ont une couche texte, lit les trois contrats. La conversion est faite une fois et son résultat n'est pas versionné.
+- Dans un PDF justifié, les passages en gras ressortaient sans espaces (« Lesgarantiesassurables »). Les lignes sont maintenant reconstruites caractère par caractère, un espace étant inséré quand l'écart entre deux glyphes dépasse un sixième du corps.
+- Le repérage des numéros d'article prenait « Vol » pour le chiffre romain V et « 1er risque » pour l'article 1. Un chiffre romain doit maintenant être suivi d'un point, et un entier nu d'un point ou d'une espace.
+- Un glyphe de police de symboles (une case à cocher) se cachait dans les cellules des tableaux AXA et passait pour du texte. Les points de code à usage privé sont retirés à l'ingestion.
+- Les conditions Lalux couvrent l'automobile, l'habitation et les personnes dans un seul document. Sans règle de périmètre, « vol du véhicule » venait concurrencer « vol du mobilier ». Seules les parties habitation, les conditions administratives et les définitions sont ingérées.
+- Les points suivants seront complétés après la première évaluation : les causes d'erreur observées sur le jeu annoté et ce qui a été changé en conséquence.
 
 ## Des centaines de contrats
 
