@@ -39,25 +39,34 @@ ul, ol { margin: 0; padding-left: 20px; }
 button { font: inherit; cursor: pointer; }
 
 .top {
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+.top-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 18px 28px 0;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 16px;
-  padding: 22px 28px 0;
-  border-bottom: 1px solid var(--line);
-  background: var(--surface);
+  gap: 12px 32px;
 }
-.tagline { color: var(--muted); margin: 0; max-width: 60ch; }
-.tabs { display: flex; gap: 4px; }
+.brand { display: flex; align-items: center; gap: 14px; padding-bottom: 16px; }
+.brand h1 { margin-bottom: 2px; }
+.mark { width: 36px; height: 36px; border-radius: 8px; flex: none; }
+.tagline { color: var(--muted); margin: 0; font-size: 14px; max-width: 64ch; }
+.tabs { display: flex; gap: 2px; }
 .tab {
   background: none;
   border: none;
   border-bottom: 3px solid transparent;
-  padding: 10px 14px;
+  padding: 10px 14px 13px;
   color: var(--muted);
   font-weight: 600;
+  border-radius: 6px 6px 0 0;
 }
+.tab:hover { color: var(--text); background: var(--bg); }
 .tab.is-active { color: var(--accent); border-bottom-color: var(--accent); }
 
 main { padding: 24px 28px 40px; max-width: 1280px; margin: 0 auto; }
@@ -65,7 +74,13 @@ main { padding: 24px 28px 40px; max-width: 1280px; margin: 0 auto; }
 .panel.is-active { display: block; }
 
 .columns { display: grid; grid-template-columns: minmax(0, 3fr) minmax(280px, 2fr); gap: 28px; }
-@media (max-width: 900px) { .columns { grid-template-columns: 1fr; } .top { padding: 16px; } main { padding: 16px; } }
+@media (max-width: 900px) {
+  .columns { grid-template-columns: 1fr; }
+  .top-inner { padding: 14px 16px 0; }
+  .brand { align-items: flex-start; padding-bottom: 10px; }
+  .mark { margin-top: 3px; }
+  main { padding: 16px; }
+}
 
 .field { display: block; margin-bottom: 14px; }
 .field span { display: block; font-weight: 600; margin-bottom: 4px; }
