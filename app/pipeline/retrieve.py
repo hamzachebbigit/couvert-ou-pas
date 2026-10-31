@@ -16,7 +16,7 @@ from __future__ import annotations
 import json
 import re
 
-from .families import fold
+from .families import QUERY_TERMS, fold
 from .index import Index, Unit
 from .models import ParsedQuestion, RetrievedClause, Trace
 from .prompts import load_prompt
@@ -26,6 +26,7 @@ ALWAYS_FAMILIES = ("definitions", "exclusions_generales", "biens_assures", "fran
 FUSION_K = 60
 TOP_PER_SIGNAL = 20
 FINAL_COUNT = 8
+MIN_COUNT = 5
 
 
 def retrieve(router: Router, index: Index, contract_id: str, question: str, parsed: ParsedQuestion, trace: Trace) -> list[RetrievedClause]:
@@ -80,6 +81,17 @@ def retrieve(router: Router, index: Index, contract_id: str, question: str, pars
         candidate.rerank_score = scores.get(candidate.clause_id)
     candidates.sort(key=lambda c: ((c.rerank_score if c.rerank_score is not None else 1.5), c.fused_score), reverse=True)
     chosen = [c for c in candidates if (c.rerank_score is None or c.rerank_score >= 1)][:FINAL_COUNT]
+    if len(chosen) < MIN_COUNT:
+        # L'arbitre a tout écarté ou presque : les meilleurs de la fusion restent au dossier, notés comme tels,
+        # pour que le verdict ne se prononce jamais sur un contrat vide.
+        kept = {c.clause_id for c in chosen}
+        for candidate in sorted(candidates, key=lambda c: c.fused_score, reverse=True):
+            if len(chosen) >= MIN_COUNT:
+                break
+            if candidate.clause_id not in kept:
+                chosen.append(candidate)
+                kept.add(candidate.clause_id)
+        trace.post_checks.append(f"arbitre trop sévère, {MIN_COUNT} clauses de la fusion gardées")
 
     for extra in _always_included(units, parsed, chosen):
         chosen.append(extra)
@@ -91,7 +103,8 @@ def retrieve(router: Router, index: Index, contract_id: str, question: str, pars
 def _query_text(question: str, parsed: ParsedQuestion) -> str:
     """La question enrichie des champs typés, pour les deux signaux de recherche."""
     extras = [parsed.event, parsed.object or "", parsed.place or "", *parsed.circumstances]
-    return f"{question} {' '.join(e for e in extras if e)}"
+    vocabulary = [QUERY_TERMS[f] for f in parsed.event_family if f in QUERY_TERMS]
+    return f"{question} {' '.join(e for e in extras if e)} {' '.join(vocabulary)}"
 
 
 def _rerank(router: Router, question: str, candidates: list[RetrievedClause], trace: Trace) -> dict[str, float]:
@@ -99,7 +112,7 @@ def _rerank(router: Router, question: str, candidates: list[RetrievedClause], tr
     if not candidates:
         return {}
     _, system = load_prompt("rerank")
-    listing = "\n\n".join(f"[{c.clause_id}] {c.path}\n{c.text[:700]}" for c in candidates)
+    listing = "\n\n".join(f"[{c.clause_id}] {c.path}\n{c.text[:1200]}" for c in candidates)
     user = f"Question, entre balises :\n<question>\n{question}\n</question>\n\nClauses candidates :\n\n{listing}"
     try:
         data, model = router.generate_json("cheap", system, user)

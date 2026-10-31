@@ -1,0 +1,109 @@
+{
+ "contract_id": "axa_optihome_2025",
+ "insurer": "AXA Luxembourg",
+ "product": "OptiHome",
+ "edition": "Octobre 2025",
+ "pages": 118,
+ "guarantee_families": [
+  "incendie",
+  "degats_eaux",
+  "vol",
+  "tempete",
+  "grele",
+  "catnat",
+  "bris_glace",
+  "rc",
+  "dommages_electriques",
+  "pertes_denrees",
+  "dommages_accidentels",
+  "assistance",
+  "protection_juridique",
+  "inoccupation"
+ ],
+ "theft_conditions": {
+  "value": "vol garanti en cas d'effraction, d'escalade, de fausses clés, d'agression ou d'introduction clandestine, le vol simple étant exclu",
+  "page": 16,
+  "clause_id": "1_58_1",
+  "quote": "vol commis par un tiers sans forcément, dégradation ou destruction de tout dispositif de fermeture extérieure : d’une habitation, d’un véhicule ou d’un bateau. N’est pas considéré comme vol simple le vol commis dans les locaux en présence de l’Assuré, le vol commis à l’aide de fausses clés, de clés volées ou perdues, le vol par escalade"
+ },
+ "theft_common_areas": {
+  "value": "vol exclu dans les dépendances isolées sans serrure à cylindre et dans les parties communes ou garages non fermés par une serrure de sûreté",
+  "page": 41,
+  "clause_id": "3_1_6",
+  "quote": null
+ },
+ "bike_cap": {
+  "value": null,
+  "page": null,
+  "clause_id": null,
+  "quote": null
+ },
+ "jewellery_cap": {
+  "value": "indemnité limitée à 40% du montant du contenu pour les objets de valeur et à 2500 euros pour les métaux précieux et pierres précieuses sous clés",
+  "page": 41,
+  "clause_id": "3_1_6",
+  "quote": null
+ },
+ "deductible_general": {
+  "value": "Part de préjudice restant à la charge du preneur d’assurance lors d’un sinistre, les franchises se cumulant entre elles.",
+  "page": 11,
+  "clause_id": "1_24",
+  "quote": "Part de préjudice restant à la charge du preneur d’assurance lors d’un sinistre. Les franchises se cumulent entre elles le cas échéant."
+ },
+ "unoccupancy_limit": {
+  "value": "Fermeture de la vanne principale d'arrivée d'eau obligatoire en cas d'inoccupation de plus de 30 jours consécutifs pour les dégâts des eaux.",
+  "page": 39,
+  "clause_id": "3_1_4",
+  "quote": "L’Assuré qui occupe le bâtiment désigné doit fermer la vanne principale d’arrivée d’eau des installations hydrauliques en cas d’inoccupation de plus de 30 jours consécutifs."
+ },
+ "heat_without_fire_excluded": {
+  "value": "les dommages par la chaleur sans embrasement sont couverts pour le mobilier et le bâtiment, sauf pour certaines extensions",
+  "page": 35,
+  "clause_id": "3_1_1",
+  "quote": "Les dégâts occasionnés au mobilier assuré et au bâtiment désigné par un événement soudain, résultant de l’action subite de la chaleur ou par le contact direct et immédiat avec un foyer ou une substance incandescente, même lorsqu’il n’y a pas eu embrasement, ni commencement d’incendie."
+ },
+ "contents_outside_building": {
+  "value": "le contenu se trouve dans le bâtiment désigné y compris ses cours et jardins",
+  "page": 9,
+  "clause_id": "1_12",
+  "quote": "Ensemble des biens repris ci-dessous qui se trouvent dans le bâtiment désigné, y compris ses cours et jardins, et qui appartiennent ou sont confiés à un Assuré."
+ },
+ "accidental_damage_option": {
+  "value": null,
+  "page": null,
+  "clause_id": null,
+  "quote": null
+ },
+ "notable_exclusions": [
+  {
+   "value": "Les dégâts causés par le gibier aux cultures et plantations.",
+   "page": 75,
+   "clause_id": "4_1_3",
+   "quote": "les dégâts causés par le gibier aux cultures et plantations ;"
+  },
+  {
+   "value": "Les dommages causés par des produits ou marchandises après leur livraison.",
+   "page": 75,
+   "clause_id": "4_1_3",
+   "quote": "les dommages causés par des produits ou marchandises après leur livraison ;"
+  },
+  {
+   "value": "La responsabilité découlant de la propriété ou de l'usage d'un véhicule à moteur de toute catégorie.",
+   "page": 75,
+   "clause_id": "4_1_3",
+   "quote": "la responsabilité découlant de la propriété, de la garde ou de l'usage d'un véhicule à moteur de toute catégorie ;"
+  },
+  {
+   "value": "Les dommages causés par l'emploi de produits toxiques non autorisés préalablement.",
+   "page": 75,
+   "clause_id": "4_1_3",
+   "quote": "les dommages causés par l'emploi de produits toxiques non autorisé préalablement par les autorités compétentes ;"
+  },
+  {
+   "value": "Les dommages causés aux objets ou animaux confiés au preneur d'assurance à quelque titre que ce soit.",
+   "page": 75,
+   "clause_id": "4_1_3",
+   "quote": "les dommages causés aux objets ou animaux confiés au Preneur d'assurance ou Assuré à quelque titre que ce soit."
+  }
+ ]
+}

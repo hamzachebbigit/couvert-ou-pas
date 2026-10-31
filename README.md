@@ -22,9 +22,9 @@ Quatre briques et un dispatcher.
 1. Parsing, payé une fois par contrat. Chaque ligne du PDF est lue avec sa page, sa police et sa graisse, et le plan des articles est reconstruit par un profil de mise en page d'une dizaine de lignes par assureur. Chaque clause reçoit un identifiant, ses pages et ses familles de garanties. Docling lit les tableaux, et chaque rangée devient une unité de recherche qui emporte ses en-têtes. Une ligne structurée par contrat est extraite avec une citation par valeur.
 2. Lecture de la question. La question devient des champs typés : événement, objet, lieu, circonstances, faits donnés. Des règles, pas le modèle, listent les faits que l'événement exige en général, par exemple effraction et antivol pour un vol. Chaque fait est marqué donné, absent ou sans objet.
 3. Recherche, filtre d'abord. Les clauses sont filtrées par contrat et par famille de garantie, puis cherchées par mots-clés (BM25 avec racinisation française) et par embeddings, fusionnées par rang réciproque, et reclassées par un arbitre qui note chaque finaliste de 0 à 3 en un seul appel. Les définitions de l'événement et les exclusions générales sont toujours ajoutées, déclarées et non découvertes.
-4. Verdict typé. Un seul appel au modèle renvoie un objet structuré : verdict, raisonnement, clauses citées, faits manquants, plafond, franchise, confiance. Le code vérifie ensuite que chaque citation est un extrait exact de la clause, retire celles qui ne le sont pas, et rétrograde tout verdict assuré qui repose sur un fait absent de la question.
+4. Verdict typé. Un seul appel au modèle renvoie un objet structuré : verdict, raisonnement, clauses citées, faits manquants, plafond, franchise, confiance. Le code vérifie ensuite que chaque citation est un extrait exact de la clause, retire celles qui ne le sont pas, suspend tout verdict assuré qui ne tient plus sur aucune clause, et rétrograde un « couvert » dès qu'une clause citée dépend d'un fait que la question ne donne pas (effraction, antivol, local fermé à clé).
 
-Le modèle économique sert à la lecture de la question, au reclassement et à l'extraction de la ligne structurée. Le modèle fort ne sert qu'au verdict. Les réponses sont mises en cache, les questions du jeu annoté sont précalculées, et un plafond quotidien borne les questions nouvelles.
+Le même modèle de la famille Flash Lite sert partout, avec un niveau de réflexion bas pour la lecture de la question, le reclassement et l'extraction, et un niveau élevé pour le verdict. Les modèles de la classe Pro n'ont pas de quota gratuit et le modèle Flash en a vingt appels par jour, ce qui ne permet ni de précalculer un jeu annoté ni de servir une démonstration. Les identifiants exacts sont choisis par `scripts/pick_models.py`, qui liste et sonde les modèles que la clé peut appeler. Les réponses sont mises en cache, les questions du jeu annoté sont précalculées, et un plafond quotidien borne les questions nouvelles.
 
 ## Les contrats
 
@@ -47,7 +47,10 @@ Ce qui a échoué en route, et ce qui a été changé :
 - Le repérage des numéros d'article prenait « Vol » pour le chiffre romain V et « 1er risque » pour l'article 1. Un chiffre romain doit maintenant être suivi d'un point, et un entier nu d'un point ou d'une espace.
 - Un glyphe de police de symboles (une case à cocher) se cachait dans les cellules des tableaux AXA et passait pour du texte. Les points de code à usage privé sont retirés à l'ingestion.
 - Les conditions Lalux couvrent l'automobile, l'habitation et les personnes dans un seul document. Sans règle de périmètre, « vol du véhicule » venait concurrencer « vol du mobilier ». Seules les parties habitation, les conditions administratives et les définitions sont ingérées.
-- Les points suivants seront complétés après la première évaluation : les causes d'erreur observées sur le jeu annoté et ce qui a été changé en conséquence.
+- Les conditions Lalux répètent les articles de l'habitation privée dans une variante « biens immobiliers donnés en location ou en copropriété ». Deux clauses jumelles diluaient la recherche et c'est la jumelle qui était citée. Le profil écarte cette section.
+- Le budget de sortie du modèle compte ses jetons de réflexion. Avec 4 096 jetons, la réflexion par défaut du modèle de verdict consommait tout et le JSON arrivait tronqué, ce qui déclenchait une reprise puis un repli silencieux sur le modèle économique. Le budget est large, le niveau de réflexion est fixé par tâche, une réponse tronquée est une erreur, et la trace dit quel modèle a répondu.
+- Le quota gratuit d'embeddings compte chaque texte d'un lot comme une requête, lots refusés compris. Des lots de cent, retentés sur le délai annoncé, échouaient en boucle. Les lots font quarante textes espacés de trente secondes, l'index est validé contrat par contrat, et les unités réduites à un titre n'ont pas de vecteur.
+- Sur la première passe, trente des quarante-deux sinistres couverts du jeu annoté ressortaient « information insuffisante ». Deux causes : le modèle demandait si la garantie de base était souscrite, et la règle de code rétrogradait tout « couvert » dès qu'un fait de la liste générale manquait, y compris l'occupation du logement pour une fuite de lave-linge. Le prompt tient les garanties de base pour souscrites et ne retient qu'une option explicite comme inconnue, et la règle ne joue que si une clause citée dépend du fait absent.
 
 ## Des centaines de contrats
 
@@ -86,7 +89,8 @@ git clone https://github.com/hamzachebbigit/couvert-ou-pas
 cd couvert-ou-pas
 python -m venv .venv && .venv/Scripts/activate      # ou source .venv/bin/activate
 pip install -e .
-cp .env.example .env                                # renseigner GEMINI_API_KEY et les identifiants de modèles
+cp .env.example .env                                # renseigner GEMINI_API_KEY
+python scripts/pick_models.py                       # sonde les modèles que la clé peut appeler, à recopier dans .env
 uvicorn app.main:app --port 7860
 ```
 

@@ -33,19 +33,36 @@ def main() -> int:
         print(f"  {m['name'].removeprefix('models/'):<40} {m.get('displayName', '')}")
 
     names = [m["name"].removeprefix("models/") for m in generators]
-    stable = [n for n in names if not any(tag in n for tag in ("exp", "preview", "tts", "image", "audio", "live", "thinking", "learnlm", "gemma"))]
-    pro = [n for n in stable if "pro" in n]
-    flash = [n for n in stable if "flash" in n and "lite" not in n]
-    lite = [n for n in stable if "lite" in n]
-    verdict = (sorted(pro, reverse=True) or sorted(flash, reverse=True) or names)[0]
-    cheap = (sorted(lite, reverse=True) or sorted(flash, reverse=True) or names)[0]
+    excluded = ("exp", "preview", "latest", "tts", "image", "audio", "live", "thinking", "learnlm", "gemma",
+                "lyria", "banana", "omni", "transcribe", "robotics", "research", "computer", "argon")
+    stable = [n for n in names if not any(tag in n for tag in excluded)]
+    flash = sorted((n for n in stable if "flash" in n and "lite" not in n), reverse=True)
+    lite = sorted((n for n in stable if "lite" in n), reverse=True)
     embed_names = [m["name"].removeprefix("models/") for m in embedders]
-    embed = (sorted([n for n in embed_names if "gemini-embedding" in n], reverse=True) or sorted(embed_names, reverse=True))[0]
-    print("\nProposition à recopier dans .env (à vérifier contre les quotas gratuits de la clé) :")
+    embed = (sorted([n for n in embed_names if "gemini-embedding" in n and "preview" not in n], reverse=True) or sorted(embed_names, reverse=True))[0]
+
+    # Les modèles de la classe Pro n'ont pas de quota gratuit et les identifiants les plus récents
+    # répondent parfois 503 sur la clé gratuite : chaque candidat est sondé par un appel minuscule.
+    print("\nSondage des candidats (un appel chacun) :")
+    verdict = _first_answering(flash) or _first_answering(lite)
+    cheap = _first_answering(lite) or verdict
+    print("\nProposition à recopier dans .env :")
     print(f"GEMINI_MODEL_VERDICT={verdict}")
     print(f"GEMINI_MODEL_CHEAP={cheap}")
     print(f"GEMINI_MODEL_EMBED={embed}")
     return 0
+
+
+def _first_answering(candidates: list[str]) -> str | None:
+    """Le premier identifiant de la liste qui répond réellement à un appel JSON."""
+    for name in candidates:
+        try:
+            router.gemini.generate_json(name, "Réponds en JSON.", '{"ok": true}')
+            print(f"  {name:<36} répond")
+            return name
+        except Exception as error:  # noqa: BLE001 : un modèle muet passe simplement son tour
+            print(f"  {name:<36} muet ({str(error)[:60]})")
+    return None
 
 
 if __name__ == "__main__":

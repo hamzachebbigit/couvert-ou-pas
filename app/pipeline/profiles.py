@@ -54,6 +54,9 @@ class Profile:
     definitions_chapter: str | None = None
     definition_term_rule: LevelRule | None = None
     scope_parts: tuple[str, ...] = ()
+    # Sections (titres de niveau 1 ou plus) à écarter dans une partie retenue : un autre produit
+    # qui répète les mêmes articles, par exemple la variante bâtiment loué ou en copropriété.
+    exclude_sections: tuple[str, ...] = ()
     body_size: float = 10.0
 
     def level_of(self, line: Line) -> int | None:
@@ -164,6 +167,9 @@ PROFILES: dict[str, Profile] = {
         ),
         level_rules=_lalux_rules(),
         scope_parts=(r"ASSURANCES?\s*HABITATION", r"BASES G[ÉE]N[ÉE]RALES", r"CONDITIONS G[ÉE]N[ÉE]RALES", r"CONDITIONS ADMINISTRATIVES", r"^D[ÉE]FINITIONS"),
+        # La variante « biens immobiliers donnés en location ou en copropriété » répète les articles
+        # de l'habitation privée : deux clauses jumelles diluaient la recherche et l'une d'elles était citée.
+        exclude_sections=(r"DONN[ÉE]S EN LOCATION|COPROPRI[ÉE]T[ÉE]",),
         body_size=8.0,
     ),
 }

@@ -79,6 +79,24 @@ def families_for_clause(title: str, path: str, text: str) -> list[str]:
     return [f for f in GUARANTEE_FAMILIES if f in found]
 
 
+# Vocabulaire du contrat par famille, ajouté à la requête de recherche par mots-clés : la question
+# dit « surtension » ou « le chien a mordu », la clause dit « dégâts électriques » ou
+# « responsabilité civile », et BM25 ne rapproche pas deux mots qu'il ne voit pas ensemble.
+QUERY_TERMS: dict[str, str] = {
+    "incendie": "incendie explosion feu fumée",
+    "degats_eaux": "dégâts des eaux fuite infiltration eau",
+    "vol": "vol effraction",
+    "tempete": "tempête vent",
+    "grele": "grêle",
+    "catnat": "catastrophe naturelle inondation tremblement de terre",
+    "bris_glace": "bris de vitrage verre",
+    "rc": "responsabilité civile tiers dommages causés",
+    "dommages_electriques": "dégâts électriques électricité appareils électriques",
+    "pertes_denrees": "denrées congélateur",
+    "dommages_accidentels": "dommages accidentels",
+    "inoccupation": "inoccupation inoccupé",
+}
+
 # Faits qu'un événement exige en général. Remplis par des règles, pas par le modèle.
 FACTS_NEEDED_BY_FAMILY: dict[str, tuple[str, ...]] = {
     "vol": (
@@ -101,3 +119,22 @@ FACTS_NEEDED_BY_FAMILY: dict[str, tuple[str, ...]] = {
     "inoccupation": ("depuis combien de jours le logement était-il inoccupé ?",),
     "catnat": ("l'événement a-t-il été reconnu comme catastrophe naturelle ?",),
 }
+
+# Faits qui ferment la porte à un « couvert » quand la question ne les donne pas ET qu'une clause
+# citée en dépend (ses mots-clés y figurent). Les autres faits de la liste informent le modèle
+# sans le contraindre : personne ne précise l'occupation de son logement ni la vitesse du vent,
+# et les contrats couvrent la tempête ou le séisme déclarés sans que le verdict en dépende.
+FACT_GATES: dict[str, tuple[str, ...]] = {
+    "effraction": ("effraction", "force", "forcee", "escalade", "fausses cles", "fausse cle"),
+    "antivol": ("antivol", "cadenas", "attache"),
+    "ferme a cle": ("ferme a cle", "fermes a cle", "serrure", "local clos", "locaux clos", "non clos"),
+}
+
+
+def gate_terms(fact: str) -> tuple[str, ...]:
+    """Les mots-clés (sans accents) qui lient un fait exigé à une clause, vide pour un fait seulement informatif."""
+    folded = fold(fact)
+    for marker, terms in FACT_GATES.items():
+        if marker in folded:
+            return terms
+    return ()

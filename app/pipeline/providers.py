@@ -22,6 +22,11 @@ from .settings import Settings, settings
 
 GEMINI_BASE = "https://generativelanguage.googleapis.com/v1beta"
 Task = Literal["verdict", "cheap"]
+EMBED_BATCH = 40
+EMBED_BATCH_SPACING_S = 30
+# Niveau de réflexion demandé au modèle par tâche : le verdict mérite une réflexion moyenne,
+# la lecture de la question et le reclassement n'en ont pas besoin.
+THINKING_BY_TASK: dict[str, str] = {"verdict": "medium", "cheap": "low"}
 
 
 class ProviderError(RuntimeError):
@@ -46,6 +51,36 @@ class Pacer:
             self._last = time.monotonic()
 
 
+def _retry_delay(response: httpx.Response, default: float) -> float:
+    """Le délai demandé par une réponse 429 (RetryInfo ou phrase « retry in »), borné à 75 s."""
+    try:
+        data = response.json()
+    except ValueError:
+        return default
+    for detail in data.get("error", {}).get("details", []):
+        if str(detail.get("@type", "")).endswith("RetryInfo"):
+            match = re.match(r"([\d.]+)s", str(detail.get("retryDelay", "")))
+            if match:
+                return min(75.0, float(match.group(1)) + 1.0)
+    match = re.search(r"retry in ([\d.]+)s", data.get("error", {}).get("message", ""))
+    return min(75.0, float(match.group(1)) + 1.0) if match else default
+
+
+def _quota_hint(response: httpx.Response) -> str:
+    """Le nom du quota touché, pour le journal, sans le reste du message."""
+    try:
+        message = response.json().get("error", {}).get("message", "")
+    except ValueError:
+        return ""
+    match = re.search(r"metric: ([\w./]+)", message)
+    return match.group(1).rsplit("/", 1)[-1] if match else message[:80]
+
+
+def _daily_quota(response: httpx.Response) -> bool:
+    """Vrai quand le 429 porte sur un quota journalier : attendre ne sert à rien."""
+    return "PerDay" in response.text
+
+
 def _strip_json(text: str) -> str:
     """Retire une éventuelle clôture de bloc de code autour du JSON."""
     text = text.strip()
@@ -58,15 +93,26 @@ class GeminiProvider:
 
     def __init__(self, keys: tuple[str, ...], rpm: int) -> None:
         self.keys = keys
-        self.pacers = [Pacer(rpm) for _ in keys]
-        self.client = httpx.Client(timeout=90)
+        self.rpm = rpm
+        self.pacers: dict[tuple[int, str], Pacer] = {}
+        self.client = httpx.Client(timeout=120)
+
+    def _pacer(self, key_index: int, path: str) -> Pacer:
+        """Un rythme par clé ET par modèle : les quotas par minute sont comptés par modèle."""
+        model = path.split(":", 1)[0]
+        return self.pacers.setdefault((key_index, model), Pacer(self.rpm))
 
     def _post(self, path: str, body: dict[str, Any]) -> dict[str, Any]:
-        """Tente chaque clé à tour de rôle, avec une attente sur 429."""
+        """Tente chaque clé à tour de rôle, avec une attente sur 429.
+
+        Le palier gratuit compte chaque texte d'un lot d'embeddings comme une
+        requête (100 par minute) : la réponse 429 porte le délai à respecter,
+        il est lu et attendu plutôt que deviné.
+        """
         last: Exception | None = None
         for index, key in enumerate(self.keys):
-            for attempt in range(3):
-                self.pacers[index].wait()
+            for attempt in range(4):
+                self._pacer(index, path).wait()
                 try:
                     response = self.client.post(f"{GEMINI_BASE}/{path}", params={"key": key}, json=body)
                 except httpx.HTTPError as error:
@@ -74,41 +120,61 @@ class GeminiProvider:
                     time.sleep(2 * (attempt + 1))
                     continue
                 if response.status_code == 429:
-                    last = ProviderError(f"429 sur la clé {index + 1}")
-                    time.sleep(min(20, 5 * (attempt + 1)))
+                    last = ProviderError(f"429 sur la clé {index + 1} : {_quota_hint(response)}")
+                    if _daily_quota(response):
+                        break  # quota du jour épuisé sur cette clé : passer à la suivante
+                    time.sleep(_retry_delay(response, default=min(20, 5 * (attempt + 1))))
                     continue
                 if response.status_code >= 500:
                     last = ProviderError(f"{response.status_code} {response.text[:200]}")
-                    time.sleep(2 * (attempt + 1))
+                    time.sleep((5, 12, 25, 40)[attempt])  # une pointe de charge dure souvent une minute
                     continue
+                if response.status_code == 400 and "thinking" in response.text.lower() and body.get("generationConfig", {}).pop("thinkingConfig", None):
+                    continue  # ce modèle ne prend pas de niveau de réflexion : même appel sans
                 if response.status_code >= 400:
                     raise ProviderError(f"{response.status_code} {response.text[:300]}")
                 return response.json()
         raise ProviderError(str(last))
 
-    def generate_json(self, model: str, system: str, user: str, temperature: float = 0.0) -> dict[str, Any]:
+    def generate_json(self, model: str, system: str, user: str, temperature: float = 0.0, thinking: str = "") -> dict[str, Any]:
+        """Un appel en mode JSON.
+
+        Le budget de sortie compte les jetons de réflexion : avec 4 096 jetons, la
+        réflexion par défaut du modèle de verdict mangeait tout et le JSON arrivait
+        tronqué. Le budget est large et le niveau de réflexion est choisi par tâche.
+        """
         body = {
             "system_instruction": {"parts": [{"text": system}]},
             "contents": [{"role": "user", "parts": [{"text": user}]}],
             "generationConfig": {
                 "temperature": temperature,
                 "responseMimeType": "application/json",
-                "maxOutputTokens": 4096,
+                "maxOutputTokens": 16384,
             },
         }
+        if thinking:
+            body["generationConfig"]["thinkingConfig"] = {"thinkingLevel": thinking}
         data = self._post(f"models/{model}:generateContent", body)
         candidates = data.get("candidates") or []
         if not candidates:
             raise ProviderError(f"réponse vide : {json.dumps(data)[:300]}")
+        if candidates[0].get("finishReason") == "MAX_TOKENS":
+            raise ProviderError("réponse tronquée (MAX_TOKENS)")
         parts = candidates[0].get("content", {}).get("parts", [])
-        text = "".join(p.get("text", "") for p in parts)
+        text = "".join(p.get("text", "") for p in parts if not p.get("thought"))
         return json.loads(_strip_json(text))
 
     def embed(self, model: str, texts: list[str], task_type: str, dim: int = 768) -> np.ndarray:
-        """Embeddings par lots de 100, normalisés pour une similarité cosinus."""
+        """Embeddings par lots, normalisés pour une similarité cosinus.
+
+        Le palier gratuit compte chaque texte du lot (100 par minute, les lots
+        refusés compris) : des lots de 40 espacés de 30 s restent sous la limite.
+        """
         vectors: list[list[float]] = []
-        for start in range(0, len(texts), 100):
-            chunk = texts[start : start + 100]
+        for start in range(0, len(texts), EMBED_BATCH):
+            if start:
+                time.sleep(EMBED_BATCH_SPACING_S)
+            chunk = texts[start : start + EMBED_BATCH]
             body = {
                 "requests": [
                     {
@@ -190,7 +256,7 @@ class Router:
         if self.gemini:
             for model in self._ladder(task):
                 try:
-                    return self.gemini.generate_json(model, system, user, temperature), f"gemini:{model}"
+                    return self.gemini.generate_json(model, system, user, temperature, THINKING_BY_TASK[task]), f"gemini:{model}"
                 except (ProviderError, json.JSONDecodeError, KeyError) as error:
                     errors.append(f"{model}: {error}")
         if self.secondary:

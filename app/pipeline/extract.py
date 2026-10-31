@@ -80,6 +80,8 @@ def _cited(raw: Any, units: list[Unit]) -> Cited:
     elif not unit:
         quote = None
         clause_id = ""
+    if quote and len(quote) > 400:
+        quote = quote[:400].rsplit(" ", 1)[0]  # un début de passage reste un extrait exact, un résumé non
     return Cited(value=str(raw.get("value"))[:300], page=page if isinstance(page, int) else None, clause_id=clause_id or None, quote=quote)
 
 

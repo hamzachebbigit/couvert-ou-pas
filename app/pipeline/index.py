@@ -29,6 +29,7 @@ STOPWORDS = set(
     notre nos votre vos y s n c qu si tout toute tous toutes même aussi ainsi lors cas""".split()
 )
 MAX_CHUNK = 3200
+MIN_EMBED_CHARS = 80
 
 
 @dataclass
@@ -136,36 +137,54 @@ class Index:
         self.embed_model: str = ""
         self._lookups: dict[str, dict[str, Clause]] = {}
 
-    def build(self, contract_ids: list[str], embed: "callable | None" = None, embed_model: str = "") -> None:
-        """Construit l'index et l'enregistre dans SQLite."""
+    def build(self, contract_ids: list[str], embed: "callable | None" = None, embed_model: str = "", resume: bool = False) -> None:
+        """Construit l'index et l'enregistre dans SQLite, un contrat à la fois.
+
+        Chaque contrat est validé dès qu'il est indexé : un quota atteint au
+        troisième contrat ne défait pas les deux premiers. Avec `resume`, les
+        contrats déjà vectorisés avec le même modèle sont laissés tels quels.
+        """
         self.db_path.parent.mkdir(parents=True, exist_ok=True)
-        if self.db_path.exists():
+        if self.db_path.exists() and not resume:
             self.db_path.unlink()
         conn = sqlite3.connect(self.db_path)
         conn.executescript(
             """
-            CREATE TABLE units (contract_id TEXT, unit_id TEXT, kind TEXT, clause_id TEXT, title TEXT, path TEXT,
+            CREATE TABLE IF NOT EXISTS units (contract_id TEXT, unit_id TEXT, kind TEXT, clause_id TEXT, title TEXT, path TEXT,
                 page_start INTEGER, page_end INTEGER, text TEXT, families TEXT, level INTEGER, PRIMARY KEY (contract_id, unit_id));
-            CREATE TABLE vectors (contract_id TEXT, unit_id TEXT, vector BLOB, PRIMARY KEY (contract_id, unit_id));
-            CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT);
+            CREATE TABLE IF NOT EXISTS vectors (contract_id TEXT, unit_id TEXT, vector BLOB, PRIMARY KEY (contract_id, unit_id));
+            CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT);
             """
         )
+        previous = conn.execute("SELECT value FROM meta WHERE key = 'embed_model'").fetchone()
+        same_model = bool(previous) and previous[0] == embed_model
         for contract_id in contract_ids:
+            done = conn.execute("SELECT COUNT(*) FROM vectors WHERE contract_id = ?", (contract_id,)).fetchone()[0]
+            if resume and same_model and (done or embed is None):
+                print(f"{contract_id} : déjà indexé")
+                continue
             clauses, rows = load_parsed(contract_id)
             units = units_from_parsed(contract_id, clauses, rows)
+            vectors: list[tuple[str, str, bytes]] = []
+            if embed is not None:
+                # Les unités réduites à un titre n'ont pas de vecteur : BM25 les retrouve par leurs mots,
+                # et chaque vecteur compte dans le quota journalier du palier gratuit.
+                worth = [u for u in units if len(u.text) >= MIN_EMBED_CHARS]
+                try:
+                    matrix = embed([f"{u.path}\n{u.text[:3000]}" for u in worth])
+                    vectors = [(u.contract_id, u.unit_id, np.asarray(matrix[i], dtype=np.float32).tobytes()) for i, u in enumerate(worth)]
+                except Exception as error:  # noqa: BLE001 : un quota atteint n'efface pas le texte indexé
+                    print(f"{contract_id} : embeddings indisponibles ({str(error)[:80]}), unités écrites sans vecteur, relancer avec --resume")
+            conn.execute("DELETE FROM units WHERE contract_id = ?", (contract_id,))
+            conn.execute("DELETE FROM vectors WHERE contract_id = ?", (contract_id,))
             conn.executemany(
                 "INSERT INTO units VALUES (?,?,?,?,?,?,?,?,?,?,?)",
                 [(u.contract_id, u.unit_id, u.kind, u.clause_id, u.title, u.path, u.page_start, u.page_end, u.text, json.dumps(u.families), u.level) for u in units],
             )
-            if embed is not None:
-                matrix = embed([f"{u.path}\n{u.text[:3000]}" for u in units])
-                conn.executemany(
-                    "INSERT INTO vectors VALUES (?,?,?)",
-                    [(u.contract_id, u.unit_id, np.asarray(matrix[i], dtype=np.float32).tobytes()) for i, u in enumerate(units)],
-                )
+            conn.executemany("INSERT INTO vectors VALUES (?,?,?)", vectors)
+            conn.execute("INSERT OR REPLACE INTO meta VALUES ('embed_model', ?)", (embed_model,))
+            conn.commit()
             print(f"{contract_id} : {len(units)} unités indexées")
-        conn.execute("INSERT INTO meta VALUES ('embed_model', ?)", (embed_model,))
-        conn.commit()
         conn.close()
 
     def load(self) -> "Index":

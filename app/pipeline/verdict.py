@@ -1,13 +1,17 @@
 """Le verdict typé et ses vérifications de code.
 
-Un seul appel au modèle fort, sur les clauses retenues. Puis le code, pas le
+Un seul appel au modèle de verdict, sur les clauses retenues. Puis le code, pas le
 prompt, applique trois règles :
 1. Chaque citation doit être un extrait exact de la clause. Sinon elle tombe,
    et un verdict qui ne tient plus sur rien devient ambigu.
 2. Un verdict couvert ou non_couvert sans clause citée devient
    information_insuffisante.
-3. Un verdict assuré qui repose sur un fait absent de la question devient
-   information_insuffisante, avec les questions à poser.
+3. Un verdict couvert ou non_couvert alors qu'une clause citée dépend d'un
+   fait absent de la question (effraction, antivol, local fermé à clé) devient
+   information_insuffisante, avec la question à poser : un vol dans un local
+   non fermé n'est ni couvert ni exclu tant qu'on ignore s'il y a eu effraction.
+   Les autres faits de la liste informent le modèle, qui décide s'ils changent
+   le verdict.
 """
 
 from __future__ import annotations
@@ -20,6 +24,7 @@ from typing import Any
 from pydantic import ValidationError
 
 from .cache import Cache, cache_key
+from .families import fold, gate_terms
 from .index import Index
 from .models import AnalyseResponse, Cited, CitedClause, Clause, ParsedQuestion, RetrievedClause, Trace, Verdict
 from .prompts import load_prompt, prompt_version
@@ -135,14 +140,16 @@ def post_check(verdict: Verdict, parsed: ParsedQuestion, chosen: list[RetrievedC
             verdict.missing_facts = ["Quelle clause du contrat traite précisément ce sinistre ?"]
         verdict.confidence = min(verdict.confidence, 0.4)
 
-    if verdict.verdict == "couvert" and parsed.facts_potentially_needed:
-        trace.post_checks.append("verdict couvert avec un fait exigé absent : rétrogradé en information_insuffisante")
-        verdict.verdict = "information_insuffisante"
-        for fact in parsed.facts_potentially_needed:
-            if fact not in verdict.missing_facts:
-                verdict.missing_facts.append(fact)
-        verdict.notes.append("Le contrat exige un fait que la question ne donne pas.")
-        verdict.confidence = min(verdict.confidence, 0.6)
+    if verdict.verdict in ("couvert", "non_couvert"):
+        gated = _gated_facts(parsed, verdict, chosen, lookup)
+        if gated:
+            trace.post_checks.append(f"verdict {verdict.verdict} alors qu'une clause citée dépend d'un fait absent : rétrogradé en information_insuffisante")
+            verdict.verdict = "information_insuffisante"
+            for fact in gated:
+                if fact not in verdict.missing_facts:
+                    verdict.missing_facts.append(fact)
+            verdict.notes.append("Une clause citée dépend d'un fait que la question ne donne pas.")
+            verdict.confidence = min(verdict.confidence, 0.6)
 
     if verdict.verdict in ("couvert", "non_couvert") and verdict.missing_facts:
         trace.post_checks.append("verdict assuré accompagné de faits manquants : rétrogradé en information_insuffisante")
@@ -153,6 +160,21 @@ def post_check(verdict: Verdict, parsed: ParsedQuestion, chosen: list[RetrievedC
         verdict.alternative_reading = "Le contrat se lit de deux façons sur ce point, voir le raisonnement."
     verdict.confidence = max(0.0, min(1.0, verdict.confidence))
     return verdict
+
+
+def _gated_facts(parsed: ParsedQuestion, verdict: Verdict, chosen: list[RetrievedClause], lookup: dict[str, Clause]) -> list[str]:
+    """Les faits absents dont une clause citée dépend : ses mots-clés figurent dans le texte cité."""
+    cited_text = fold(" ".join(clause_text_for(c.clause_id, chosen, lookup)[0] for c in verdict.cited))
+    absent = list(parsed.facts_potentially_needed)
+    effraction_known = not any("effraction" in fold(f) for f in absent)
+    gated: list[str] = []
+    for fact in absent:
+        if effraction_known and "ferme a cle" in fold(fact):
+            continue  # une effraction donnée rend la question de la fermeture sans objet
+        terms = gate_terms(fact)
+        if terms and any(term in cited_text for term in terms):
+            gated.append(fact)
+    return gated
 
 
 def _coerce_verdict(data: dict[str, Any]) -> Verdict:
@@ -214,6 +236,8 @@ def analyse(router: Router, index: Index, cache: Cache, contract_id: str, questi
         with watch.stage("verdict"):
             verdict, model = _call_verdict(router, question, parsed, status, chosen)
             trace.models["verdict"] = model
+            if router.config.model_verdict and model != f"gemini:{router.config.model_verdict}":
+                trace.post_checks.append(f"modèle de verdict indisponible, réponse du modèle de repli {model}")
         with watch.stage("vérifications"):
             verdict = post_check(verdict, parsed, chosen, lookup, trace)
     except ProviderError as error:
@@ -234,7 +258,7 @@ def _call_verdict(router: Router, question: str, parsed: ParsedQuestion, status:
     user = (
         f"Question, entre balises :\n<question>\n{question}\n</question>\n\n"
         f"Lecture typée de la question :\n{describe(parsed)}\n\n"
-        f"Faits exigés par ce type de sinistre et absents de la question :\n{facts}\n\n"
+        f"Faits que ce type de sinistre peut exiger et que la question ne donne pas (ils ne comptent que si une clause citée en dépend) :\n{facts}\n\n"
         f"Clauses du contrat (les seules que tu connais) :\n\n{dump_for_prompt(chosen)}"
     )
     last: Exception | None = None

@@ -186,16 +186,23 @@ def _collect_headings(lines: list[Line], profile: Profile) -> list[tuple[int, Li
 
 def _apply_scope(items: list[tuple[int, Line, list[Line]]], profile: Profile) -> list[tuple[int, Line, list[Line]]]:
     """Dans un contrat multi-branches, ne garde que les parties qui concernent l'habitation."""
-    if not profile.scope_parts:
+    if not profile.scope_parts and not profile.exclude_sections:
         return items
     patterns = [re.compile(p, re.I) for p in profile.scope_parts]
+    excluded = [re.compile(p, re.I) for p in profile.exclude_sections]
     kept: list[tuple[int, Line, list[Line]]] = []
     keep_part = True
+    skip_until_level: int | None = None  # niveau de la section écartée, ses sous-sections la suivent
     for level, head, body in items:
+        _, title = number_of(head.text)
         if level == 0:
-            _, title = number_of(head.text)
-            keep_part = any(p.search(title) for p in patterns)
-        if keep_part:
+            keep_part = not patterns or any(p.search(title) for p in patterns)
+            skip_until_level = None
+        elif skip_until_level is not None and level <= skip_until_level:
+            skip_until_level = None
+        if skip_until_level is None and level >= 1 and any(p.search(title) for p in excluded):
+            skip_until_level = level
+        if keep_part and skip_until_level is None:
             kept.append((level, head, body))
     return kept
 
