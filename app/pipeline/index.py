@@ -134,6 +134,7 @@ class Index:
         self.bm25: dict[str, BM25Okapi] = {}
         self.vectors: dict[str, np.ndarray] = {}
         self.embed_model: str = ""
+        self._lookups: dict[str, dict[str, Clause]] = {}
 
     def build(self, contract_ids: list[str], embed: "callable | None" = None, embed_model: str = "") -> None:
         """Construit l'index et l'enregistre dans SQLite."""
@@ -215,5 +216,10 @@ class Index:
         return [(positions[int(j)], float(sims[int(j)])) for j in order]
 
     def clause_lookup(self, contract_id: str) -> dict[str, Clause]:
-        clauses, _ = load_parsed(contract_id)
-        return {c.clause_id: c for c in clauses}
+        """Les clauses complètes d'un contrat par identifiant, lues une fois."""
+        cached = self._lookups.get(contract_id)
+        if cached is None:
+            clauses, _ = load_parsed(contract_id)
+            cached = {c.clause_id: c for c in clauses}
+            self._lookups[contract_id] = cached
+        return cached

@@ -15,7 +15,7 @@ COPY data/eval ./data/eval
 COPY data/index.db ./data/index.db
 
 RUN pip install --no-cache-dir . \
-    && addgroup --system app && adduser --system --ingroup app app \
+    && addgroup --system --gid 10001 app && adduser --system --uid 10001 --ingroup app app \
     && chown -R app:app /app
 
 USER app

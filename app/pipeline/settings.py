@@ -35,6 +35,7 @@ class Settings:
     cf_access_aud: str
     data_dir: Path = field(default=ROOT / "data")
     prompts_dir: Path = field(default=ROOT / "prompts")
+    cache_db_path: Path = field(default=ROOT / "data" / "cache.db")
 
     @property
     def has_llm(self) -> bool:
@@ -57,6 +58,8 @@ def load_settings() -> Settings:
         per_ip_per_minute=_int("PER_IP_PER_MINUTE", 6),
         cf_access_team_domain=os.environ.get("CF_ACCESS_TEAM_DOMAIN", "").strip(),
         cf_access_aud=os.environ.get("CF_ACCESS_AUD", "").strip(),
+        # Le cache vit hors de l'image quand le conteneur est en lecture seule.
+        cache_db_path=Path(os.environ.get("CACHE_DB_PATH", "").strip() or (ROOT / "data" / "cache.db")),
     )
 
 

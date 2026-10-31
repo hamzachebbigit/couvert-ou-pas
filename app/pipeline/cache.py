@@ -36,7 +36,7 @@ class Cache:
     """Accès SQLite sérialisé par un verrou, suffisant pour un processus."""
 
     def __init__(self, path: Path | None = None) -> None:
-        self.path = path or settings.data_dir / "cache.db"
+        self.path = path or settings.cache_db_path
         self.path.parent.mkdir(parents=True, exist_ok=True)
         self.conn = sqlite3.connect(self.path, check_same_thread=False)
         self.conn.execute("PRAGMA journal_mode=WAL")
