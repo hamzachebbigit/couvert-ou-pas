@@ -1,0 +1,38 @@
+{
+  "note": "Conditions générales publiques, téléchargées depuis les sites des assureurs. Les PDF ne sont pas versionnés, scripts/fetch_sources.py les reconstitue. Les conditions générales Mozaïk de Foyer ne sont servies qu'après saisie d'un numéro de client et de contrat, elles ne sont donc pas publiques.",
+  "contracts": [
+    {
+      "id": "axa_optihome_2025",
+      "insurer": "AXA Luxembourg",
+      "product": "OptiHome",
+      "edition": "Octobre 2025",
+      "country": "LU",
+      "url": "https://axa.lu/sites/axa/files/2025-10/CA_OptiHome_W03_24_FR_1.pdf",
+      "pages": 118,
+      "sha256": "9a84dfc98a08d35d989af017542d19cfb18b7076f6fc414f47534f1712b7cbec",
+      "downloaded_on": "2026-10-31"
+    },
+    {
+      "id": "baloise_home2_2024",
+      "insurer": "Baloise Luxembourg",
+      "product": "HOME",
+      "edition": "CG-HOME(2)-LUFR-09-24",
+      "country": "LU",
+      "url": "https://www.baloise.lu/dam/baloise-lu/1890/particulier/documents/CG-CS/CG-HOME-2--LUFR-09-24.pdf",
+      "pages": 48,
+      "sha256": "2c365b0ea59a47ddf86295b0e1ad65a0c23847bcc30db22ec47861b18ba4a5a6",
+      "downloaded_on": "2026-10-31"
+    },
+    {
+      "id": "lalux_easyprotect_2017",
+      "insurer": "Lalux",
+      "product": "easyPROTECT",
+      "edition": "Mai 2017",
+      "country": "LU",
+      "url": "https://www.lalux.lu/fileadmin/mediatheque/terms_and_conditions/X9C/fra_dg_easypropart_052017_fr-v2.pdf",
+      "pages": 117,
+      "sha256": "aeb59b5abe9f61115ff65cdf7d84707fc0ee58c782fd00c893fa2852fc6dae17",
+      "downloaded_on": "2026-10-31"
+    }
+  ]
+}

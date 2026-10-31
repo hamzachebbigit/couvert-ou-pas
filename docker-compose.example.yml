@@ -1,0 +1,13 @@
+# Exemple de lancement local. Copier .env.example vers .env et renseigner une clé.
+services:
+  couvert-ou-pas:
+    build: .
+    env_file: .env
+    ports:
+      - "127.0.0.1:7860:7860"
+    volumes:
+      - ./data/cache.db:/app/data/cache.db
+    read_only: true
+    tmpfs:
+      - /tmp
+    restart: unless-stopped

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Couvert ou pas</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <h1>Couvert ou pas</h1>
+      <p class="tagline">Un sinistre, des conditions générales, un verdict qui cite ses clauses et qui sait dire qu'il ne sait pas.</p>
+    </div>
+    <nav class="tabs" role="tablist">
+      <button class="tab is-active" data-tab="analyse" role="tab">Analyse</button>
+      <button class="tab" data-tab="evaluation" role="tab">Évaluation</button>
+      <button class="tab" data-tab="methode" role="tab">Méthode</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="tab-analyse" class="panel is-active">
+      <div class="columns">
+        <div class="col-left">
+          <form id="form">
+            <label class="field">
+              <span>Contrat</span>
+              <select id="contract" required></select>
+            </label>
+            <label class="field">
+              <span>Sinistre</span>
+              <textarea id="question" rows="4" maxlength="500" placeholder="Décrivez le sinistre en une ou deux phrases." required></textarea>
+            </label>
+            <div class="examples">
+              <span class="examples-label">Exemples</span>
+              <div id="examples" class="chips"></div>
+            </div>
+            <div class="actions">
+              <button type="submit" id="submit" class="primary">Analyser</button>
+              <span id="status" class="status" aria-live="polite"></span>
+            </div>
+          </form>
+
+          <div id="result" class="result" hidden>
+            <div id="card" class="card">
+              <div class="card-head">
+                <span id="verdict-label" class="verdict-label"></span>
+                <span id="confidence" class="confidence"></span>
+              </div>
+              <p id="summary" class="summary"></p>
+              <div id="missing" class="block" hidden>
+                <h3>Pour trancher</h3>
+                <ul id="missing-list"></ul>
+              </div>
+              <div id="alternative" class="block" hidden>
+                <h3>Autre lecture possible</h3>
+                <p id="alternative-text"></p>
+              </div>
+              <div id="ifthen" class="block" hidden>
+                <h3>Selon les faits</h3>
+                <ul id="ifthen-list"></ul>
+              </div>
+              <div id="amounts" class="amounts" hidden></div>
+              <div id="notes" class="notes" hidden></div>
+            </div>
+
+            <div class="block">
+              <h3>Clauses citées</h3>
+              <p class="hint">Cliquez une clause pour lire son texte avec le passage cité surligné.</p>
+              <ul id="cited" class="cited"></ul>
+            </div>
+
+            <div class="block">
+              <h3>Raisonnement</h3>
+              <ol id="reasoning"></ol>
+            </div>
+
+            <details id="trace" class="trace">
+              <summary id="trace-line"></summary>
+              <div id="trace-body"></div>
+            </details>
+          </div>
+        </div>
+
+        <aside class="col-right">
+          <h2>Ce que le système a compris du contrat</h2>
+          <p class="hint">La ligne structurée extraite une fois à l'ingestion. Survolez une valeur pour voir sa citation.</p>
+          <div id="contract-row" class="contract-row"></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="tab-evaluation" class="panel">
+      <h2>Jeu annoté</h2>
+      <p class="hint">Chaque question a été lue contre les clauses du contrat avant d'être étiquetée. Les deux types d'erreur sont comptés à part parce qu'ils n'ont pas le même coût pour un assureur.</p>
+      <div id="eval-summary" class="stats"></div>
+      <div class="table-wrap">
+        <table id="eval-table">
+          <thead>
+            <tr><th>Id</th><th>Contrat</th><th>Question</th><th>Attendu</th><th>Obtenu</th><th>Clause attendue citée</th><th>Confiance</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="tab-methode" class="panel">
+      <h2>Comment ça marche</h2>
+      <p>Quatre briques et un dispatcher. Le modèle n'est jamais appelé sur le PDF brut, seulement sur des clauses déjà structurées.</p>
+      <ol class="pipeline">
+        <li><strong>Parsing, payé une fois par contrat.</strong> Chaque ligne du PDF est lue avec sa page, sa police et sa graisse. Le plan des articles est reconstruit par un petit profil de mise en page par assureur. Chaque clause reçoit un identifiant, ses pages, ses familles de garanties. Les tableaux sont lus par Docling et sérialisés rangée par rangée, en-têtes compris. Une ligne structurée par contrat est extraite, avec une citation par valeur.</li>
+        <li><strong>Lecture de la question.</strong> La question devient des champs typés : événement, objet, lieu, circonstances, faits donnés. Des règles, pas le modèle, listent les faits que l'événement exige en général, par exemple effraction et antivol pour un vol. Chaque fait est marqué donné, absent ou sans objet.</li>
+        <li><strong>Recherche, filtre d'abord.</strong> Les clauses sont filtrées par contrat et par famille de garantie, puis cherchées par mots-clés (BM25) et par embeddings, fusionnées par rang réciproque, et reclassées par un arbitre qui note chaque finaliste de 0 à 3. Les définitions de l'événement et les exclusions générales sont toujours ajoutées.</li>
+        <li><strong>Verdict typé.</strong> Un seul appel au modèle renvoie un objet structuré : verdict, raisonnement, clauses citées, faits manquants, plafond, franchise, confiance. Puis le code vérifie que chaque citation est un extrait exact de la clause, retire celles qui ne le sont pas, et rétrograde tout verdict assuré qui repose sur un fait absent de la question.</li>
+      </ol>
+      <h3>Des centaines de contrats</h3>
+      <p>La ligne structurée par contrat est la réponse. Six à dix champs qu'un gestionnaire nomme sans réfléchir, remplis une fois à l'ingestion. Chaque question commence par un filtre sur cette table et sur les familles de garanties avant toute recherche dans le texte, de sorte que le coût par question ne suit pas la taille du corpus.</p>
+      <h3>Ce qui est vérifié par le code, pas par le prompt</h3>
+      <ul>
+        <li>Une citation qui n'est pas un extrait exact de la clause est retirée.</li>
+        <li>Un verdict couvert ou non couvert sans clause vérifiée devient information insuffisante.</li>
+        <li>Un verdict couvert qui repose sur un fait absent de la question devient information insuffisante, avec les questions à poser.</li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="clause-modal" class="modal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true">
+      <div class="modal-head">
+        <div>
+          <h3 id="clause-title"></h3>
+          <p id="clause-meta" class="hint"></p>
+        </div>
+        <button id="clause-close" class="close" aria-label="Fermer">×</button>
+      </div>
+      <div id="clause-text" class="clause-text"></div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <span>Conditions générales publiques du marché luxembourgeois, citées avec leur page. Aucune donnée personnelle n'est conservée.</span>
+  </footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+.venv
+.git
+.env
+.env.*
+!.env.example
+__pycache__
+*.pyc
+.pytest_cache
+data/sources/*.pdf
+data/parsed/*/docling.json
+data/cache.db
+data/cache.db-*
+tests

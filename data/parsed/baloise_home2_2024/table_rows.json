@@ -1,0 +1,3239 @@
+[
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r1",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Les garanties de base",
+   "",
+   ""
+  ],
+  "serialized": "Garantie: Les garanties de base",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r2",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Toutes les garanties dommages de base",
+   "Batiment, biens immeubles par destination, embellissements",
+   "Valeur à neuf"
+  ],
+  "serialized": "Garantie: Toutes les garanties dommages de base | Objet de la garantie: Batiment, biens immeubles par destination, embellissements | Limite (exprimé par évènement sinistre): Valeur à neuf",
+  "families": [
+   "biens_assures",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r3",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Toutes les garanties dommages de base",
+   "Mobilier",
+   "Limite prévue dans vos conditions particulières"
+  ],
+  "serialized": "Garantie: Toutes les garanties dommages de base | Objet de la garantie: Mobilier | Limite (exprimé par évènement sinistre): Limite prévue dans vos conditions particulières",
+  "families": [
+   "biens_assures",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r4",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Toutes les garanties dommages de base",
+   "Matériel professionnel et marchandises",
+   "Limite prévue pour le mobilier avec un maximum de 15 000 euros"
+  ],
+  "serialized": "Garantie: Toutes les garanties dommages de base | Objet de la garantie: Matériel professionnel et marchandises | Limite (exprimé par évènement sinistre): Limite prévue pour le mobilier avec un maximum de 15 000 euros",
+  "families": [
+   "biens_assures",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r5",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Toutes les garanties dommages de base",
+   "Objets de valeur / art et objets précieux / bijoux",
+   "50 % de la limite prévue pour le mobilier"
+  ],
+  "serialized": "Garantie: Toutes les garanties dommages de base | Objet de la garantie: Objets de valeur / art et objets précieux / bijoux | Limite (exprimé par évènement sinistre): 50 % de la limite prévue pour le mobilier",
+  "families": [
+   "biens_assures",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r6",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Limites spécifiques pour certaines garanties",
+   "",
+   ""
+  ],
+  "serialized": "Garantie: Limites spécifiques pour certaines garanties",
+  "families": [
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r7",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Incendie",
+   "Dommages ménagers",
+   "5% du contenu assuré avec un maximum de 5 000 euros"
+  ],
+  "serialized": "Garantie: Incendie | Objet de la garantie: Dommages ménagers | Limite (exprimé par évènement sinistre): 5% du contenu assuré avec un maximum de 5 000 euros",
+  "families": [
+   "incendie",
+   "biens_assures",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r8",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Inondation",
+   "Selon la zone inondation du risque",
+   "Limite prévue dans vos conditions particulières"
+  ],
+  "serialized": "Garantie: Inondation | Objet de la garantie: Selon la zone inondation du risque | Limite (exprimé par évènement sinistre): Limite prévue dans vos conditions particulières",
+  "families": [
+   "catnat",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r9",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Dégâts des eaux",
+   "Les frais de recherche et de réparation de la fuite à l'intérieur",
+   "Frais réels"
+  ],
+  "serialized": "Garantie: Dégâts des eaux | Objet de la garantie: Les frais de recherche et de réparation de la fuite à l'intérieur | Limite (exprimé par évènement sinistre): Frais réels",
+  "families": [
+   "degats_eaux",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r10",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Dégâts des eaux",
+   "Les frais de recherche et de réparation de la fuite à l'extérieur",
+   "5 000 euros"
+  ],
+  "serialized": "Garantie: Dégâts des eaux | Objet de la garantie: Les frais de recherche et de réparation de la fuite à l'extérieur | Limite (exprimé par évènement sinistre): 5 000 euros",
+  "families": [
+   "degats_eaux",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r11",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Dégâts des eaux",
+   "Surconsommation d'eau",
+   "1 500 euros"
+  ],
+  "serialized": "Garantie: Dégâts des eaux | Objet de la garantie: Surconsommation d'eau | Limite (exprimé par évènement sinistre): 1 500 euros",
+  "families": [
+   "degats_eaux",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r12",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Frais pertes consécutives / Garanties complémentaires",
+   "Limite frais déblais",
+   "Frais réels"
+  ],
+  "serialized": "Garantie: Frais pertes consécutives / Garanties complémentaires | Objet de la garantie: Limite frais déblais | Limite (exprimé par évènement sinistre): Frais réels",
+  "families": [
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r13",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Frais pertes consécutives / Garanties complémentaires",
+   "Limite frais jardin, clotures etc..",
+   "Limite prévue dans le pack jardin / piscine"
+  ],
+  "serialized": "Garantie: Frais pertes consécutives / Garanties complémentaires | Objet de la garantie: Limite frais jardin, clotures etc.. | Limite (exprimé par évènement sinistre): Limite prévue dans le pack jardin / piscine",
+  "families": [
+   "biens_assures",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r14",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Frais pertes consécutives / Garanties complémentaires",
+   "Limite frais clôture obturation provisoire",
+   "Frais réels"
+  ],
+  "serialized": "Garantie: Frais pertes consécutives / Garanties complémentaires | Objet de la garantie: Limite frais clôture obturation provisoire | Limite (exprimé par évènement sinistre): Frais réels",
+  "families": [
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r15",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Frais pertes consécutives / Garanties complémentaires",
+   "Limite frais relogement provisoire",
+   "Frais réels dans la limite de 24 mois"
+  ],
+  "serialized": "Garantie: Frais pertes consécutives / Garanties complémentaires | Objet de la garantie: Limite frais relogement provisoire | Limite (exprimé par évènement sinistre): Frais réels dans la limite de 24 mois",
+  "families": [
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r16",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Frais pertes consécutives / Garanties complémentaires",
+   "Limite frais expert",
+   "5% de l'indemnité relative au bâtiment"
+  ],
+  "serialized": "Garantie: Frais pertes consécutives / Garanties complémentaires | Objet de la garantie: Limite frais expert | Limite (exprimé par évènement sinistre): 5% de l'indemnité relative au bâtiment",
+  "families": [
+   "biens_assures",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r17",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Frais pertes consécutives / Garanties complémentaires",
+   "Limite frais architecte",
+   "5% de l'indemnité relative au bâtiment"
+  ],
+  "serialized": "Garantie: Frais pertes consécutives / Garanties complémentaires | Objet de la garantie: Limite frais architecte | Limite (exprimé par évènement sinistre): 5% de l'indemnité relative au bâtiment",
+  "families": [
+   "biens_assures",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r18",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Frais pertes consécutives / Garanties complémentaires",
+   "Frais de mise en conformité",
+   "5% de l'indemnité relative au bâtiment"
+  ],
+  "serialized": "Garantie: Frais pertes consécutives / Garanties complémentaires | Objet de la garantie: Frais de mise en conformité | Limite (exprimé par évènement sinistre): 5% de l'indemnité relative au bâtiment",
+  "families": [
+   "biens_assures",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r19",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Frais pertes consécutives / Garanties complémentaires",
+   "Perte d'usage / perte de loyer",
+   "24 mois"
+  ],
+  "serialized": "Garantie: Frais pertes consécutives / Garanties complémentaires | Objet de la garantie: Perte d'usage / perte de loyer | Limite (exprimé par évènement sinistre): 24 mois",
+  "families": [
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r20",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Frais pertes consécutives / Garanties complémentaires",
+   "Défense recours",
+   "15 000 euros"
+  ],
+  "serialized": "Garantie: Frais pertes consécutives / Garanties complémentaires | Objet de la garantie: Défense recours | Limite (exprimé par évènement sinistre): 15 000 euros",
+  "families": [
+   "rc",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r21",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Frais pertes consécutives / Garanties complémentaires",
+   "Mobilier transporté pendant le déménagement",
+   "5 000 euros"
+  ],
+  "serialized": "Garantie: Frais pertes consécutives / Garanties complémentaires | Objet de la garantie: Mobilier transporté pendant le déménagement | Limite (exprimé par évènement sinistre): 5 000 euros",
+  "families": [
+   "biens_assures",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t2_r22",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 33,
+  "headers": [
+   "Garantie",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Frais pertes consécutives / Garanties complémentaires",
+   "Remplacement clé /serrure en cas de perte des clés",
+   "1 000 euros"
+  ],
+  "serialized": "Garantie: Frais pertes consécutives / Garanties complémentaires | Objet de la garantie: Remplacement clé /serrure en cas de perte des clés | Limite (exprimé par évènement sinistre): 1 000 euros",
+  "families": [
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r1",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Responsabilités civiles du fait des biens assurés",
+   "- dont perte d'usage",
+   "24 mois"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Responsabilités civiles du fait des biens assurés | Risques locatifs: - dont perte d'usage | Valeur réelle: 24 mois",
+  "families": [
+   "rc",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r2",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Responsabilités civiles du fait des biens assurés",
+   "- dont perte de loyer",
+   "24 mois"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Responsabilités civiles du fait des biens assurés | Risques locatifs: - dont perte de loyer | Valeur réelle: 24 mois",
+  "families": [
+   "rc",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r3",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Recours voisins et tiers",
+   "2 500 000 euros"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Responsabilités civiles du fait des biens assurés | Risques locatifs: Recours voisins et tiers | Valeur réelle: 2 500 000 euros",
+  "families": [
+   "rc",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r4",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Responsabilités civiles du fait des biens assurés",
+   "- dont perte d'usage",
+   "24 mois"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Responsabilités civiles du fait des biens assurés | Risques locatifs: - dont perte d'usage | Valeur réelle: 24 mois",
+  "families": [
+   "rc",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r5",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Responsabilités civiles du fait des biens assurés",
+   "- dont perte de loyer",
+   "24 mois"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Responsabilités civiles du fait des biens assurés | Risques locatifs: - dont perte de loyer | Valeur réelle: 24 mois",
+  "families": [
+   "rc",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r6",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Recours des locataires",
+   "2 500 000 euros"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Responsabilités civiles du fait des biens assurés | Risques locatifs: Recours des locataires | Valeur réelle: 2 500 000 euros",
+  "families": [
+   "rc",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r7",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Responsabilités civiles du fait des biens assurés",
+   "- dont perte d'usage",
+   "24 mois"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Responsabilités civiles du fait des biens assurés | Risques locatifs: - dont perte d'usage | Valeur réelle: 24 mois",
+  "families": [
+   "rc",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r8",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Responsabilités civiles du fait des biens assurés",
+   "- dont perte de loyer",
+   "24 mois"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Responsabilités civiles du fait des biens assurés | Risques locatifs: - dont perte de loyer | Valeur réelle: 24 mois",
+  "families": [
+   "rc",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r9",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Responsabilité civile propriétaire d'immeuble",
+   ""
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Responsabilités civiles du fait des biens assurés | Risques locatifs: Responsabilité civile propriétaire d'immeuble",
+  "families": [
+   "rc",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r10",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Responsabilités civiles du fait des biens assurés",
+   "- Limites dommages corporels",
+   "12 500 000 euros"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Responsabilités civiles du fait des biens assurés | Risques locatifs: - Limites dommages corporels | Valeur réelle: 12 500 000 euros",
+  "families": [
+   "rc",
+   "biens_assures",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r11",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Responsabilités civiles du fait des biens assurés",
+   "- Limites dommages matériels et immatériels consécutifs",
+   "1 250 000 euros"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Responsabilités civiles du fait des biens assurés | Risques locatifs: - Limites dommages matériels et immatériels consécutifs | Valeur réelle: 1 250 000 euros",
+  "families": [
+   "rc",
+   "biens_assures",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r12",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Responsabilités civiles du fait des biens assurés",
+   "- Atteinte environnement accidentelle",
+   "50 000 euros"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Responsabilités civiles du fait des biens assurés | Risques locatifs: - Atteinte environnement accidentelle | Valeur réelle: 50 000 euros",
+  "families": [
+   "rc",
+   "dommages_accidentels",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r13",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Responsabilité civile maître d'ouvrage",
+   "250 000 euros"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Responsabilités civiles du fait des biens assurés | Risques locatifs: Responsabilité civile maître d'ouvrage | Valeur réelle: 250 000 euros",
+  "families": [
+   "rc",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r14",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Responsabilité civile producteur d'énergie",
+   "1 500 000 euros"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Responsabilités civiles du fait des biens assurés | Risques locatifs: Responsabilité civile producteur d'énergie | Valeur réelle: 1 500 000 euros",
+  "families": [
+   "rc",
+   "biens_assures",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r15",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Assistance",
+   "Prise en charge de chambre d'hôtel",
+   "80 euros par jour et par personne"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Assistance | Risques locatifs: Prise en charge de chambre d'hôtel | Valeur réelle: 80 euros par jour et par personne",
+  "families": [
+   "rc",
+   "assistance",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r16",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Assistance",
+   "Recherche et transfert vers un logement provisoire et retour au domicile",
+   "Frais réels"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Assistance | Risques locatifs: Recherche et transfert vers un logement provisoire et retour au domicile | Valeur réelle: Frais réels",
+  "families": [
+   "rc",
+   "assistance",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r17",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Assistance",
+   "Retour anticipé",
+   "Frais réels"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Assistance | Risques locatifs: Retour anticipé | Valeur réelle: Frais réels",
+  "families": [
+   "rc",
+   "assistance",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r18",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Assistance",
+   "Prise en charge des enfants mineurs - frais de voyage",
+   "Frais réels"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Assistance | Risques locatifs: Prise en charge des enfants mineurs - frais de voyage | Valeur réelle: Frais réels",
+  "families": [
+   "rc",
+   "assistance",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r19",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Assistance",
+   "Prise en charge des enfants mineurs - frais de garde des enfants",
+   "500 euros"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Assistance | Risques locatifs: Prise en charge des enfants mineurs - frais de garde des enfants | Valeur réelle: 500 euros",
+  "families": [
+   "rc",
+   "assistance",
+   "biens_assures",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r20",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Assistance",
+   "Aide familiale",
+   "800 euros"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Assistance | Risques locatifs: Aide familiale | Valeur réelle: 800 euros",
+  "families": [
+   "rc",
+   "assistance",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r21",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Assistance",
+   "Véhicule de remplacement",
+   "500 euros"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Assistance | Risques locatifs: Véhicule de remplacement | Valeur réelle: 500 euros",
+  "families": [
+   "rc",
+   "assistance",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r22",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Assistance",
+   "Prise en charge des animaux de compagnie",
+   "250 euros"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Assistance | Risques locatifs: Prise en charge des animaux de compagnie | Valeur réelle: 250 euros",
+  "families": [
+   "rc",
+   "assistance",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r23",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Assistance",
+   "Gardiennage",
+   "Frais réels"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Assistance | Risques locatifs: Gardiennage | Valeur réelle: Frais réels",
+  "families": [
+   "rc",
+   "assistance",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r24",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Assistance",
+   "Obturation provisoire",
+   "Frais réels"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Assistance | Risques locatifs: Obturation provisoire | Valeur réelle: Frais réels",
+  "families": [
+   "rc",
+   "assistance",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r25",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Assistance",
+   "Transfert du mobiler dans un garde meuble",
+   "Frais réels"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Assistance | Risques locatifs: Transfert du mobiler dans un garde meuble | Valeur réelle: Frais réels",
+  "families": [
+   "rc",
+   "assistance",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r26",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Assistance",
+   "Déménagement",
+   "Frais réels"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Assistance | Risques locatifs: Déménagement | Valeur réelle: Frais réels",
+  "families": [
+   "rc",
+   "assistance",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r27",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Assistance",
+   "Service de nettoyage",
+   "Frais réels"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Assistance | Risques locatifs: Service de nettoyage | Valeur réelle: Frais réels",
+  "families": [
+   "rc",
+   "assistance",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t3_r28",
+  "clause_id": "12__limite_exprime_par_evenement_sinistre",
+  "page": 34,
+  "headers": [
+   "Responsabilités civiles du fait des biens assurés",
+   "Risques locatifs",
+   "Valeur réelle"
+  ],
+  "values": [
+   "Assistance",
+   "Dépannage serrurerie",
+   "Frais réels"
+  ],
+  "serialized": "Responsabilités civiles du fait des biens assurés: Assistance | Risques locatifs: Dépannage serrurerie | Valeur réelle: Frais réels",
+  "families": [
+   "rc",
+   "assistance",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r1",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Les garanties optionnelles",
+   "",
+   ""
+  ],
+  "serialized": "Garanties optionnelles: Les garanties optionnelles",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r2",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Vol / vandalisme",
+   "Batiment, biens immeubles par destination, embellissements",
+   "Valeur à neuf"
+  ],
+  "serialized": "Garanties optionnelles: Vol / vandalisme | Objet de la garantie: Batiment, biens immeubles par destination, embellissements | Limite (exprimé par évènement sinistre): Valeur à neuf",
+  "families": [
+   "vol",
+   "biens_assures",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r3",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Vol / vandalisme",
+   "Mobilier",
+   "Limite prévue dans vos conditions particulières"
+  ],
+  "serialized": "Garanties optionnelles: Vol / vandalisme | Objet de la garantie: Mobilier | Limite (exprimé par évènement sinistre): Limite prévue dans vos conditions particulières",
+  "families": [
+   "vol",
+   "biens_assures",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r4",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Vol / vandalisme",
+   "Matériel professionnel et marchandises",
+   "Limite prévue pour le mobilier avec un maximum de 15 000 euros"
+  ],
+  "serialized": "Garanties optionnelles: Vol / vandalisme | Objet de la garantie: Matériel professionnel et marchandises | Limite (exprimé par évènement sinistre): Limite prévue pour le mobilier avec un maximum de 15 000 euros",
+  "families": [
+   "vol",
+   "biens_assures",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r5",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Vol / vandalisme",
+   "Objets de valeur / art et objets précieux / bijoux",
+   "50 % de la limite prévue pour le mobilier"
+  ],
+  "serialized": "Garanties optionnelles: Vol / vandalisme | Objet de la garantie: Objets de valeur / art et objets précieux / bijoux | Limite (exprimé par évènement sinistre): 50 % de la limite prévue pour le mobilier",
+  "families": [
+   "vol",
+   "biens_assures",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r6",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Vol / vandalisme",
+   "Vandalisme, inscriptions, graffitis, peintures sur les murs extérieurs et les clôtures",
+   "5 000 euros"
+  ],
+  "serialized": "Garanties optionnelles: Vol / vandalisme | Objet de la garantie: Vandalisme, inscriptions, graffitis, peintures sur les murs extérieurs et les clôtures | Limite (exprimé par évènement sinistre): 5 000 euros",
+  "families": [
+   "vol",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r7",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Vol / vandalisme",
+   "Profanation de sépultures",
+   "2 500 euros"
+  ],
+  "serialized": "Garanties optionnelles: Vol / vandalisme | Objet de la garantie: Profanation de sépultures | Limite (exprimé par évènement sinistre): 2 500 euros",
+  "families": [
+   "vol",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r8",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Vol / vandalisme",
+   "Larcins",
+   "2 500 euros"
+  ],
+  "serialized": "Garanties optionnelles: Vol / vandalisme | Objet de la garantie: Larcins | Limite (exprimé par évènement sinistre): 2 500 euros",
+  "families": [
+   "vol",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r9",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Vol / vandalisme",
+   "Valeurs / espèces hors coffre fort",
+   "1 500 euros"
+  ],
+  "serialized": "Garanties optionnelles: Vol / vandalisme | Objet de la garantie: Valeurs / espèces hors coffre fort | Limite (exprimé par évènement sinistre): 1 500 euros",
+  "families": [
+   "vol",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r10",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Vol / vandalisme",
+   "Valeurs / espèces dans un coffre fort",
+   "Valeur maximale assurable de la classe du coffre fort respectant les normes EN 14450 ou EN 1143-1 sans pouvoir dépasser 10% de la limite prévue pour le mobilier"
+  ],
+  "serialized": "Garanties optionnelles: Vol / vandalisme | Objet de la garantie: Valeurs / espèces dans un coffre fort | Limite (exprimé par évènement sinistre): Valeur maximale assurable de la classe du coffre fort respectant les normes EN 14450 ou EN 1143-1 sans pouvoir dépasser 10% de la limite prévue pour le mobilier",
+  "families": [
+   "vol",
+   "biens_assures",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r11",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Vol / vandalisme",
+   "Vol par agression",
+   "2 500 euros"
+  ],
+  "serialized": "Garanties optionnelles: Vol / vandalisme | Objet de la garantie: Vol par agression | Limite (exprimé par évènement sinistre): 2 500 euros",
+  "families": [
+   "vol",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r12",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Vol / vandalisme",
+   "Vol des biens des hôtes",
+   "2 500 euros"
+  ],
+  "serialized": "Garanties optionnelles: Vol / vandalisme | Objet de la garantie: Vol des biens des hôtes | Limite (exprimé par évènement sinistre): 2 500 euros",
+  "families": [
+   "vol",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r13",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Pack jardin / piscine",
+   "Biens immeubles",
+   "Valeur à neuf"
+  ],
+  "serialized": "Garanties optionnelles: Pack jardin / piscine | Objet de la garantie: Biens immeubles | Limite (exprimé par évènement sinistre): Valeur à neuf",
+  "families": [
+   "biens_assures",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r14",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Pack jardin / piscine",
+   "Mobilier",
+   "Limite prévue dans vos conditions particulières"
+  ],
+  "serialized": "Garanties optionnelles: Pack jardin / piscine | Objet de la garantie: Mobilier | Limite (exprimé par évènement sinistre): Limite prévue dans vos conditions particulières",
+  "families": [
+   "biens_assures",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r15",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Pack jardin / piscine",
+   "Frais de déblaiement des arbres",
+   "Frais réels"
+  ],
+  "serialized": "Garanties optionnelles: Pack jardin / piscine | Objet de la garantie: Frais de déblaiement des arbres | Limite (exprimé par évènement sinistre): Frais réels",
+  "families": [
+   "biens_assures",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r16",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Pack jardin / piscine",
+   "Inondation",
+   "Limite prévue pour la garantie inondation"
+  ],
+  "serialized": "Garanties optionnelles: Pack jardin / piscine | Objet de la garantie: Inondation | Limite (exprimé par évènement sinistre): Limite prévue pour la garantie inondation",
+  "families": [
+   "catnat",
+   "biens_assures",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r17",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "\"Pack objets de valeur / art Pack objets précieux / bijoux Pack Multimédia Pack objets de loisirs Pack équipements de mobilité durable Pack cave à vin / denrées alimentaires Pack perte de liquide / dommages aux cuves\"",
+   "",
+   "Limite prévue dans vos conditions particulières selon les catégories de biens concernés"
+  ],
+  "serialized": "Garanties optionnelles: \"Pack objets de valeur / art Pack objets précieux / bijoux Pack Multimédia Pack objets de loisirs Pack équipements de mobilité durable Pack cave à vin / denrées alimentaires Pack perte de liquide / dommages aux cuves\" | Limite (exprimé par évènement sinistre): Limite prévue dans vos conditions particulières selon les catégories de biens concernés",
+  "families": [
+   "degats_eaux",
+   "pertes_denrees",
+   "biens_assures",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r18",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Pack énergie renouvelable",
+   "Dommages matériels",
+   "Limite prévue dans vos conditions particulières selon les catégories de biens concernés"
+  ],
+  "serialized": "Garanties optionnelles: Pack énergie renouvelable | Objet de la garantie: Dommages matériels | Limite (exprimé par évènement sinistre): Limite prévue dans vos conditions particulières selon les catégories de biens concernés",
+  "families": [
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r19",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Pack énergie renouvelable",
+   "Perte financière",
+   "10% de la somme assurée dans le pack énergie renouvelable selon la catégorie de biens concernés"
+  ],
+  "serialized": "Garanties optionnelles: Pack énergie renouvelable | Objet de la garantie: Perte financière | Limite (exprimé par évènement sinistre): 10% de la somme assurée dans le pack énergie renouvelable selon la catégorie de biens concernés",
+  "families": [
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r20",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Garanties optionnelles du propriétaire non occupant",
+   "Loyers impayés",
+   "Limite prévue dans vos conditions particulières"
+  ],
+  "serialized": "Garanties optionnelles: Garanties optionnelles du propriétaire non occupant | Objet de la garantie: Loyers impayés | Limite (exprimé par évènement sinistre): Limite prévue dans vos conditions particulières",
+  "families": [
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r21",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Garanties optionnelles du propriétaire non occupant",
+   "Détériorations immobilières",
+   "15 000 euros"
+  ],
+  "serialized": "Garanties optionnelles: Garanties optionnelles du propriétaire non occupant | Objet de la garantie: Détériorations immobilières | Limite (exprimé par évènement sinistre): 15 000 euros",
+  "families": [
+   "biens_assures",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t4_r22",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 35,
+  "headers": [
+   "Garanties optionnelles",
+   "Objet de la garantie",
+   "Limite (exprimé par évènement sinistre)"
+  ],
+  "values": [
+   "Garanties optionnelles du propriétaire non occupant",
+   "Défense recours",
+   "15 000 euros"
+  ],
+  "serialized": "Garanties optionnelles: Garanties optionnelles du propriétaire non occupant | Objet de la garantie: Défense recours | Limite (exprimé par évènement sinistre): 15 000 euros",
+  "families": [
+   "rc",
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r1",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile vie privée",
+   "Dommages matériels et immatériels consécutifs",
+   "1 250 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile vie privée | Dommages corporels: Dommages matériels et immatériels consécutifs | 12 500 000 euros: 1 250 000 euros",
+  "families": [
+   "rc"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r2",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile vie privée",
+   "dont dommages immatériels consécutifs",
+   "350 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile vie privée | Dommages corporels: dont dommages immatériels consécutifs | 12 500 000 euros: 350 000 euros",
+  "families": [
+   "rc"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r3",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile vie privée",
+   "dont atteintes accidentelles à l'environnement",
+   "50 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile vie privée | Dommages corporels: dont atteintes accidentelles à l'environnement | 12 500 000 euros: 50 000 euros",
+  "families": [
+   "rc",
+   "dommages_accidentels"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r4",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile vie privée",
+   "Dommages Corporels, matériels et immatériels pour RC séjour voyages",
+   "1 750 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile vie privée | Dommages corporels: Dommages Corporels, matériels et immatériels pour RC séjour voyages | 12 500 000 euros: 1 750 000 euros",
+  "families": [
+   "rc"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r5",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile vie privée",
+   "Responsabilité civile stages d'étude au GD de Luxembourg ou à l'étranger",
+   "350 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile vie privée | Dommages corporels: Responsabilité civile stages d'étude au GD de Luxembourg ou à l'étranger | 12 500 000 euros: 350 000 euros",
+  "families": [
+   "rc"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r6",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile vie privée",
+   "Dommages Corporels, matériels et immatériels en cas de utilisation d'un véhicule terrestre à moteur par un mineur",
+   "1 000 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile vie privée | Dommages corporels: Dommages Corporels, matériels et immatériels en cas de utilisation d'un véhicule terrestre à moteur par un mineur | 12 500 000 euros: 1 000 000 euros",
+  "families": [
+   "rc",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r7",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile vie privée",
+   "Dommages Corporels, matériels et immatériels pour RC fête familiale",
+   "1 750 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile vie privée | Dommages corporels: Dommages Corporels, matériels et immatériels pour RC fête familiale | 12 500 000 euros: 1 750 000 euros",
+  "families": [
+   "rc"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r8",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile vie privée",
+   "Responsabilité garde d'enfants",
+   "1 000 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile vie privée | Dommages corporels: Responsabilité garde d'enfants | 12 500 000 euros: 1 000 000 euros",
+  "families": [
+   "rc"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r9",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile vie privée",
+   "Défense recours responsabilité civile vie privée",
+   "15 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile vie privée | Dommages corporels: Défense recours responsabilité civile vie privée | 12 500 000 euros: 15 000 euros",
+  "families": [
+   "rc"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r10",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile assistant parental",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile assistant parental | Dommages corporels: Dommages corporels | 12 500 000 euros: 12 500 000 euros",
+  "families": [
+   "rc"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r11",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile assistant parental",
+   "Dommages matériels et immatériels consécutifs",
+   "1 250 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile assistant parental | Dommages corporels: Dommages matériels et immatériels consécutifs | 12 500 000 euros: 1 250 000 euros",
+  "families": [
+   "rc"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r12",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile assistant parental",
+   "dont dommages immatériels consécutifs",
+   "350 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile assistant parental | Dommages corporels: dont dommages immatériels consécutifs | 12 500 000 euros: 350 000 euros",
+  "families": [
+   "rc"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r13",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile chiens dangereux",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile chiens dangereux | Dommages corporels: Dommages corporels | 12 500 000 euros: 12 500 000 euros",
+  "families": [
+   "rc"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r14",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile chiens dangereux",
+   "Dommages matériels et immatériels consécutifs",
+   "1 250 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile chiens dangereux | Dommages corporels: Dommages matériels et immatériels consécutifs | 12 500 000 euros: 1 250 000 euros",
+  "families": [
+   "rc"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r15",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile chiens dangereux",
+   "dont dommages immatériels consécutifs",
+   "350 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile chiens dangereux | Dommages corporels: dont dommages immatériels consécutifs | 12 500 000 euros: 350 000 euros",
+  "families": [
+   "rc"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r16",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile jouets à moteur",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile jouets à moteur | Dommages corporels: Dommages corporels | 12 500 000 euros: 12 500 000 euros",
+  "families": [
+   "rc",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r17",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile jouets à moteur",
+   "Dommages matériels et immatériels consécutifs",
+   "1 250 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile jouets à moteur | Dommages corporels: Dommages matériels et immatériels consécutifs | 12 500 000 euros: 1 250 000 euros",
+  "families": [
+   "rc",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r18",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile jouets à moteur",
+   "dont dommages immatériels consécutifs",
+   "350 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile jouets à moteur | Dommages corporels: dont dommages immatériels consécutifs | 12 500 000 euros: 350 000 euros",
+  "families": [
+   "rc",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r19",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile des équidés",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile des équidés | Dommages corporels: Dommages corporels | 12 500 000 euros: 12 500 000 euros",
+  "families": [
+   "rc"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r20",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile des équidés",
+   "Dommages matériels et immatériels consécutifs",
+   "1 250 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile des équidés | Dommages corporels: Dommages matériels et immatériels consécutifs | 12 500 000 euros: 1 250 000 euros",
+  "families": [
+   "rc"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r21",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile des équidés",
+   "dont dommages immatériels consécutifs",
+   "350 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile des équidés | Dommages corporels: dont dommages immatériels consécutifs | 12 500 000 euros: 350 000 euros",
+  "families": [
+   "rc"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r22",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile professionnelle gîte et chambre d'hôte",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile professionnelle gîte et chambre d'hôte | Dommages corporels: Dommages corporels | 12 500 000 euros: 12 500 000 euros",
+  "families": [
+   "rc"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r23",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile professionnelle gîte et chambre d'hôte",
+   "Dommages matériels et immatériels consécutifs",
+   "1 250 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile professionnelle gîte et chambre d'hôte | Dommages corporels: Dommages matériels et immatériels consécutifs | 12 500 000 euros: 1 250 000 euros",
+  "families": [
+   "rc"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t5_r24",
+  "clause_id": "12__12__limite_exprime_par_evenement_sinistre",
+  "page": 36,
+  "headers": [
+   "Responsabilité civile vie privée",
+   "Dommages corporels",
+   "12 500 000 euros"
+  ],
+  "values": [
+   "Responsabilité civile professionnelle gîte et chambre d'hôte",
+   "dont dommages immatériels consécutifs",
+   "350 000 euros"
+  ],
+  "serialized": "Responsabilité civile vie privée: Responsabilité civile professionnelle gîte et chambre d'hôte | Dommages corporels: dont dommages immatériels consécutifs | 12 500 000 euros: 350 000 euros",
+  "families": [
+   "rc"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t6_r1",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "Nature des biens",
+   "Age du bien",
+   "Formule essentielle",
+   "Formule essentielle",
+   "Formule Intégrale"
+  ],
+  "values": [
+   "Nature des biens",
+   "Age du bien",
+   "Sans rééquipement à neuf",
+   "Avec rééquipement à neuf",
+   "Formule Intégrale"
+  ],
+  "serialized": "Nature des biens: Nature des biens | Age du bien: Age du bien | Formule essentielle: Sans rééquipement à neuf | Formule essentielle: Avec rééquipement à neuf | Formule Intégrale: Formule Intégrale",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t6_r2",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "Nature des biens",
+   "Age du bien",
+   "Formule essentielle",
+   "Formule essentielle",
+   "Formule Intégrale"
+  ],
+  "values": [
+   "Appareils électroménager, TV, Hifi, Vidéo, informatique",
+   "Biens de moins de 6 ans",
+   "Vétusté déduite : applica- tion d'une grille de vétusté",
+   "Valeur de remplacement à neuf",
+   ""
+  ],
+  "serialized": "Nature des biens: Appareils électroménager, TV, Hifi, Vidéo, informatique | Age du bien: Biens de moins de 6 ans | Formule essentielle: Vétusté déduite : applica- tion d'une grille de vétusté | Formule essentielle: Valeur de remplacement à neuf",
+  "families": [
+   "dommages_electriques"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t6_r3",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "Nature des biens",
+   "Age du bien",
+   "Formule essentielle",
+   "Formule essentielle",
+   "Formule Intégrale"
+  ],
+  "values": [
+   "Appareils électroménager, TV, Hifi, Vidéo, informatique",
+   "Biens de plus de 6 ans",
+   "Vétusté déduite : applica- tion d'une grille de vétusté",
+   "Vétusté déduite : application d'une grille de vétusté",
+   "Vétusté déduite : application d'une grille de vétusté"
+  ],
+  "serialized": "Nature des biens: Appareils électroménager, TV, Hifi, Vidéo, informatique | Age du bien: Biens de plus de 6 ans | Formule essentielle: Vétusté déduite : applica- tion d'une grille de vétusté | Formule essentielle: Vétusté déduite : application d'une grille de vétusté | Formule Intégrale: Vétusté déduite : application d'une grille de vétusté",
+  "families": [
+   "dommages_electriques"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t6_r4",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "Nature des biens",
+   "Age du bien",
+   "Formule essentielle",
+   "Formule essentielle",
+   "Formule Intégrale"
+  ],
+  "values": [
+   "Multimédia nomades",
+   "Biens de moins de 18 mois",
+   "Vétusté déduite : applica- tion d'une grille de vétusté",
+   "Valeur de remplacement à neuf",
+   ""
+  ],
+  "serialized": "Nature des biens: Multimédia nomades | Age du bien: Biens de moins de 18 mois | Formule essentielle: Vétusté déduite : applica- tion d'une grille de vétusté | Formule essentielle: Valeur de remplacement à neuf",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t6_r5",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "Nature des biens",
+   "Age du bien",
+   "Formule essentielle",
+   "Formule essentielle",
+   "Formule Intégrale"
+  ],
+  "values": [
+   "Multimédia nomades",
+   "Biens de plus de 18 mois",
+   "Vétusté déduite : applica- tion d'une grille de vétusté",
+   "Vétusté déduite : application d'une grille de vétusté",
+   "Vétusté déduite : application d'une grille de vétusté"
+  ],
+  "serialized": "Nature des biens: Multimédia nomades | Age du bien: Biens de plus de 18 mois | Formule essentielle: Vétusté déduite : applica- tion d'une grille de vétusté | Formule essentielle: Vétusté déduite : application d'une grille de vétusté | Formule Intégrale: Vétusté déduite : application d'une grille de vétusté",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t6_r6",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "Nature des biens",
+   "Age du bien",
+   "Formule essentielle",
+   "Formule essentielle",
+   "Formule Intégrale"
+  ],
+  "values": [
+   "Matériel professionnel",
+   "Sans condition d'âge",
+   "Vétusté déduite",
+   "",
+   ""
+  ],
+  "serialized": "Nature des biens: Matériel professionnel | Age du bien: Sans condition d'âge | Formule essentielle: Vétusté déduite",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t6_r7",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "Nature des biens",
+   "Age du bien",
+   "Formule essentielle",
+   "Formule essentielle",
+   "Formule Intégrale"
+  ],
+  "values": [
+   "Objets précieux / bijoux objets de valeur",
+   "Sans condition d'âge",
+   "Valeur vénale",
+   "",
+   "et"
+  ],
+  "serialized": "Nature des biens: Objets précieux / bijoux objets de valeur | Age du bien: Sans condition d'âge | Formule essentielle: Valeur vénale | Formule Intégrale: et",
+  "families": [
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t6_r8",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "Nature des biens",
+   "Age du bien",
+   "Formule essentielle",
+   "Formule essentielle",
+   "Formule Intégrale"
+  ],
+  "values": [
+   "Autres biens mobiliers",
+   "Sans condition d'âge",
+   "Vétusté déduite",
+   "Valeur de remplacement à neuf",
+   ""
+  ],
+  "serialized": "Nature des biens: Autres biens mobiliers | Age du bien: Sans condition d'âge | Formule essentielle: Vétusté déduite | Formule essentielle: Valeur de remplacement à neuf",
+  "families": [
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t6_r9",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "Nature des biens",
+   "Age du bien",
+   "Formule essentielle",
+   "Formule essentielle",
+   "Formule Intégrale"
+  ],
+  "values": [
+   "Installations énergie renouvelable : solaires et photovoltaïques",
+   "Biens de moins de 5 ans",
+   "Vétusté déduite : applica- tion d'une grille de vétusté",
+   "Valeur de remplacement à neuf",
+   ""
+  ],
+  "serialized": "Nature des biens: Installations énergie renouvelable : solaires et photovoltaïques | Age du bien: Biens de moins de 5 ans | Formule essentielle: Vétusté déduite : applica- tion d'une grille de vétusté | Formule essentielle: Valeur de remplacement à neuf",
+  "families": [
+   "vol"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t6_r10",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "Nature des biens",
+   "Age du bien",
+   "Formule essentielle",
+   "Formule essentielle",
+   "Formule Intégrale"
+  ],
+  "values": [
+   "Installations énergie renouvelable : solaires et photovoltaïques",
+   "Biens de plus de 5 ans",
+   "Vétusté déduite : applica- tion d'une grille de vétusté",
+   "Vétusté déduite : application d'une grille de vétusté",
+   "Vétusté déduite : application d'une grille de vétusté"
+  ],
+  "serialized": "Nature des biens: Installations énergie renouvelable : solaires et photovoltaïques | Age du bien: Biens de plus de 5 ans | Formule essentielle: Vétusté déduite : applica- tion d'une grille de vétusté | Formule essentielle: Vétusté déduite : application d'une grille de vétusté | Formule Intégrale: Vétusté déduite : application d'une grille de vétusté",
+  "families": [
+   "vol"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t7_r1",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "Age du bien",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)"
+  ],
+  "values": [
+   "0 à 2 ans inclus",
+   "100%"
+  ],
+  "serialized": "Age du bien: 0 à 2 ans inclus | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 100%",
+  "families": [
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t7_r2",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "Age du bien",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)"
+  ],
+  "values": [
+   "2 à 3 ans inclus",
+   "70%"
+  ],
+  "serialized": "Age du bien: 2 à 3 ans inclus | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 70%",
+  "families": [
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t7_r3",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "Age du bien",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)"
+  ],
+  "values": [
+   "3 à 4 ans inclus",
+   "60%"
+  ],
+  "serialized": "Age du bien: 3 à 4 ans inclus | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 60%",
+  "families": [
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t7_r4",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "Age du bien",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)"
+  ],
+  "values": [
+   "4 à 5 ans inclus",
+   "50%"
+  ],
+  "serialized": "Age du bien: 4 à 5 ans inclus | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 50%",
+  "families": [
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t7_r5",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "Age du bien",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)"
+  ],
+  "values": [
+   "5 à 6 ans inclus",
+   "40%"
+  ],
+  "serialized": "Age du bien: 5 à 6 ans inclus | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 40%",
+  "families": [
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t7_r6",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "Age du bien",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)"
+  ],
+  "values": [
+   "6 à 7 ans inclus",
+   "30%"
+  ],
+  "serialized": "Age du bien: 6 à 7 ans inclus | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 30%",
+  "families": [
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t7_r7",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "Age du bien",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)"
+  ],
+  "values": [
+   "8 ans et plus",
+   "25%"
+  ],
+  "serialized": "Age du bien: 8 ans et plus | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 25%",
+  "families": [
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t8_r1",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "7",
+   "82"
+  ],
+  "values": [
+   "8",
+   "79"
+  ],
+  "serialized": "7: 8 | 82: 79",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t8_r2",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "7",
+   "82"
+  ],
+  "values": [
+   "9",
+   "76"
+  ],
+  "serialized": "7: 9 | 82: 76",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t8_r3",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "7",
+   "82"
+  ],
+  "values": [
+   "10",
+   "73"
+  ],
+  "serialized": "7: 10 | 82: 73",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t8_r4",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "7",
+   "82"
+  ],
+  "values": [
+   "11",
+   "70"
+  ],
+  "serialized": "7: 11 | 82: 70",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t8_r5",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "7",
+   "82"
+  ],
+  "values": [
+   "12",
+   "67"
+  ],
+  "serialized": "7: 12 | 82: 67",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t8_r6",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "7",
+   "82"
+  ],
+  "values": [
+   "13",
+   "64"
+  ],
+  "serialized": "7: 13 | 82: 64",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t8_r7",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "7",
+   "82"
+  ],
+  "values": [
+   "14",
+   "61"
+  ],
+  "serialized": "7: 14 | 82: 61",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t8_r8",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 38,
+  "headers": [
+   "7",
+   "82"
+  ],
+  "values": [
+   "15",
+   "58"
+  ],
+  "serialized": "7: 15 | 82: 58",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t9_r1",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "16",
+   "55"
+  ],
+  "values": [
+   "17",
+   "52"
+  ],
+  "serialized": "16: 17 | 55: 52",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t9_r2",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "16",
+   "55"
+  ],
+  "values": [
+   "18",
+   "50"
+  ],
+  "serialized": "16: 18 | 55: 50",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t9_r3",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "16",
+   "55"
+  ],
+  "values": [
+   "19",
+   "48"
+  ],
+  "serialized": "16: 19 | 55: 48",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t9_r4",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "16",
+   "55"
+  ],
+  "values": [
+   "20",
+   "46"
+  ],
+  "serialized": "16: 20 | 55: 46",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t9_r5",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "16",
+   "55"
+  ],
+  "values": [
+   "21",
+   "44"
+  ],
+  "serialized": "16: 21 | 55: 44",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t9_r6",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "16",
+   "55"
+  ],
+  "values": [
+   "22",
+   "42"
+  ],
+  "serialized": "16: 22 | 55: 42",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t9_r7",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "16",
+   "55"
+  ],
+  "values": [
+   "23",
+   "40"
+  ],
+  "serialized": "16: 23 | 55: 40",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t9_r8",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "16",
+   "55"
+  ],
+  "values": [
+   "24",
+   "38"
+  ],
+  "serialized": "16: 24 | 55: 38",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t9_r9",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "16",
+   "55"
+  ],
+  "values": [
+   "25",
+   "36"
+  ],
+  "serialized": "16: 25 | 55: 36",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t9_r10",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "16",
+   "55"
+  ],
+  "values": [
+   "26",
+   "34"
+  ],
+  "serialized": "16: 26 | 55: 34",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t9_r11",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "16",
+   "55"
+  ],
+  "values": [
+   "27",
+   "32"
+  ],
+  "serialized": "16: 27 | 55: 32",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t9_r12",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "16",
+   "55"
+  ],
+  "values": [
+   "28",
+   "30"
+  ],
+  "serialized": "16: 28 | 55: 30",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t9_r13",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "16",
+   "55"
+  ],
+  "values": [
+   "29",
+   "28"
+  ],
+  "serialized": "16: 29 | 55: 28",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t9_r14",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "16",
+   "55"
+  ],
+  "values": [
+   "30",
+   "25"
+  ],
+  "serialized": "16: 30 | 55: 25",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t9_r15",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "16",
+   "55"
+  ],
+  "values": [
+   "31",
+   "25"
+  ],
+  "serialized": "16: 31 | 55: 25",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t9_r16",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "16",
+   "55"
+  ],
+  "values": [
+   "32",
+   "25"
+  ],
+  "serialized": "16: 32 | 55: 25",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t9_r17",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "16",
+   "55"
+  ],
+  "values": [
+   "33",
+   "25"
+  ],
+  "serialized": "16: 33 | 55: 25",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t9_r18",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "16",
+   "55"
+  ],
+  "values": [
+   "34",
+   "25"
+  ],
+  "serialized": "16: 34 | 55: 25",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t9_r19",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "16",
+   "55"
+  ],
+  "values": [
+   "35",
+   "25"
+  ],
+  "serialized": "16: 35 | 55: 25",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t9_r20",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "16",
+   "55"
+  ],
+  "values": [
+   "36",
+   "25"
+  ],
+  "serialized": "16: 36 | 55: 25",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t9_r21",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "16",
+   "55"
+  ],
+  "values": [
+   "37 et plus",
+   "25"
+  ],
+  "serialized": "16: 37 et plus | 55: 25",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t10_r1",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "Age du bien",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)"
+  ],
+  "values": [
+   "",
+   "Panneaux solaires et photovoltaïques",
+   "Onduleurs"
+  ],
+  "serialized": "Limite de garantie (exprimée en % de la valeur de remplacement à neuf): Panneaux solaires et photovoltaïques | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): Onduleurs",
+  "families": [
+   "degats_eaux",
+   "vol",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t10_r2",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "Age du bien",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)"
+  ],
+  "values": [
+   "0 à 2 ans inclus",
+   "100 %",
+   "100 %"
+  ],
+  "serialized": "Age du bien: 0 à 2 ans inclus | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 100 % | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 100 %",
+  "families": [
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t10_r3",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "Age du bien",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)"
+  ],
+  "values": [
+   "2 à 3 ans inclus",
+   "98%",
+   "84%"
+  ],
+  "serialized": "Age du bien: 2 à 3 ans inclus | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 98% | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 84%",
+  "families": [
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t10_r4",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "Age du bien",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)"
+  ],
+  "values": [
+   "3 à 4 ans inclus",
+   "97%",
+   "76%"
+  ],
+  "serialized": "Age du bien: 3 à 4 ans inclus | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 97% | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 76%",
+  "families": [
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t10_r5",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "Age du bien",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)"
+  ],
+  "values": [
+   "4 à 5 ans inclus",
+   "96%",
+   "68%"
+  ],
+  "serialized": "Age du bien: 4 à 5 ans inclus | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 96% | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 68%",
+  "families": [
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t10_r6",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "Age du bien",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)"
+  ],
+  "values": [
+   "5 à 6 ans inclus",
+   "95%",
+   "60%"
+  ],
+  "serialized": "Age du bien: 5 à 6 ans inclus | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 95% | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 60%",
+  "families": [
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t10_r7",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "Age du bien",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)"
+  ],
+  "values": [
+   "7 à 8 ans inclus",
+   "90%",
+   "52%"
+  ],
+  "serialized": "Age du bien: 7 à 8 ans inclus | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 90% | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 52%",
+  "families": [
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t10_r8",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "Age du bien",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)"
+  ],
+  "values": [
+   "8 à 9 ans inclus",
+   "85%",
+   "44%"
+  ],
+  "serialized": "Age du bien: 8 à 9 ans inclus | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 85% | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 44%",
+  "families": [
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t10_r9",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "Age du bien",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)"
+  ],
+  "values": [
+   "9 à 10 ans inclus",
+   "80%",
+   "36%"
+  ],
+  "serialized": "Age du bien: 9 à 10 ans inclus | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 80% | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 36%",
+  "families": [
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t10_r10",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "Age du bien",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)",
+   "Limite de garantie (exprimée en % de la valeur de remplacement à neuf)"
+  ],
+  "values": [
+   "10 à 11 ans inclus",
+   "75%",
+   "28%"
+  ],
+  "serialized": "Age du bien: 10 à 11 ans inclus | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 75% | Limite de garantie (exprimée en % de la valeur de remplacement à neuf): 28%",
+  "families": [
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t11_r1",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "11 à 12 ans inclus",
+   "70%",
+   "25%"
+  ],
+  "values": [
+   "12 à 13 ans inclus",
+   "65%",
+   "25%"
+  ],
+  "serialized": "11 à 12 ans inclus: 12 à 13 ans inclus | 70%: 65% | 25%: 25%",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t11_r2",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "11 à 12 ans inclus",
+   "70%",
+   "25%"
+  ],
+  "values": [
+   "13 à 14 ans inclus",
+   "60%",
+   "25%"
+  ],
+  "serialized": "11 à 12 ans inclus: 13 à 14 ans inclus | 70%: 60% | 25%: 25%",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t11_r3",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "11 à 12 ans inclus",
+   "70%",
+   "25%"
+  ],
+  "values": [
+   "14 à 15 ans inclus",
+   "55%",
+   "25%"
+  ],
+  "serialized": "11 à 12 ans inclus: 14 à 15 ans inclus | 70%: 55% | 25%: 25%",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t11_r4",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "11 à 12 ans inclus",
+   "70%",
+   "25%"
+  ],
+  "values": [
+   "15 à 16 ans inclus",
+   "50%",
+   "25%"
+  ],
+  "serialized": "11 à 12 ans inclus: 15 à 16 ans inclus | 70%: 50% | 25%: 25%",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t11_r5",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "11 à 12 ans inclus",
+   "70%",
+   "25%"
+  ],
+  "values": [
+   "16 à 17 ans inclus",
+   "45%",
+   "25%"
+  ],
+  "serialized": "11 à 12 ans inclus: 16 à 17 ans inclus | 70%: 45% | 25%: 25%",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t11_r6",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "11 à 12 ans inclus",
+   "70%",
+   "25%"
+  ],
+  "values": [
+   "17 à 18 ans inclus",
+   "40%",
+   "25%"
+  ],
+  "serialized": "11 à 12 ans inclus: 17 à 18 ans inclus | 70%: 40% | 25%: 25%",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t11_r7",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "11 à 12 ans inclus",
+   "70%",
+   "25%"
+  ],
+  "values": [
+   "18 à 19 ans inclus",
+   "35%",
+   "25%"
+  ],
+  "serialized": "11 à 12 ans inclus: 18 à 19 ans inclus | 70%: 35% | 25%: 25%",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t11_r8",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "11 à 12 ans inclus",
+   "70%",
+   "25%"
+  ],
+  "values": [
+   "19 à 20 ans inclus",
+   "30%",
+   "25%"
+  ],
+  "serialized": "11 à 12 ans inclus: 19 à 20 ans inclus | 70%: 30% | 25%: 25%",
+  "families": []
+ },
+ {
+  "contract_id": "baloise_home2_2024",
+  "row_id": "t11_r9",
+  "clause_id": "13__formule_essentielle_formule_integrale",
+  "page": 39,
+  "headers": [
+   "11 à 12 ans inclus",
+   "70%",
+   "25%"
+  ],
+  "values": [
+   "Au-delà de 20 ans",
+   "25%",
+   "25%"
+  ],
+  "serialized": "11 à 12 ans inclus: Au-delà de 20 ans | 70%: 25% | 25%: 25%",
+  "families": []
+ }
+]

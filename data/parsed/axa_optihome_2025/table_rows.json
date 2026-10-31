@@ -1,0 +1,1975 @@
+[
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t4_r1",
+  "clause_id": "2_5_2",
+  "page": 19,
+  "headers": [
+   "",
+   "",
+   "Age du bien *",
+   "Age du bien *",
+   "Age du bien *",
+   "Age du bien *"
+  ],
+  "values": [
+   "",
+   "",
+   "2 ans",
+   "> 2 ans et 3 ans",
+   "> 3 ans et 4 ans",
+   "> 4 ans"
+  ],
+  "serialized": "Age du bien *: 2 ans | Age du bien *: > 2 ans et 3 ans | Age du bien *: > 3 ans et 4 ans | Age du bien *: > 4 ans",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t4_r2",
+  "clause_id": "2_5_2",
+  "page": 19,
+  "headers": [
+   "",
+   "",
+   "Age du bien *",
+   "Age du bien *",
+   "Age du bien *",
+   "Age du bien *"
+  ],
+  "values": [
+   "Vétusté à déduire pour :",
+   "matériel multimédia",
+   "0%",
+   "35%",
+   "50%",
+   "75%"
+  ],
+  "serialized": ": Vétusté à déduire pour : | : matériel multimédia | Age du bien *: 0% | Age du bien *: 35% | Age du bien *: 50% | Age du bien *: 75%",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t4_r3",
+  "clause_id": "2_5_2",
+  "page": 19,
+  "headers": [
+   "",
+   "",
+   "Age du bien *",
+   "Age du bien *",
+   "Age du bien *",
+   "Age du bien *"
+  ],
+  "values": [
+   "Vétusté à déduire pour :",
+   "◼ équipements d'alarme et de surveillance ◼ équipements domotiques",
+   "0%",
+   "3% par année d'ancienneté révolue Maximum 75%",
+   "3% par année d'ancienneté révolue Maximum 75%",
+   "3% par année d'ancienneté révolue Maximum 75%"
+  ],
+  "serialized": ": Vétusté à déduire pour : | : ◼ équipements d'alarme et de surveillance ◼ équipements domotiques | Age du bien *: 0% | Age du bien *: 3% par année d'ancienneté révolue Maximum 75% | Age du bien *: 3% par année d'ancienneté révolue Maximum 75% | Age du bien *: 3% par année d'ancienneté révolue Maximum 75%",
+  "families": [
+   "vol"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t5_r1",
+  "clause_id": "2_20_1",
+  "page": 31,
+  "headers": [
+   "Qui peut résilier ? Dans quelles circonstances ?",
+   "Selon quelles modalités ?",
+   "Prise d'effet de la résiliation"
+  ],
+  "values": [
+   "à l'échéance annuelle",
+   "en adressant une notification de résiliation par lettre recommandée au plus tard trente jours avant la date de l'échéance principale",
+   "À 0h00 de la date de l'échéance annuelle de la prime"
+  ],
+  "serialized": "Qui peut résilier ? Dans quelles circonstances ?: à l'échéance annuelle | Selon quelles modalités ?: en adressant une notification de résiliation par lettre recommandée au plus tard trente jours avant la date de l'échéance principale | Prise d'effet de la résiliation: À 0h00 de la date de l'échéance annuelle de la prime",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t5_r2",
+  "clause_id": "2_20_1",
+  "page": 31,
+  "headers": [
+   "Qui peut résilier ? Dans quelles circonstances ?",
+   "Selon quelles modalités ?",
+   "Prise d'effet de la résiliation"
+  ],
+  "values": [
+   "annulation d'une ou plusieurs garanties du contrat",
+   "en adressant une notification de résiliation par lettre recommandée au plus tard un mois avant la date de l'échéance principale",
+   "À l'expiration d'un délai d'un mois à compter du lendemain de la notification de résiliation"
+  ],
+  "serialized": "Qui peut résilier ? Dans quelles circonstances ?: annulation d'une ou plusieurs garanties du contrat | Selon quelles modalités ?: en adressant une notification de résiliation par lettre recommandée au plus tard un mois avant la date de l'échéance principale | Prise d'effet de la résiliation: À l'expiration d'un délai d'un mois à compter du lendemain de la notification de résiliation",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t5_r3",
+  "clause_id": "2_20_1",
+  "page": 31,
+  "headers": [
+   "Qui peut résilier ? Dans quelles circonstances ?",
+   "Selon quelles modalités ?",
+   "Prise d'effet de la résiliation"
+  ],
+  "values": [
+   "Le Preneur d'Assurance en cas de résiliation par la Compagnie après sinistre, d'un autre de ses contrats",
+   "en adressant une notification de résiliation par lettre recommandée au plus tard un mois suivant la notification de la résiliation préalablement adressée par la Compagnie",
+   "À l'expiration d'un délai d'un mois à compter du lendemain de la notification de résiliation"
+  ],
+  "serialized": "Qui peut résilier ? Dans quelles circonstances ?: Le Preneur d'Assurance en cas de résiliation par la Compagnie après sinistre, d'un autre de ses contrats | Selon quelles modalités ?: en adressant une notification de résiliation par lettre recommandée au plus tard un mois suivant la notification de la résiliation préalablement adressée par la Compagnie | Prise d'effet de la résiliation: À l'expiration d'un délai d'un mois à compter du lendemain de la notification de résiliation",
+  "families": [
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t5_r4",
+  "clause_id": "2_20_1",
+  "page": 31,
+  "headers": [
+   "Qui peut résilier ? Dans quelles circonstances ?",
+   "Selon quelles modalités ?",
+   "Prise d'effet de la résiliation"
+  ],
+  "values": [
+   "en cas d'augmentation tarifaire",
+   "En adressant une notification de résiliation par lettre recommandée au plus tard dans les 60 jours suivant la date d'envoi de l'avis d'échéance",
+   "Au deuxième jour suivant la date de l'envoi de la lettre de résiliation ou au plus tôt à la date d'échéance"
+  ],
+  "serialized": "Qui peut résilier ? Dans quelles circonstances ?: en cas d'augmentation tarifaire | Selon quelles modalités ?: En adressant une notification de résiliation par lettre recommandée au plus tard dans les 60 jours suivant la date d'envoi de l'avis d'échéance | Prise d'effet de la résiliation: Au deuxième jour suivant la date de l'envoi de la lettre de résiliation ou au plus tôt à la date d'échéance",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t5_r5",
+  "clause_id": "2_20_1",
+  "page": 31,
+  "headers": [
+   "Qui peut résilier ? Dans quelles circonstances ?",
+   "Selon quelles modalités ?",
+   "Prise d'effet de la résiliation"
+  ],
+  "values": [
+   "en cas de modification et si la Compagnie ne réduit pas votre prime (point 2.8.1)",
+   "En adressant une notification de résiliation par lettre avec accusé de réception au plus tard dans le mois suivant la demande de réduction introduite par le Preneur d'assurance.",
+   "Un mois suivant la date de l'envoi de la notification de la résiliation"
+  ],
+  "serialized": "Qui peut résilier ? Dans quelles circonstances ?: en cas de modification et si la Compagnie ne réduit pas votre prime (point 2.8.1) | Selon quelles modalités ?: En adressant une notification de résiliation par lettre avec accusé de réception au plus tard dans le mois suivant la demande de réduction introduite par le Preneur d'assurance. | Prise d'effet de la résiliation: Un mois suivant la date de l'envoi de la notification de la résiliation",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t5_r6",
+  "clause_id": "2_20_1",
+  "page": 31,
+  "headers": [
+   "Qui peut résilier ? Dans quelles circonstances ?",
+   "Selon quelles modalités ?",
+   "Prise d'effet de la résiliation"
+  ],
+  "values": [
+   "À l'échéance annuelle",
+   "En adressant une notification de résiliation par lettre recommandée au plus tard 60 jours avant la date de l'échéance principale",
+   "À 0h00 de la date de l'échéance annuelle de la prime"
+  ],
+  "serialized": "Qui peut résilier ? Dans quelles circonstances ?: À l'échéance annuelle | Selon quelles modalités ?: En adressant une notification de résiliation par lettre recommandée au plus tard 60 jours avant la date de l'échéance principale | Prise d'effet de la résiliation: À 0h00 de la date de l'échéance annuelle de la prime",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t5_r7",
+  "clause_id": "2_20_1",
+  "page": 31,
+  "headers": [
+   "Qui peut résilier ? Dans quelles circonstances ?",
+   "Selon quelles modalités ?",
+   "Prise d'effet de la résiliation"
+  ],
+  "values": [
+   "Après la survenance d'un sinistre donnant lieu à indemnisation",
+   "En adressant une notification de résiliation par lettre recommandée au plus tard dans le mois suivant le paiement de la première prestation",
+   "À l'expiration d'un délai d'un mois à compter de la notification de la résiliation"
+  ],
+  "serialized": "Qui peut résilier ? Dans quelles circonstances ?: Après la survenance d'un sinistre donnant lieu à indemnisation | Selon quelles modalités ?: En adressant une notification de résiliation par lettre recommandée au plus tard dans le mois suivant le paiement de la première prestation | Prise d'effet de la résiliation: À l'expiration d'un délai d'un mois à compter de la notification de la résiliation",
+  "families": [
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t5_r8",
+  "clause_id": "2_20_1",
+  "page": 31,
+  "headers": [
+   "Qui peut résilier ? Dans quelles circonstances ?",
+   "Selon quelles modalités ?",
+   "Prise d'effet de la résiliation"
+  ],
+  "values": [
+   "La Compagnie En cas de non-paiement de la prime ou d'une fraction de la prime dans les 10 jours de son échéance",
+   "",
+   "Après un délai de 40 jours suivant mise en demeure adressée au dernier domicile connu du Preneur d'Assurance"
+  ],
+  "serialized": "Qui peut résilier ? Dans quelles circonstances ?: La Compagnie En cas de non-paiement de la prime ou d'une fraction de la prime dans les 10 jours de son échéance | Prise d'effet de la résiliation: Après un délai de 40 jours suivant mise en demeure adressée au dernier domicile connu du Preneur d'Assurance",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t5_r9",
+  "clause_id": "2_20_1",
+  "page": 31,
+  "headers": [
+   "Qui peut résilier ? Dans quelles circonstances ?",
+   "Selon quelles modalités ?",
+   "Prise d'effet de la résiliation"
+  ],
+  "values": [
+   "En cas de manquement frauduleux du Preneur d'Assurance et/ ou de l'Assuré aux obligations qui leur incombent en cas de sinistre",
+   "En adressant une notification de résiliation par lettre recommandée au plus tard un mois après la découverte de la fraude",
+   "Dans les 30 jours à compter de la notification de résiliation"
+  ],
+  "serialized": "Qui peut résilier ? Dans quelles circonstances ?: En cas de manquement frauduleux du Preneur d'Assurance et/ ou de l'Assuré aux obligations qui leur incombent en cas de sinistre | Selon quelles modalités ?: En adressant une notification de résiliation par lettre recommandée au plus tard un mois après la découverte de la fraude | Prise d'effet de la résiliation: Dans les 30 jours à compter de la notification de résiliation",
+  "families": [
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t5_r10",
+  "clause_id": "2_20_1",
+  "page": 31,
+  "headers": [
+   "Qui peut résilier ? Dans quelles circonstances ?",
+   "Selon quelles modalités ?",
+   "Prise d'effet de la résiliation"
+  ],
+  "values": [
+   "en cas d'omission ou d'inexactitude dans la déclaration du risque",
+   "en adressant une notification de résiliation par lettre recommandée au plus tard suivant le délai de réflexion d'un mois laissé au Preneur d'Assurance après proposition de la Compagnie. (Points 2-7 et 2.8.2)",
+   "a l'expiration d'un délai d'un mois à compter de la notification de la résiliation"
+  ],
+  "serialized": "Qui peut résilier ? Dans quelles circonstances ?: en cas d'omission ou d'inexactitude dans la déclaration du risque | Selon quelles modalités ?: en adressant une notification de résiliation par lettre recommandée au plus tard suivant le délai de réflexion d'un mois laissé au Preneur d'Assurance après proposition de la Compagnie. (Points 2-7 et 2.8.2) | Prise d'effet de la résiliation: a l'expiration d'un délai d'un mois à compter de la notification de la résiliation",
+  "families": [
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t5_r11",
+  "clause_id": "2_20_1",
+  "page": 31,
+  "headers": [
+   "Qui peut résilier ? Dans quelles circonstances ?",
+   "Selon quelles modalités ?",
+   "Prise d'effet de la résiliation"
+  ],
+  "values": [
+   "en cas d'aggravation du risque. Si la Compagnie apporte la preuve qu'elle n'aurait pas assuré le risque ou en cas de refus de la proposition de modification",
+   "en adressant une notification de résiliation par lettre recommandée au plus tard suivant le délai de réflexion d'un mois laissé au Preneur d'Assurance après proposition de la Compagnie. (Points 2-7 et 2.8.2)",
+   "a l'expiration d'un délai d'un mois à compter de la notification de la résiliation"
+  ],
+  "serialized": "Qui peut résilier ? Dans quelles circonstances ?: en cas d'aggravation du risque. Si la Compagnie apporte la preuve qu'elle n'aurait pas assuré le risque ou en cas de refus de la proposition de modification | Selon quelles modalités ?: en adressant une notification de résiliation par lettre recommandée au plus tard suivant le délai de réflexion d'un mois laissé au Preneur d'Assurance après proposition de la Compagnie. (Points 2-7 et 2.8.2) | Prise d'effet de la résiliation: a l'expiration d'un délai d'un mois à compter de la notification de la résiliation",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t6_r1",
+  "clause_id": "2_22_2",
+  "page": 32,
+  "headers": [
+   "La Compagnie",
+   "en cas du décès du Preneur d'Assurance",
+   "dans les trois mois suivant le jour où la Compagnie a eu connaissance du décès",
+   "un mois à compter du lendemain de la notification de la résiliation au dernier domicile connu du Preneur d'Assurance"
+  ],
+  "values": [
+   "",
+   "en cas de faillite du Preneur d'Assurance",
+   "dans le mois suivant l'expiration d'un délai de trois mois après déclaration en faillite",
+   "un mois à compter du lendemain de la notification de la résiliation au dernier domicile connu du Preneur d'Assurance"
+  ],
+  "serialized": "en cas du décès du Preneur d'Assurance: en cas de faillite du Preneur d'Assurance | dans les trois mois suivant le jour où la Compagnie a eu connaissance du décès: dans le mois suivant l'expiration d'un délai de trois mois après déclaration en faillite | un mois à compter du lendemain de la notification de la résiliation au dernier domicile connu du Preneur d'Assurance: un mois à compter du lendemain de la notification de la résiliation au dernier domicile connu du Preneur d'Assurance",
+  "families": [
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t6_r2",
+  "clause_id": "2_22_2",
+  "page": 32,
+  "headers": [
+   "La Compagnie",
+   "en cas du décès du Preneur d'Assurance",
+   "dans les trois mois suivant le jour où la Compagnie a eu connaissance du décès",
+   "un mois à compter du lendemain de la notification de la résiliation au dernier domicile connu du Preneur d'Assurance"
+  ],
+  "values": [
+   "",
+   "en cas de transfert ou cession du bien assuré",
+   "le contrat prend fin de plein droit à compter l'acte de transmission ou de cession (point 2.22)",
+   ""
+  ],
+  "serialized": "en cas du décès du Preneur d'Assurance: en cas de transfert ou cession du bien assuré | dans les trois mois suivant le jour où la Compagnie a eu connaissance du décès: le contrat prend fin de plein droit à compter l'acte de transmission ou de cession (point 2.22)",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t7_r1",
+  "clause_id": "2_22_2",
+  "page": 32,
+  "headers": [
+   "Qui peut résilier ?",
+   "Dans quelles circonstances ?",
+   "Selon quelles modalités ?",
+   "Prise d'effet de la résiliation"
+  ],
+  "values": [
+   "Les ayants droit",
+   "en cas de décès du Preneur d'assurance. Si la résiliation n'est pas demandée, le contrat continue sans autres formalités pour compte des ayants droit qui restent solidairement et indivisiblement tenus des obligations découlant de l'assurance.",
+   "dans les trois mois et quarante jours du décès du Preneur d'assurance.",
+   "à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation."
+  ],
+  "serialized": "Qui peut résilier ?: Les ayants droit | Dans quelles circonstances ?: en cas de décès du Preneur d'assurance. Si la résiliation n'est pas demandée, le contrat continue sans autres formalités pour compte des ayants droit qui restent solidairement et indivisiblement tenus des obligations découlant de l'assurance. | Selon quelles modalités ?: dans les trois mois et quarante jours du décès du Preneur d'assurance. | Prise d'effet de la résiliation: à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation.",
+  "families": [
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t8_r1",
+  "clause_id": "2_22_2",
+  "page": 32,
+  "headers": [
+   "Qui peut résilier ?",
+   "Dans quelles circonstances ?",
+   "Selon quelles modalités ?",
+   "Prise d'effet de la résiliation"
+  ],
+  "values": [
+   "Le curateur",
+   "en cas de faillite du Preneur d'assurance.",
+   "dans les trois mois qui suivent la déclaration de faillite.",
+   "à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation."
+  ],
+  "serialized": "Qui peut résilier ?: Le curateur | Dans quelles circonstances ?: en cas de faillite du Preneur d'assurance. | Selon quelles modalités ?: dans les trois mois qui suivent la déclaration de faillite. | Prise d'effet de la résiliation: à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation.",
+  "families": [
+   "tempete",
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t9_r1",
+  "clause_id": "3_1_4",
+  "page": 39,
+  "headers": [
+   "",
+   "Ne sont pas assurés, les dommages causés :"
+  ],
+  "values": [
+   "3.1.4.2.1.",
+   "à la toiture du bâtiment ainsi qu'aux revêtements qui en assurent l'étanchéité ;"
+  ],
+  "serialized": ": 3.1.4.2.1. | Ne sont pas assurés, les dommages causés :: à la toiture du bâtiment ainsi qu'aux revêtements qui en assurent l'étanchéité ;",
+  "families": [
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t9_r2",
+  "clause_id": "3_1_4",
+  "page": 39,
+  "headers": [
+   "",
+   "Ne sont pas assurés, les dommages causés :"
+  ],
+  "values": [
+   "3.1.4.2.2.",
+   "aux conduites, aux installations et appareils hydrauliques, aux tuyaux d'évacuation, aux boilers, chaudières, citernes, aquariums et matelas d'eau à l'origine du sinistre ; toutefois, les dommages aux conduites encastrées sont pris en charge par la Compagnie ;"
+  ],
+  "serialized": ": 3.1.4.2.2. | Ne sont pas assurés, les dommages causés :: aux conduites, aux installations et appareils hydrauliques, aux tuyaux d'évacuation, aux boilers, chaudières, citernes, aquariums et matelas d'eau à l'origine du sinistre ; toutefois, les dommages aux conduites encastrées sont pris en charge par la Compagnie ;",
+  "families": [
+   "dommages_electriques",
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t9_r3",
+  "clause_id": "3_1_4",
+  "page": 39,
+  "headers": [
+   "",
+   "Ne sont pas assurés, les dommages causés :"
+  ],
+  "values": [
+   "3.1.4.2.3.",
+   "par la condensation ;"
+  ],
+  "serialized": ": 3.1.4.2.3. | Ne sont pas assurés, les dommages causés :: par la condensation ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t9_r4",
+  "clause_id": "3_1_4",
+  "page": 39,
+  "headers": [
+   "",
+   "Ne sont pas assurés, les dommages causés :"
+  ],
+  "values": [
+   "3.1.4.2.4.",
+   "par la porosité des murs sauf si celle-ci trouve son origine dans un ou des bâtiments voisins ou dans une fuite ou un débordement des installations hydrauliques extérieures au bâtiment désigné ;"
+  ],
+  "serialized": ": 3.1.4.2.4. | Ne sont pas assurés, les dommages causés :: par la porosité des murs sauf si celle-ci trouve son origine dans un ou des bâtiments voisins ou dans une fuite ou un débordement des installations hydrauliques extérieures au bâtiment désigné ;",
+  "families": [
+   "degats_eaux",
+   "rc",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t9_r5",
+  "clause_id": "3_1_4",
+  "page": 39,
+  "headers": [
+   "",
+   "Ne sont pas assurés, les dommages causés :"
+  ],
+  "values": [
+   "3.1.4.2.5.",
+   "par tous les événements pouvant être pris en charge au titre de la garantie « tempête et grêle » ou de la garantie « pluies & inondations » ;"
+  ],
+  "serialized": ": 3.1.4.2.5. | Ne sont pas assurés, les dommages causés :: par tous les événements pouvant être pris en charge au titre de la garantie « tempête et grêle » ou de la garantie « pluies & inondations » ;",
+  "families": [
+   "tempete",
+   "grele",
+   "catnat"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t9_r6",
+  "clause_id": "3_1_4",
+  "page": 39,
+  "headers": [
+   "",
+   "Ne sont pas assurés, les dommages causés :"
+  ],
+  "values": [
+   "3.1.4.2.6.",
+   "par des entrées d'eaux pluviales, de neige ou de glace par des ouvertures fermées ou non, telles que portes, fenêtres, soupiraux, lucarne."
+  ],
+  "serialized": ": 3.1.4.2.6. | Ne sont pas assurés, les dommages causés :: par des entrées d'eaux pluviales, de neige ou de glace par des ouvertures fermées ou non, telles que portes, fenêtres, soupiraux, lucarne.",
+  "families": [
+   "degats_eaux",
+   "tempete"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t9_r7",
+  "clause_id": "3_1_4",
+  "page": 39,
+  "headers": [
+   "",
+   "Ne sont pas assurés, les dommages causés :"
+  ],
+  "values": [
+   "3.1.4.2.7.",
+   "par les infiltrations d'eaux souterraines ;"
+  ],
+  "serialized": ": 3.1.4.2.7. | Ne sont pas assurés, les dommages causés :: par les infiltrations d'eaux souterraines ;",
+  "families": [
+   "degats_eaux"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t9_r8",
+  "clause_id": "3_1_4",
+  "page": 39,
+  "headers": [
+   "",
+   "Ne sont pas assurés, les dommages causés :"
+  ],
+  "values": [
+   "3.1.4.2.8.",
+   "par les dommages causés par un objet non relié à l'installation hydraulique du bâtiment à l'exception des aquariums et matelas d'eau ;"
+  ],
+  "serialized": ": 3.1.4.2.8. | Ne sont pas assurés, les dommages causés :: par les dommages causés par un objet non relié à l'installation hydraulique du bâtiment à l'exception des aquariums et matelas d'eau ;",
+  "families": [
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t9_r9",
+  "clause_id": "3_1_4",
+  "page": 39,
+  "headers": [
+   "",
+   "Ne sont pas assurés, les dommages causés :"
+  ],
+  "values": [
+   "3.1.4.2.9.",
+   "par des conduites, installations et appareils apparents présentant des points de corrosion visibles et non traités ;"
+  ],
+  "serialized": ": 3.1.4.2.9. | Ne sont pas assurés, les dommages causés :: par des conduites, installations et appareils apparents présentant des points de corrosion visibles et non traités ;",
+  "families": [
+   "dommages_electriques"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t9_r10",
+  "clause_id": "3_1_4",
+  "page": 39,
+  "headers": [
+   "",
+   "Ne sont pas assurés, les dommages causés :"
+  ],
+  "values": [
+   "3.1.4.2.10.",
+   "lorsque le bâtiment désigné est en cours de construction, de transformation ou de rénovation, à moins que l'Assuré ne démontre que cette circonstance n'a pas contribué à la survenance ou à l'aggravation des conséquences du sinistre ;"
+  ],
+  "serialized": ": 3.1.4.2.10. | Ne sont pas assurés, les dommages causés :: lorsque le bâtiment désigné est en cours de construction, de transformation ou de rénovation, à moins que l'Assuré ne démontre que cette circonstance n'a pas contribué à la survenance ou à l'aggravation des conséquences du sinistre ;",
+  "families": [
+   "biens_assures",
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t9_r11",
+  "clause_id": "3_1_4",
+  "page": 39,
+  "headers": [
+   "",
+   "Ne sont pas assurés, les dommages causés :"
+  ],
+  "values": [
+   "3.1.4.2.11.",
+   "par l'hygrométrie ambiante, même consécutivement à un sinistre couvert ;"
+  ],
+  "serialized": ": 3.1.4.2.11. | Ne sont pas assurés, les dommages causés :: par l'hygrométrie ambiante, même consécutivement à un sinistre couvert ;",
+  "families": [
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t9_r12",
+  "clause_id": "3_1_4",
+  "page": 39,
+  "headers": [
+   "",
+   "Ne sont pas assurés, les dommages causés :"
+  ],
+  "values": [
+   "3.1.4.2.12.",
+   "par des champignons ou des moisissures, même consécutivement à un sinistre couvert ;"
+  ],
+  "serialized": ": 3.1.4.2.12. | Ne sont pas assurés, les dommages causés :: par des champignons ou des moisissures, même consécutivement à un sinistre couvert ;",
+  "families": [
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t9_r13",
+  "clause_id": "3_1_4",
+  "page": 39,
+  "headers": [
+   "",
+   "Ne sont pas assurés, les dommages causés :"
+  ],
+  "values": [
+   "3.1.4.2.13.",
+   "par un défaut de réparation ou d'entretien, ou dus à une étanchéité absente, mal conçue ou mal réalisée ;"
+  ],
+  "serialized": ": 3.1.4.2.13. | Ne sont pas assurés, les dommages causés :: par un défaut de réparation ou d'entretien, ou dus à une étanchéité absente, mal conçue ou mal réalisée ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t9_r14",
+  "clause_id": "3_1_4",
+  "page": 39,
+  "headers": [
+   "",
+   "Ne sont pas assurés, les dommages causés :"
+  ],
+  "values": [
+   "3.1.4.2.14.",
+   "lors du remplissage, de travaux de révision ou de réparation des installations et/ou citernes d'huiles minérales."
+  ],
+  "serialized": ": 3.1.4.2.14. | Ne sont pas assurés, les dommages causés :: lors du remplissage, de travaux de révision ou de réparation des installations et/ou citernes d'huiles minérales.",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t10_r1",
+  "clause_id": "3_1_7",
+  "page": 44,
+  "headers": [
+   "3.1.7.2.1.",
+   "le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;"
+  ],
+  "values": [
+   "3.1.7.2.2.",
+   "les pertes liées à l'action d'un virus ou d'une cyber-attaque et tous préjudices consécutifs ;"
+  ],
+  "serialized": "3.1.7.2.1.: 3.1.7.2.2. | le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;: les pertes liées à l'action d'un virus ou d'une cyber-attaque et tous préjudices consécutifs ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t10_r2",
+  "clause_id": "3_1_7",
+  "page": 44,
+  "headers": [
+   "3.1.7.2.1.",
+   "le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;"
+  ],
+  "values": [
+   "3.1.7.2.3.",
+   "les pertes ou dommages dus à des vices ou défauts qui existaient à la date d'effet de la présente assurance et qui étaient connus de l'Assuré ou de ses mandataires ;"
+  ],
+  "serialized": "3.1.7.2.1.: 3.1.7.2.3. | le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;: les pertes ou dommages dus à des vices ou défauts qui existaient à la date d'effet de la présente assurance et qui étaient connus de l'Assuré ou de ses mandataires ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t10_r3",
+  "clause_id": "3_1_7",
+  "page": 44,
+  "headers": [
+   "3.1.7.2.1.",
+   "le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;"
+  ],
+  "values": [
+   "3.1.7.2.4.",
+   "les pertes ou dommages qui sont la conséquence directe : ◼ des effets continuels de l'utilisation (usure) ; ◼ d'un fonctionnement défectueux."
+  ],
+  "serialized": "3.1.7.2.1.: 3.1.7.2.4. | le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;: les pertes ou dommages qui sont la conséquence directe : ◼ des effets continuels de l'utilisation (usure) ; ◼ d'un fonctionnement défectueux.",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t10_r4",
+  "clause_id": "3_1_7",
+  "page": 44,
+  "headers": [
+   "3.1.7.2.1.",
+   "le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;"
+  ],
+  "values": [
+   "3.1.7.2.5.",
+   "les frais exposés pour réparer des défauts de fonctionnement, sauf si ces défauts sont la conséquence d'une perte ou d'un dommage indemnisable causé aux matériels assurés ;"
+  ],
+  "serialized": "3.1.7.2.1.: 3.1.7.2.5. | le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;: les frais exposés pour réparer des défauts de fonctionnement, sauf si ces défauts sont la conséquence d'une perte ou d'un dommage indemnisable causé aux matériels assurés ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t10_r5",
+  "clause_id": "3_1_7",
+  "page": 44,
+  "headers": [
+   "3.1.7.2.1.",
+   "le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;"
+  ],
+  "values": [
+   "3.1.7.2.6.",
+   "les frais d'entretien des matériels assurés, y compris le coût des pièces remplacées pendant les travaux d'entretien ;"
+  ],
+  "serialized": "3.1.7.2.1.: 3.1.7.2.6. | le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;: les frais d'entretien des matériels assurés, y compris le coût des pièces remplacées pendant les travaux d'entretien ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t10_r6",
+  "clause_id": "3_1_7",
+  "page": 44,
+  "headers": [
+   "3.1.7.2.1.",
+   "le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;"
+  ],
+  "values": [
+   "3.1.7.2.7.",
+   "les pertes ou dommages dont le fabricant ou le fournisseur est légalement ou contractuellement responsable ;"
+  ],
+  "serialized": "3.1.7.2.1.: 3.1.7.2.7. | le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;: les pertes ou dommages dont le fabricant ou le fournisseur est légalement ou contractuellement responsable ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t10_r7",
+  "clause_id": "3_1_7",
+  "page": 44,
+  "headers": [
+   "3.1.7.2.1.",
+   "le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;"
+  ],
+  "values": [
+   "3.1.7.2.8.",
+   "les pertes indirectes de quelque nature que ce soit ;"
+  ],
+  "serialized": "3.1.7.2.1.: 3.1.7.2.8. | le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;: les pertes indirectes de quelque nature que ce soit ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t10_r8",
+  "clause_id": "3_1_7",
+  "page": 44,
+  "headers": [
+   "3.1.7.2.1.",
+   "le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;"
+  ],
+  "values": [
+   "3.1.7.2.9.",
+   "les pertes ou dommages causés aux lampes, tubes, bandes transporteuses, fusibles, joints, courroies, chaînes ;"
+  ],
+  "serialized": "3.1.7.2.1.: 3.1.7.2.9. | le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;: les pertes ou dommages causés aux lampes, tubes, bandes transporteuses, fusibles, joints, courroies, chaînes ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t10_r9",
+  "clause_id": "3_1_7",
+  "page": 44,
+  "headers": [
+   "3.1.7.2.1.",
+   "le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;"
+  ],
+  "values": [
+   "3.1.7.2.10.",
+   "les défauts d'ordre esthétique, tels que les bosses, égratignures, rayures ou écaillements ;"
+  ],
+  "serialized": "3.1.7.2.1.: 3.1.7.2.10. | le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;: les défauts d'ordre esthétique, tels que les bosses, égratignures, rayures ou écaillements ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t10_r10",
+  "clause_id": "3_1_7",
+  "page": 44,
+  "headers": [
+   "3.1.7.2.1.",
+   "le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;"
+  ],
+  "values": [
+   "3.1.7.2.11.",
+   "les pertes de données ;"
+  ],
+  "serialized": "3.1.7.2.1.: 3.1.7.2.11. | le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;: les pertes de données ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t10_r11",
+  "clause_id": "3_1_7",
+  "page": 44,
+  "headers": [
+   "3.1.7.2.1.",
+   "le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;"
+  ],
+  "values": [
+   "3.1.7.2.12.",
+   "les dommages d'origine électrique ;"
+  ],
+  "serialized": "3.1.7.2.1.: 3.1.7.2.12. | le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;: les dommages d'origine électrique ;",
+  "families": [
+   "dommages_electriques"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t10_r12",
+  "clause_id": "3_1_7",
+  "page": 44,
+  "headers": [
+   "3.1.7.2.1.",
+   "le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;"
+  ],
+  "values": [
+   "3.1.7.2.13.",
+   "les dommages d'un montant inférieur à 60 € ;"
+  ],
+  "serialized": "3.1.7.2.1.: 3.1.7.2.13. | le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;: les dommages d'un montant inférieur à 60 € ;",
+  "families": [
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t10_r13",
+  "clause_id": "3_1_7",
+  "page": 44,
+  "headers": [
+   "3.1.7.2.1.",
+   "le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;"
+  ],
+  "values": [
+   "3.1.7.2.14.",
+   "les dommages causés au contenu des appareils ;"
+  ],
+  "serialized": "3.1.7.2.1.: 3.1.7.2.14. | le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;: les dommages causés au contenu des appareils ;",
+  "families": [
+   "dommages_electriques",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t10_r14",
+  "clause_id": "3_1_7",
+  "page": 44,
+  "headers": [
+   "3.1.7.2.1.",
+   "le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;"
+  ],
+  "values": [
+   "3.1.7.2.15.",
+   "les vols commis par ou avec la complicité de ou du : ◼ Preneur d'assurance, son conjoint, leurs ascendants ou descendants ainsi que les conjoints de ces personnes ; ◼ l'Assuré ; ◼ toute personne au service de l'Assuré pendant les heures de service et, si ces vols ont été commis en dehors de celles-ci, autrement que par effraction ou avec violence."
+  ],
+  "serialized": "3.1.7.2.1.: 3.1.7.2.15. | le matériel dont l'Assuré n'est pas propriétaire, sauf si le matériel a été confié à l'Assuré dans un but pédagogique par un établissement d'enseignement ;: les vols commis par ou avec la complicité de ou du : ◼ Preneur d'assurance, son conjoint, leurs ascendants ou descendants ainsi que les conjoints de ces personnes ; ◼ l'Assuré ; ◼ toute personne au service de l'Assuré pendant les heures de service et, si ces vols ont été commis en dehors de celles-ci, autrement que par effraction ou avec violence.",
+  "families": [
+   "vol",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t11_r1",
+  "clause_id": "3_1_9",
+  "page": 49,
+  "headers": [
+   "Assuré",
+   "Intervention",
+   "Durée"
+  ],
+  "values": [
+   "Propriétaire-occupant",
+   "80 €/ nuit par personne vivant habituellement au domicile de l'Assuré (sur présentation de justificatifs)",
+   "Maximum 90 jours"
+  ],
+  "serialized": "Assuré: Propriétaire-occupant | Intervention: 80 €/ nuit par personne vivant habituellement au domicile de l'Assuré (sur présentation de justificatifs) | Durée: Maximum 90 jours",
+  "families": [
+   "tempete"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t11_r2",
+  "clause_id": "3_1_9",
+  "page": 49,
+  "headers": [
+   "Assuré",
+   "Intervention",
+   "Durée"
+  ],
+  "values": [
+   "Locataire",
+   "Différence entre le loyer du logement sinistré et les frais exposés pour le relogement provisoire avec un maximum de 80 €/ nuit par personne vivant habituellement au domicile de l'Assuré (sur présentation de justificatifs)",
+   "Maximum 90 jours"
+  ],
+  "serialized": "Assuré: Locataire | Intervention: Différence entre le loyer du logement sinistré et les frais exposés pour le relogement provisoire avec un maximum de 80 €/ nuit par personne vivant habituellement au domicile de l'Assuré (sur présentation de justificatifs) | Durée: Maximum 90 jours",
+  "families": [
+   "tempete",
+   "rc",
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t11_r3",
+  "clause_id": "3_1_9",
+  "page": 49,
+  "headers": [
+   "Assuré",
+   "Intervention",
+   "Durée"
+  ],
+  "values": [
+   "Propriétaire non- occupant",
+   "Non pris en charge",
+   ""
+  ],
+  "serialized": "Assuré: Propriétaire non- occupant | Intervention: Non pris en charge",
+  "families": [
+   "tempete"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t12_r1",
+  "clause_id": "3_1_9",
+  "page": 49,
+  "headers": [
+   "Assuré",
+   "Intervention",
+   "Durée"
+  ],
+  "values": [
+   "Propriétaire-occupant",
+   "A hauteur de la valeur locative du bien",
+   "Maximum 24 mois"
+  ],
+  "serialized": "Assuré: Propriétaire-occupant | Intervention: A hauteur de la valeur locative du bien | Durée: Maximum 24 mois",
+  "families": [
+   "tempete"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t12_r2",
+  "clause_id": "3_1_9",
+  "page": 49,
+  "headers": [
+   "Assuré",
+   "Intervention",
+   "Durée"
+  ],
+  "values": [
+   "Locataire",
+   "La perte de loyer augmenté de ses charges subie par le bailleur dès lors que la responsabilité de l'Assuré est engagée et que le logement sinistré est devenu inhabitable",
+   "Maximum 24 mois"
+  ],
+  "serialized": "Assuré: Locataire | Intervention: La perte de loyer augmenté de ses charges subie par le bailleur dès lors que la responsabilité de l'Assuré est engagée et que le logement sinistré est devenu inhabitable | Durée: Maximum 24 mois",
+  "families": [
+   "tempete",
+   "rc",
+   "inoccupation",
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t12_r3",
+  "clause_id": "3_1_9",
+  "page": 49,
+  "headers": [
+   "Assuré",
+   "Intervention",
+   "Durée"
+  ],
+  "values": [
+   "Propriétaire non- occupant",
+   "La perte de loyer augmentée de ses charges si le logement était donné en location au moment du sinistre",
+   "Maximum 24 mois"
+  ],
+  "serialized": "Assuré: Propriétaire non- occupant | Intervention: La perte de loyer augmentée de ses charges si le logement était donné en location au moment du sinistre | Durée: Maximum 24 mois",
+  "families": [
+   "tempete",
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t13_r1",
+  "clause_id": "3_1_10",
+  "page": 51,
+  "headers": [
+   "",
+   "Ne sont pas garantis, les dommages causés :"
+  ],
+  "values": [
+   "3.1.10.3.1.",
+   "à des biens dont l'Assuré est locataire ou occupant à titre gratuit, ainsi qu'à ceux qui lui ont été confiés ;"
+  ],
+  "serialized": ": 3.1.10.3.1. | Ne sont pas garantis, les dommages causés :: à des biens dont l'Assuré est locataire ou occupant à titre gratuit, ainsi qu'à ceux qui lui ont été confiés ;",
+  "families": [
+   "rc",
+   "exclusions_generales"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t13_r2",
+  "clause_id": "3_1_10",
+  "page": 51,
+  "headers": [
+   "",
+   "Ne sont pas garantis, les dommages causés :"
+  ],
+  "values": [
+   "3.1.10.3.2.",
+   "par le fait de l'exercice d'une profession ;"
+  ],
+  "serialized": ": 3.1.10.3.2. | Ne sont pas garantis, les dommages causés :: par le fait de l'exercice d'une profession ;",
+  "families": [
+   "exclusions_generales"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t13_r3",
+  "clause_id": "3_1_10",
+  "page": 51,
+  "headers": [
+   "",
+   "Ne sont pas garantis, les dommages causés :"
+  ],
+  "values": [
+   "3.1.10.3.3.",
+   "aux biens par le feu, la fumée, l'eau, l'explosion, l'implosion, le déplacement du sol ou du bâtiment ;"
+  ],
+  "serialized": ": 3.1.10.3.3. | Ne sont pas garantis, les dommages causés :: aux biens par le feu, la fumée, l'eau, l'explosion, l'implosion, le déplacement du sol ou du bâtiment ;",
+  "families": [
+   "incendie",
+   "exclusions_generales",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t13_r4",
+  "clause_id": "3_1_10",
+  "page": 51,
+  "headers": [
+   "",
+   "Ne sont pas garantis, les dommages causés :"
+  ],
+  "values": [
+   "3.1.10.3.4.",
+   "par la présence ou la dispersion d'amiante, de fibres d'amiante ou de produits contenant de l'amiante"
+  ],
+  "serialized": ": 3.1.10.3.4. | Ne sont pas garantis, les dommages causés :: par la présence ou la dispersion d'amiante, de fibres d'amiante ou de produits contenant de l'amiante",
+  "families": [
+   "exclusions_generales"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t13_r5",
+  "clause_id": "3_1_10",
+  "page": 51,
+  "headers": [
+   "",
+   "Ne sont pas garantis, les dommages causés :"
+  ],
+  "values": [
+   "3.1.10.3.5.",
+   "par le fait des terrains non attenants dont l'Assuré est propriétaire."
+  ],
+  "serialized": ": 3.1.10.3.5. | Ne sont pas garantis, les dommages causés :: par le fait des terrains non attenants dont l'Assuré est propriétaire.",
+  "families": [
+   "exclusions_generales"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t14_r1",
+  "clause_id": "3_2_2",
+  "page": 59,
+  "headers": [
+   "",
+   "Ne sont pas couverts dans le cadre de cette garantie les dommages :"
+  ],
+  "values": [
+   "3.2.1.2.1.",
+   "survenus alors que le bâtiment est en cours de construction, transformation ou rénovation"
+  ],
+  "serialized": ": 3.2.1.2.1. | Ne sont pas couverts dans le cadre de cette garantie les dommages :: survenus alors que le bâtiment est en cours de construction, transformation ou rénovation",
+  "families": [
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t14_r2",
+  "clause_id": "3_2_2",
+  "page": 59,
+  "headers": [
+   "",
+   "Ne sont pas couverts dans le cadre de cette garantie les dommages :"
+  ],
+  "values": [
+   "3.2.1.2.2.",
+   "survenus aux objets se trouvant à l'extérieur du bâtiment sauf s'ils sont fixés à demeure ;"
+  ],
+  "serialized": ": 3.2.1.2.2. | Ne sont pas couverts dans le cadre de cette garantie les dommages :: survenus aux objets se trouvant à l'extérieur du bâtiment sauf s'ils sont fixés à demeure ;",
+  "families": [
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t14_r3",
+  "clause_id": "3_2_2",
+  "page": 59,
+  "headers": [
+   "",
+   "Ne sont pas couverts dans le cadre de cette garantie les dommages :"
+  ],
+  "values": [
+   "3.2.1.2.3.",
+   "aux constructions faciles à déplacer ou à démonter, délabrées ou en cours de démolition de même qu'à leur éventuel contenu ;"
+  ],
+  "serialized": ": 3.2.1.2.3. | Ne sont pas couverts dans le cadre de cette garantie les dommages :: aux constructions faciles à déplacer ou à démonter, délabrées ou en cours de démolition de même qu'à leur éventuel contenu ;",
+  "families": [
+   "tempete",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t14_r4",
+  "clause_id": "3_2_2",
+  "page": 59,
+  "headers": [
+   "",
+   "Ne sont pas couverts dans le cadre de cette garantie les dommages :"
+  ],
+  "values": [
+   "3.2.1.2.4.",
+   "aux dépendances et abris de jardins qui ne reposent pas sur des fondations, aux jardins et plantations, aux terrains de golf ou de tennis ;"
+  ],
+  "serialized": ": 3.2.1.2.4. | Ne sont pas couverts dans le cadre de cette garantie les dommages :: aux dépendances et abris de jardins qui ne reposent pas sur des fondations, aux jardins et plantations, aux terrains de golf ou de tennis ;",
+  "families": [
+   "bris_glace",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t14_r5",
+  "clause_id": "3_2_2",
+  "page": 59,
+  "headers": [
+   "",
+   "Ne sont pas couverts dans le cadre de cette garantie les dommages :"
+  ],
+  "values": [
+   "3.2.1.2.5.",
+   "aux véhicules terrestres à moteur, aériens, maritimes ou fluviaux."
+  ],
+  "serialized": ": 3.2.1.2.5. | Ne sont pas couverts dans le cadre de cette garantie les dommages :: aux véhicules terrestres à moteur, aériens, maritimes ou fluviaux.",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t15_r1",
+  "clause_id": "4_1_1",
+  "page": 71,
+  "headers": [
+   "4.1.1.5.11.",
+   "d'incendie, d'explosion, de jets de flammes, d'étincelles ou du fait de l'eau. La garantie s'applique notamment à l'occasion de pique-nique, camping ou caravaning ;"
+  ],
+  "values": [
+   "4.1.1.5.12.",
+   "de l'intoxication ou de l'empoisonnement causé par les boissons ou aliments servis à la table de l'Assuré ;"
+  ],
+  "serialized": "4.1.1.5.11.: 4.1.1.5.12. | d'incendie, d'explosion, de jets de flammes, d'étincelles ou du fait de l'eau. La garantie s'applique notamment à l'occasion de pique-nique, camping ou caravaning ;: de l'intoxication ou de l'empoisonnement causé par les boissons ou aliments servis à la table de l'Assuré ;",
+  "families": [
+   "incendie"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t15_r2",
+  "clause_id": "4_1_1",
+  "page": 71,
+  "headers": [
+   "4.1.1.5.11.",
+   "d'incendie, d'explosion, de jets de flammes, d'étincelles ou du fait de l'eau. La garantie s'applique notamment à l'occasion de pique-nique, camping ou caravaning ;"
+  ],
+  "values": [
+   "4.1.1.5.13.",
+   "du fait d'animaux ou de véhicules quelconques n'appartenant pas à l'Assuré et dont il n'a pas la garde lorsqu'il est obligé de les déplacer à la main sur quelques mètres ;"
+  ],
+  "serialized": "4.1.1.5.11.: 4.1.1.5.13. | d'incendie, d'explosion, de jets de flammes, d'étincelles ou du fait de l'eau. La garantie s'applique notamment à l'occasion de pique-nique, camping ou caravaning ;: du fait d'animaux ou de véhicules quelconques n'appartenant pas à l'Assuré et dont il n'a pas la garde lorsqu'il est obligé de les déplacer à la main sur quelques mètres ;",
+  "families": [
+   "incendie"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t15_r3",
+  "clause_id": "4_1_1",
+  "page": 71,
+  "headers": [
+   "4.1.1.5.11.",
+   "d'incendie, d'explosion, de jets de flammes, d'étincelles ou du fait de l'eau. La garantie s'applique notamment à l'occasion de pique-nique, camping ou caravaning ;"
+  ],
+  "values": [
+   "4.1.1.5.14.",
+   "du fait de l'Assuré ayant pris place dans un véhicule en qualité de passager. La garantie est accordée à partir du moment où celui-ci monte dans le véhicule jusque et y compris le moment où il en descend, mais ne s'applique que dans la mesure où les dommages ne sont pas couverts par un contrat d'assurance couvrant les dégâts au véhicule ;"
+  ],
+  "serialized": "4.1.1.5.11.: 4.1.1.5.14. | d'incendie, d'explosion, de jets de flammes, d'étincelles ou du fait de l'eau. La garantie s'applique notamment à l'occasion de pique-nique, camping ou caravaning ;: du fait de l'Assuré ayant pris place dans un véhicule en qualité de passager. La garantie est accordée à partir du moment où celui-ci monte dans le véhicule jusque et y compris le moment où il en descend, mais ne s'applique que dans la mesure où les dommages ne sont pas couverts par un contrat d'assurance couvrant les dégâts au véhicule ;",
+  "families": [
+   "incendie"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t15_r4",
+  "clause_id": "4_1_1",
+  "page": 71,
+  "headers": [
+   "4.1.1.5.11.",
+   "d'incendie, d'explosion, de jets de flammes, d'étincelles ou du fait de l'eau. La garantie s'applique notamment à l'occasion de pique-nique, camping ou caravaning ;"
+  ],
+  "values": [
+   "4.1.1.5.15.",
+   "de l'usage, à l'insu du Preneur d'assurance et de son conjoint, par un de leurs enfants ou toute autre personne dont lui ou son conjoint est civilement responsable, d'un véhicule terrestre à moteur ne leur appartenant pas et dont ils ne sont pas gardiens autorisés. La garantie est étendue à la responsabilité personnelle de l'enfant à condition qu'il ait utilisé le véhicule à l'insu de son gardien et que, s'il n'est pas titulaire du permis de conduire, il n'ait pas au moment du dommage, dépassé de plus de trois mois l'âge minimum requis pour son obtention. Ne sont pas couverts au titre du présent point les dommages subis par le véhicule."
+  ],
+  "serialized": "4.1.1.5.11.: 4.1.1.5.15. | d'incendie, d'explosion, de jets de flammes, d'étincelles ou du fait de l'eau. La garantie s'applique notamment à l'occasion de pique-nique, camping ou caravaning ;: de l'usage, à l'insu du Preneur d'assurance et de son conjoint, par un de leurs enfants ou toute autre personne dont lui ou son conjoint est civilement responsable, d'un véhicule terrestre à moteur ne leur appartenant pas et dont ils ne sont pas gardiens autorisés. La garantie est étendue à la responsabilité personnelle de l'enfant à condition qu'il ait utilisé le véhicule à l'insu de son gardien et que, s'il n'est pas titulaire du permis de conduire, il n'ait pas au moment du dommage, dépassé de plus de trois mois l'âge minimum requis pour son obtention. Ne sont pas couverts au titre du présent point les dommages subis par le véhicule.",
+  "families": [
+   "incendie",
+   "rc",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t16_r1",
+  "clause_id": "4_1_2",
+  "page": 73,
+  "headers": [
+   "4.1.1.8.4.",
+   "les dommages survenant aux objets, immeubles ou animaux qui sont confiés à l'Assuré à un titre quelconque, soit pour les garder, les utiliser, les travailler, les transporter ou dans tout autre but ;"
+  ],
+  "values": [
+   "4.1.1.8.5.",
+   "les dommages subis par une personne apportant une aide à titre gratuit à l'Assuré, lorsque ceux-ci relèvent de l'application de la législation sur les Accidents du Travail ;"
+  ],
+  "serialized": "4.1.1.8.4.: 4.1.1.8.5. | les dommages survenant aux objets, immeubles ou animaux qui sont confiés à l'Assuré à un titre quelconque, soit pour les garder, les utiliser, les travailler, les transporter ou dans tout autre but ;: les dommages subis par une personne apportant une aide à titre gratuit à l'Assuré, lorsque ceux-ci relèvent de l'application de la législation sur les Accidents du Travail ;",
+  "families": [
+   "tempete",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t16_r2",
+  "clause_id": "4_1_2",
+  "page": 73,
+  "headers": [
+   "4.1.1.8.4.",
+   "les dommages survenant aux objets, immeubles ou animaux qui sont confiés à l'Assuré à un titre quelconque, soit pour les garder, les utiliser, les travailler, les transporter ou dans tout autre but ;"
+  ],
+  "values": [
+   "4.1.1.8.6.",
+   "les dommages matériels et immatériels d'incendie, d'explosion, ou d'eau, lorsque l'événement dommageable a son origine dans les locaux ou immeubles appartenant à l'Assuré ou occupés par lui à quelque titre que ce soit ;"
+  ],
+  "serialized": "4.1.1.8.4.: 4.1.1.8.6. | les dommages survenant aux objets, immeubles ou animaux qui sont confiés à l'Assuré à un titre quelconque, soit pour les garder, les utiliser, les travailler, les transporter ou dans tout autre but ;: les dommages matériels et immatériels d'incendie, d'explosion, ou d'eau, lorsque l'événement dommageable a son origine dans les locaux ou immeubles appartenant à l'Assuré ou occupés par lui à quelque titre que ce soit ;",
+  "families": [
+   "incendie",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t16_r3",
+  "clause_id": "4_1_2",
+  "page": 73,
+  "headers": [
+   "4.1.1.8.4.",
+   "les dommages survenant aux objets, immeubles ou animaux qui sont confiés à l'Assuré à un titre quelconque, soit pour les garder, les utiliser, les travailler, les transporter ou dans tout autre but ;"
+  ],
+  "values": [
+   "4.1.1.8.7.",
+   "les dommages engageant une responsabilité civile soumise à une assurance rendue obligatoire au Grand-Duché du Luxembourg. Restent cependant couverts les sports pratiqués à l'étranger au moyen d'un bateau de plaisance ou d'une planche à voile pris en location ;"
+  ],
+  "serialized": "4.1.1.8.4.: 4.1.1.8.7. | les dommages survenant aux objets, immeubles ou animaux qui sont confiés à l'Assuré à un titre quelconque, soit pour les garder, les utiliser, les travailler, les transporter ou dans tout autre but ;: les dommages engageant une responsabilité civile soumise à une assurance rendue obligatoire au Grand-Duché du Luxembourg. Restent cependant couverts les sports pratiqués à l'étranger au moyen d'un bateau de plaisance ou d'une planche à voile pris en location ;",
+  "families": [
+   "rc",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t16_r4",
+  "clause_id": "4_1_2",
+  "page": 73,
+  "headers": [
+   "4.1.1.8.4.",
+   "les dommages survenant aux objets, immeubles ou animaux qui sont confiés à l'Assuré à un titre quelconque, soit pour les garder, les utiliser, les travailler, les transporter ou dans tout autre but ;"
+  ],
+  "values": [
+   "4.1.1.8.8.",
+   "les dommages causés par les étangs et autres pièces d'eau situés à une autre adresse que la résidence principale ;"
+  ],
+  "serialized": "4.1.1.8.4.: 4.1.1.8.8. | les dommages survenant aux objets, immeubles ou animaux qui sont confiés à l'Assuré à un titre quelconque, soit pour les garder, les utiliser, les travailler, les transporter ou dans tout autre but ;: les dommages causés par les étangs et autres pièces d'eau situés à une autre adresse que la résidence principale ;",
+  "families": [
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t16_r5",
+  "clause_id": "4_1_2",
+  "page": 73,
+  "headers": [
+   "4.1.1.8.4.",
+   "les dommages survenant aux objets, immeubles ou animaux qui sont confiés à l'Assuré à un titre quelconque, soit pour les garder, les utiliser, les travailler, les transporter ou dans tout autre but ;"
+  ],
+  "values": [
+   "4.1.1.8.9.",
+   "les dommages liés à un glissement, affaissement ou tassement de terrain."
+  ],
+  "serialized": "4.1.1.8.4.: 4.1.1.8.9. | les dommages survenant aux objets, immeubles ou animaux qui sont confiés à l'Assuré à un titre quelconque, soit pour les garder, les utiliser, les travailler, les transporter ou dans tout autre but ;: les dommages liés à un glissement, affaissement ou tassement de terrain.",
+  "families": [
+   "catnat",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t17_r1",
+  "clause_id": "4_1_3",
+  "page": 75,
+  "headers": [
+   "",
+   "Outre les exclusions prévues aux conditions générales communes à toutes les garanties, la Compagnie ne garantit pas :"
+  ],
+  "values": [
+   "4.1.2.7.1.",
+   "les dommages causés par des produits ou marchandises après leur livraison ;"
+  ],
+  "serialized": ": 4.1.2.7.1. | Outre les exclusions prévues aux conditions générales communes à toutes les garanties, la Compagnie ne garantit pas :: les dommages causés par des produits ou marchandises après leur livraison ;",
+  "families": [
+   "exclusions_generales"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t17_r2",
+  "clause_id": "4_1_3",
+  "page": 75,
+  "headers": [
+   "",
+   "Outre les exclusions prévues aux conditions générales communes à toutes les garanties, la Compagnie ne garantit pas :"
+  ],
+  "values": [
+   "4.1.2.7.2.",
+   "les dommages causés par l'emploi de produits toxiques non autorisé préalablement par les autorités compétentes ;"
+  ],
+  "serialized": ": 4.1.2.7.2. | Outre les exclusions prévues aux conditions générales communes à toutes les garanties, la Compagnie ne garantit pas :: les dommages causés par l'emploi de produits toxiques non autorisé préalablement par les autorités compétentes ;",
+  "families": [
+   "exclusions_generales"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t17_r3",
+  "clause_id": "4_1_3",
+  "page": 75,
+  "headers": [
+   "",
+   "Outre les exclusions prévues aux conditions générales communes à toutes les garanties, la Compagnie ne garantit pas :"
+  ],
+  "values": [
+   "4.1.2.7.3.",
+   "les dégâts causés par le gibier aux cultures et plantations ;"
+  ],
+  "serialized": ": 4.1.2.7.3. | Outre les exclusions prévues aux conditions générales communes à toutes les garanties, la Compagnie ne garantit pas :: les dégâts causés par le gibier aux cultures et plantations ;",
+  "families": [
+   "exclusions_generales"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t17_r4",
+  "clause_id": "4_1_3",
+  "page": 75,
+  "headers": [
+   "",
+   "Outre les exclusions prévues aux conditions générales communes à toutes les garanties, la Compagnie ne garantit pas :"
+  ],
+  "values": [
+   "4.1.2.7.4.",
+   "la responsabilité civile du Preneur d'assurance comme propriétaire, locataire ou occupant à quelque titre que ce soit, de bâtiments et abris de chasse fixes ou mobiles, sauf convention contraire. En cas de convention contraire, restent toujours exclus les dégâts matériels causés par le feu ou les explosions, si ces événements ont pris naissance dans le bâtiment ou l'abri de chasse ;"
+  ],
+  "serialized": ": 4.1.2.7.4. | Outre les exclusions prévues aux conditions générales communes à toutes les garanties, la Compagnie ne garantit pas :: la responsabilité civile du Preneur d'assurance comme propriétaire, locataire ou occupant à quelque titre que ce soit, de bâtiments et abris de chasse fixes ou mobiles, sauf convention contraire. En cas de convention contraire, restent toujours exclus les dégâts matériels causés par le feu ou les explosions, si ces événements ont pris naissance dans le bâtiment ou l'abri de chasse ;",
+  "families": [
+   "incendie",
+   "tempete",
+   "bris_glace",
+   "rc",
+   "exclusions_generales",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t17_r5",
+  "clause_id": "4_1_3",
+  "page": 75,
+  "headers": [
+   "",
+   "Outre les exclusions prévues aux conditions générales communes à toutes les garanties, la Compagnie ne garantit pas :"
+  ],
+  "values": [
+   "4.1.2.7.5.",
+   "la responsabilité découlant de la propriété, de la garde ou de l'usage d'un véhicule à moteur de toute catégorie ;"
+  ],
+  "serialized": ": 4.1.2.7.5. | Outre les exclusions prévues aux conditions générales communes à toutes les garanties, la Compagnie ne garantit pas :: la responsabilité découlant de la propriété, de la garde ou de l'usage d'un véhicule à moteur de toute catégorie ;",
+  "families": [
+   "rc",
+   "exclusions_generales"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t17_r6",
+  "clause_id": "4_1_3",
+  "page": 75,
+  "headers": [
+   "",
+   "Outre les exclusions prévues aux conditions générales communes à toutes les garanties, la Compagnie ne garantit pas :"
+  ],
+  "values": [
+   "4.1.2.7.6.",
+   "les dommages causés aux objets ou animaux confiés au Preneur d'assurance ou Assuré à quelque titre que ce soit."
+  ],
+  "serialized": ": 4.1.2.7.6. | Outre les exclusions prévues aux conditions générales communes à toutes les garanties, la Compagnie ne garantit pas :: les dommages causés aux objets ou animaux confiés au Preneur d'assurance ou Assuré à quelque titre que ce soit.",
+  "families": [
+   "exclusions_generales",
+   "biens_assures"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t18_r1",
+  "clause_id": "4_1_4",
+  "page": 93,
+  "headers": [
+   "Défense des intérêts de l'Assuré (*) (**) Expertises diverses (défense amiable et judiciaire) 1 er instance (défense judiciaire) Appel (défense judiciaire)",
+   "2.500 € 5.750 €",
+   "par sinistre et par année d'assurance",
+   "Groupe I"
+  ],
+  "values": [
+   "",
+   "5.750 €",
+   "par sinistre et par année d'assurance",
+   "Groupe I"
+  ],
+  "serialized": "2.500 € 5.750 €: 5.750 € | par sinistre et par année d'assurance: par sinistre et par année d'assurance | Groupe I: Groupe I",
+  "families": [
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t18_r2",
+  "clause_id": "4_1_4",
+  "page": 93,
+  "headers": [
+   "Défense des intérêts de l'Assuré (*) (**) Expertises diverses (défense amiable et judiciaire) 1 er instance (défense judiciaire) Appel (défense judiciaire)",
+   "2.500 € 5.750 €",
+   "par sinistre et par année d'assurance",
+   "Groupe I"
+  ],
+  "values": [
+   "Cassation (défense judiciaire)",
+   "5.750 €",
+   "par sinistre et par année d'assurance",
+   "Groupe I"
+  ],
+  "serialized": "Défense des intérêts de l'Assuré (*) (**) Expertises diverses (défense amiable et judiciaire) 1 er instance (défense judiciaire) Appel (défense judiciaire): Cassation (défense judiciaire) | 2.500 € 5.750 €: 5.750 € | par sinistre et par année d'assurance: par sinistre et par année d'assurance | Groupe I: Groupe I",
+  "families": [
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t18_r3",
+  "clause_id": "4_1_4",
+  "page": 93,
+  "headers": [
+   "Défense des intérêts de l'Assuré (*) (**) Expertises diverses (défense amiable et judiciaire) 1 er instance (défense judiciaire) Appel (défense judiciaire)",
+   "2.500 € 5.750 €",
+   "par sinistre et par année d'assurance",
+   "Groupe I"
+  ],
+  "values": [
+   "Mise en relation en cas d'at- teinte à l'e-réputation",
+   "5.000 € de prise en charge des frais de nettoyage ou de noyage des informations",
+   "par sinistre et par année d'assurance",
+   "Groupe II"
+  ],
+  "serialized": "Défense des intérêts de l'Assuré (*) (**) Expertises diverses (défense amiable et judiciaire) 1 er instance (défense judiciaire) Appel (défense judiciaire): Mise en relation en cas d'at- teinte à l'e-réputation | 2.500 € 5.750 €: 5.000 € de prise en charge des frais de nettoyage ou de noyage des informations | par sinistre et par année d'assurance: par sinistre et par année d'assurance | Groupe I: Groupe II",
+  "families": [
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t18_r4",
+  "clause_id": "4_1_4",
+  "page": 93,
+  "headers": [
+   "Défense des intérêts de l'Assuré (*) (**) Expertises diverses (défense amiable et judiciaire) 1 er instance (défense judiciaire) Appel (défense judiciaire)",
+   "2.500 € 5.750 €",
+   "par sinistre et par année d'assurance",
+   "Groupe I"
+  ],
+  "values": [
+   "Indemnisation du préjudice subi en cas d'usurpation d'identité",
+   "5.000 € ***",
+   "par sinistre et par année d'assurance",
+   "Groupe II"
+  ],
+  "serialized": "Défense des intérêts de l'Assuré (*) (**) Expertises diverses (défense amiable et judiciaire) 1 er instance (défense judiciaire) Appel (défense judiciaire): Indemnisation du préjudice subi en cas d'usurpation d'identité | 2.500 € 5.750 €: 5.000 € *** | par sinistre et par année d'assurance: par sinistre et par année d'assurance | Groupe I: Groupe II",
+  "families": [
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t18_r5",
+  "clause_id": "4_1_4",
+  "page": 93,
+  "headers": [
+   "Défense des intérêts de l'Assuré (*) (**) Expertises diverses (défense amiable et judiciaire) 1 er instance (défense judiciaire) Appel (défense judiciaire)",
+   "2.500 € 5.750 €",
+   "par sinistre et par année d'assurance",
+   "Groupe I"
+  ],
+  "values": [
+   "Indemnisation du préjudice subi en cas d'utilisation frauduleuse des moyens de paiement",
+   "5.000 € ***",
+   "par sinistre et par année d'assurance",
+   "Groupe II"
+  ],
+  "serialized": "Défense des intérêts de l'Assuré (*) (**) Expertises diverses (défense amiable et judiciaire) 1 er instance (défense judiciaire) Appel (défense judiciaire): Indemnisation du préjudice subi en cas d'utilisation frauduleuse des moyens de paiement | 2.500 € 5.750 €: 5.000 € *** | par sinistre et par année d'assurance: par sinistre et par année d'assurance | Groupe I: Groupe II",
+  "families": [
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t18_r6",
+  "clause_id": "4_1_4",
+  "page": 93,
+  "headers": [
+   "Défense des intérêts de l'Assuré (*) (**) Expertises diverses (défense amiable et judiciaire) 1 er instance (défense judiciaire) Appel (défense judiciaire)",
+   "2.500 € 5.750 €",
+   "par sinistre et par année d'assurance",
+   "Groupe I"
+  ],
+  "values": [
+   "Indemnisation du préjudice subi en cas d'achat d'un bien mobilier corporel auprès d'un e-commerçant",
+   "5.000 €",
+   "par sinistre et par année d'assurance",
+   "Groupe II"
+  ],
+  "serialized": "Défense des intérêts de l'Assuré (*) (**) Expertises diverses (défense amiable et judiciaire) 1 er instance (défense judiciaire) Appel (défense judiciaire): Indemnisation du préjudice subi en cas d'achat d'un bien mobilier corporel auprès d'un e-commerçant | 2.500 € 5.750 €: 5.000 € | par sinistre et par année d'assurance: par sinistre et par année d'assurance | Groupe I: Groupe II",
+  "families": [
+   "biens_assures",
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t19_r1",
+  "clause_id": "4_2_1",
+  "page": 96,
+  "headers": [
+   "4.2.1.2.4.",
+   "en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;"
+  ],
+  "values": [
+   "4.2.1.2.5.",
+   "lorsque la présence de l'Assuré est rendue obligatoire en raison d'un nouveau contrat de travail conclu après la réservation du voyage ;"
+  ],
+  "serialized": "4.2.1.2.4.: 4.2.1.2.5. | en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;: lorsque la présence de l'Assuré est rendue obligatoire en raison d'un nouveau contrat de travail conclu après la réservation du voyage ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t19_r2",
+  "clause_id": "4_2_1",
+  "page": 96,
+  "headers": [
+   "4.2.1.2.4.",
+   "en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;"
+  ],
+  "values": [
+   "4.2.1.2.6.",
+   "lorsque l'Assuré est convoqué pour une greffe d'organe ;"
+  ],
+  "serialized": "4.2.1.2.4.: 4.2.1.2.6. | en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;: lorsque l'Assuré est convoqué pour une greffe d'organe ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t19_r3",
+  "clause_id": "4_2_1",
+  "page": 96,
+  "headers": [
+   "4.2.1.2.4.",
+   "en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;"
+  ],
+  "values": [
+   "4.2.1.2.7.",
+   "lorsque l'Assuré est convoqué pour l'adoption d'un enfant ;"
+  ],
+  "serialized": "4.2.1.2.4.: 4.2.1.2.7. | en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;: lorsque l'Assuré est convoqué pour l'adoption d'un enfant ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t19_r4",
+  "clause_id": "4_2_1",
+  "page": 96,
+  "headers": [
+   "4.2.1.2.4.",
+   "en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;"
+  ],
+  "values": [
+   "4.2.1.2.8.",
+   "lorsque, pour des raisons médicales, l'Assuré ne peut subir les vaccinations nécessaires pour le voyage et que ces vaccinations sont exigées par les autorités locales du lieu de destination ;"
+  ],
+  "serialized": "4.2.1.2.4.: 4.2.1.2.8. | en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;: lorsque, pour des raisons médicales, l'Assuré ne peut subir les vaccinations nécessaires pour le voyage et que ces vaccinations sont exigées par les autorités locales du lieu de destination ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t19_r5",
+  "clause_id": "4_2_1",
+  "page": 96,
+  "headers": [
+   "4.2.1.2.4.",
+   "en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;"
+  ],
+  "values": [
+   "4.2.1.2.9.",
+   "en cas de vol des papiers d'identité ou du visa de l'Assuré dans les 10 jours calendaires précédant le départ et attesté par une déclaration auprès des autorités compétentes ;"
+  ],
+  "serialized": "4.2.1.2.4.: 4.2.1.2.9. | en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;: en cas de vol des papiers d'identité ou du visa de l'Assuré dans les 10 jours calendaires précédant le départ et attesté par une déclaration auprès des autorités compétentes ;",
+  "families": [
+   "vol",
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t19_r6",
+  "clause_id": "4_2_1",
+  "page": 96,
+  "headers": [
+   "4.2.1.2.4.",
+   "en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;"
+  ],
+  "values": [
+   "4.2.1.2.10.",
+   "en cas de divorce, pour autant que la procédure ait été introduite devant les tribunaux après la réservation du voyage et sur présentation d'un document officiel ;"
+  ],
+  "serialized": "4.2.1.2.4.: 4.2.1.2.10. | en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;: en cas de divorce, pour autant que la procédure ait été introduite devant les tribunaux après la réservation du voyage et sur présentation d'un document officiel ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t19_r7",
+  "clause_id": "4_2_1",
+  "page": 96,
+  "headers": [
+   "4.2.1.2.4.",
+   "en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;"
+  ],
+  "values": [
+   "4.2.1.2.11.",
+   "en cas de séparation de droit ou de fait, pour autant que l'un des conjoints ait changé de domicile après la réservation du voyage et sur présentation d'un document officiel ;"
+  ],
+  "serialized": "4.2.1.2.4.: 4.2.1.2.11. | en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;: en cas de séparation de droit ou de fait, pour autant que l'un des conjoints ait changé de domicile après la réservation du voyage et sur présentation d'un document officiel ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t19_r8",
+  "clause_id": "4_2_1",
+  "page": 96,
+  "headers": [
+   "4.2.1.2.4.",
+   "en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;"
+  ],
+  "values": [
+   "4.2.1.2.12.",
+   "en cas de convocation devant un tribunal en qualité de témoin ou juré ;"
+  ],
+  "serialized": "4.2.1.2.4.: 4.2.1.2.12. | en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;: en cas de convocation devant un tribunal en qualité de témoin ou juré ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t19_r9",
+  "clause_id": "4_2_1",
+  "page": 96,
+  "headers": [
+   "4.2.1.2.4.",
+   "en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;"
+  ],
+  "values": [
+   "4.2.1.2.13.",
+   "lorsque la personne chez qui l'Assuré va loger à l'étranger ne peut l'accueillir suite à une maladie grave ou un accident grave tels que définis au point 4.2.1.2.1, ou parce qu'elle est décédée ou qu'un des membres de sa famille (jusqu'au 1er degré) est décédé."
+  ],
+  "serialized": "4.2.1.2.4.: 4.2.1.2.13. | en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;: lorsque la personne chez qui l'Assuré va loger à l'étranger ne peut l'accueillir suite à une maladie grave ou un accident grave tels que définis au point 4.2.1.2.1, ou parce qu'elle est décédée ou qu'un des membres de sa famille (jusqu'au 1er degré) est décédé.",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t19_r10",
+  "clause_id": "4_2_1",
+  "page": 96,
+  "headers": [
+   "4.2.1.2.4.",
+   "en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;"
+  ],
+  "values": [
+   "4.2.1.2.14.",
+   "en cas de dégâts matériels accidentels graves, non réalisés au moment de l'inscription au voyage occasionnés à la résidence principale de l'Assuré, à sa résidence secondaire, ou à ses locaux professionnels, à condition que la présence de l'Assuré suite à ces dégâts soit impérativement requise."
+  ],
+  "serialized": "4.2.1.2.4.: 4.2.1.2.14. | en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;: en cas de dégâts matériels accidentels graves, non réalisés au moment de l'inscription au voyage occasionnés à la résidence principale de l'Assuré, à sa résidence secondaire, ou à ses locaux professionnels, à condition que la présence de l'Assuré suite à ces dégâts soit impérativement requise.",
+  "families": [
+   "dommages_accidentels"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t19_r11",
+  "clause_id": "4_2_1",
+  "page": 96,
+  "headers": [
+   "4.2.1.2.4.",
+   "en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;"
+  ],
+  "values": [
+   "4.2.1.2.15.",
+   "en cas de complications ou troubles de la grossesse de l'Assurée ou d'un membre de sa famille jusqu'au 2ème degré, y compris l'accouchement prématuré avant la 33ème semaine de grossesse"
+  ],
+  "serialized": "4.2.1.2.4.: 4.2.1.2.15. | en cas de licenciement économique de l'Assuré ou d'un des membres de sa famille vivant sous son toit, assuré par ce contrat et mentionné sur le même document de voyage / confirmation, à condition que cette situation n'ait pas été connue au moment de la souscription de cette garantie ;: en cas de complications ou troubles de la grossesse de l'Assurée ou d'un membre de sa famille jusqu'au 2ème degré, y compris l'accouchement prématuré avant la 33ème semaine de grossesse",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t20_r1",
+  "clause_id": "4_2_1",
+  "page": 97,
+  "headers": [
+   "",
+   "Sont exclus de la garantie :"
+  ],
+  "values": [
+   "4.2.1.4.1.",
+   "les voyages à caractère professionnel ;"
+  ],
+  "serialized": ": 4.2.1.4.1. | Sont exclus de la garantie :: les voyages à caractère professionnel ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t20_r2",
+  "clause_id": "4_2_1",
+  "page": 97,
+  "headers": [
+   "",
+   "Sont exclus de la garantie :"
+  ],
+  "values": [
+   "4.2.1.4.2.",
+   "les voyages réservés par l'Assuré avant la date de souscription de la garantie et dont la date de départ est prévue moins d'un mois après sa date de prise d'effet ;"
+  ],
+  "serialized": ": 4.2.1.4.2. | Sont exclus de la garantie :: les voyages réservés par l'Assuré avant la date de souscription de la garantie et dont la date de départ est prévue moins d'un mois après sa date de prise d'effet ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t20_r3",
+  "clause_id": "4_2_1",
+  "page": 97,
+  "headers": [
+   "",
+   "Sont exclus de la garantie :"
+  ],
+  "values": [
+   "4.2.1.4.3.",
+   "l'usage abusif de l'alcool (ivresse, alcoolisme), de médicaments, de drogues ou de stupéfiants ;"
+  ],
+  "serialized": ": 4.2.1.4.3. | Sont exclus de la garantie :: l'usage abusif de l'alcool (ivresse, alcoolisme), de médicaments, de drogues ou de stupéfiants ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t20_r4",
+  "clause_id": "4_2_1",
+  "page": 97,
+  "headers": [
+   "",
+   "Sont exclus de la garantie :"
+  ],
+  "values": [
+   "4.2.1.4.4.",
+   "les maladies psychotiques, mentales ou nerveuses qui n'entraînent pas d'hospitalisation de plus de 7 jours ;"
+  ],
+  "serialized": ": 4.2.1.4.4. | Sont exclus de la garantie :: les maladies psychotiques, mentales ou nerveuses qui n'entraînent pas d'hospitalisation de plus de 7 jours ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t20_r5",
+  "clause_id": "4_2_1",
+  "page": 97,
+  "headers": [
+   "",
+   "Sont exclus de la garantie :"
+  ],
+  "values": [
+   "4.2.1.4.5.",
+   "les actes intentionnels ;"
+  ],
+  "serialized": ": 4.2.1.4.5. | Sont exclus de la garantie :: les actes intentionnels ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t20_r6",
+  "clause_id": "4_2_1",
+  "page": 97,
+  "headers": [
+   "",
+   "Sont exclus de la garantie :"
+  ],
+  "values": [
+   "4.2.1.4.6.",
+   "les accidents et troubles résultant de participation à des paris, crimes, rixes (sauf cas de légitime défense) ;"
+  ],
+  "serialized": ": 4.2.1.4.6. | Sont exclus de la garantie :: les accidents et troubles résultant de participation à des paris, crimes, rixes (sauf cas de légitime défense) ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t20_r7",
+  "clause_id": "4_2_1",
+  "page": 97,
+  "headers": [
+   "",
+   "Sont exclus de la garantie :"
+  ],
+  "values": [
+   "4.2.1.4.7.",
+   "les accidents et troubles résultant de participation, à titre professionnel ou sous contrat avec rémunération, à tout sport ou compétition ainsi qu'aux entrainements préparatoires ;"
+  ],
+  "serialized": ": 4.2.1.4.7. | Sont exclus de la garantie :: les accidents et troubles résultant de participation, à titre professionnel ou sous contrat avec rémunération, à tout sport ou compétition ainsi qu'aux entrainements préparatoires ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t20_r8",
+  "clause_id": "4_2_1",
+  "page": 97,
+  "headers": [
+   "",
+   "Sont exclus de la garantie :"
+  ],
+  "values": [
+   "4.2.1.4.8.",
+   "les accidents résultant de la pratique en tant qu'amateur et n'importe quel niveau, des sports suivants : sports mécaniques (auto, moto, tout véhicule motorisé), sports aériens, alpinisme, sports de glisse donnant lieu à un classement international, national ou régional, skeleton, sports de combat, spéléologie."
+  ],
+  "serialized": ": 4.2.1.4.8. | Sont exclus de la garantie :: les accidents résultant de la pratique en tant qu'amateur et n'importe quel niveau, des sports suivants : sports mécaniques (auto, moto, tout véhicule motorisé), sports aériens, alpinisme, sports de glisse donnant lieu à un classement international, national ou régional, skeleton, sports de combat, spéléologie.",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t20_r9",
+  "clause_id": "4_2_1",
+  "page": 97,
+  "headers": [
+   "",
+   "Sont exclus de la garantie :"
+  ],
+  "values": [
+   "4.2.1.4.9.",
+   "les épidémies, la pollution du milieu naturel et les catastrophes naturelles ;"
+  ],
+  "serialized": ": 4.2.1.4.9. | Sont exclus de la garantie :: les épidémies, la pollution du milieu naturel et les catastrophes naturelles ;",
+  "families": [
+   "catnat"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t20_r10",
+  "clause_id": "4_2_1",
+  "page": 97,
+  "headers": [
+   "",
+   "Sont exclus de la garantie :"
+  ],
+  "values": [
+   "4.2.1.4.10.",
+   "les grèves, les guerres et les guerres civiles, les émeutes, les mouvements populaires, les actes de terrorisme ;"
+  ],
+  "serialized": ": 4.2.1.4.10. | Sont exclus de la garantie :: les grèves, les guerres et les guerres civiles, les émeutes, les mouvements populaires, les actes de terrorisme ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t20_r11",
+  "clause_id": "4_2_1",
+  "page": 97,
+  "headers": [
+   "",
+   "Sont exclus de la garantie :"
+  ],
+  "values": [
+   "4.2.1.4.11.",
+   "tout effet de rayonnement radioactif ainsi que l'inobservation consciente d'interdictions officielles ;"
+  ],
+  "serialized": ": 4.2.1.4.11. | Sont exclus de la garantie :: tout effet de rayonnement radioactif ainsi que l'inobservation consciente d'interdictions officielles ;",
+  "families": []
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t20_r12",
+  "clause_id": "4_2_1",
+  "page": 97,
+  "headers": [
+   "",
+   "Sont exclus de la garantie :"
+  ],
+  "values": [
+   "4.2.1.4.12.",
+   "les annulations et modifications consécutives à une interruption volontaire de grossesse ;"
+  ],
+  "serialized": ": 4.2.1.4.12. | Sont exclus de la garantie :: les annulations et modifications consécutives à une interruption volontaire de grossesse ;",
+  "families": [
+   "vol"
+  ]
+ },
+ {
+  "contract_id": "axa_optihome_2025",
+  "row_id": "t20_r13",
+  "clause_id": "4_2_1",
+  "page": 97,
+  "headers": [
+   "",
+   "Sont exclus de la garantie :"
+  ],
+  "values": [
+   "4.2.1.4.13.",
+   "les annulations et modifications consécutives au fait que l'Assuré ne peut pas voyager ou choisit de ne pas le faire parce que le ministère des Affaires étrangères (ou tout organisme gouvernemental équivalent dans un autre pays) déconseille de voyager en raison d'une pandémie."
+  ],
+  "serialized": ": 4.2.1.4.13. | Sont exclus de la garantie :: les annulations et modifications consécutives au fait que l'Assuré ne peut pas voyager ou choisit de ne pas le faire parce que le ministère des Affaires étrangères (ou tout organisme gouvernemental équivalent dans un autre pays) déconseille de voyager en raison d'une pandémie.",
+  "families": []
+ }
+]

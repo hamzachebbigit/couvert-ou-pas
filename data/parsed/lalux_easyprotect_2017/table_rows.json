@@ -1,0 +1,326 @@
+[
+ {
+  "contract_id": "lalux_easyprotect_2017",
+  "row_id": "t13_r1",
+  "clause_id": "conditions_administratives__resiliation__resiliation_facultative",
+  "page": 105,
+  "headers": [
+   "",
+   "Droit de résiliation Délais de notification de la résiliation Effet de la résiliation",
+   ""
+  ],
+  "values": [
+   "chaque année à la date d'échéance de la prime annuelle du contrat; ou, à défaut de date d ' échéance , chaque année pour la date anniversaire de la prise d'effet du contrat;",
+   "30 jours avant la date d'échéance de la prime annuelle du contrat; 30 jours avant la date anniversaire de la prise d'effet du contrat;",
+   "le 2e jour ouvrable suivant la date d'envoi de la lettre de résiliation, et au plus tôt à la date d'échéance de la prime annuelle ou à la date anniversaire de la prise d'effet du contrat;"
+  ],
+  "serialized": ": chaque année à la date d'échéance de la prime annuelle du contrat; ou, à défaut de date d ' échéance , chaque année pour la date anniversaire de la prise d'effet du contrat; | Droit de résiliation Délais de notification de la résiliation Effet de la résiliation: 30 jours avant la date d'échéance de la prime annuelle du contrat; 30 jours avant la date anniversaire de la prise d'effet du contrat; | : le 2e jour ouvrable suivant la date d'envoi de la lettre de résiliation, et au plus tôt à la date d'échéance de la prime annuelle ou à la date anniversaire de la prise d'effet du contrat;",
+  "families": []
+ },
+ {
+  "contract_id": "lalux_easyprotect_2017",
+  "row_id": "t13_r2",
+  "clause_id": "conditions_administratives__resiliation__resiliation_facultative",
+  "page": 105,
+  "headers": [
+   "",
+   "Droit de résiliation Délais de notification de la résiliation Effet de la résiliation",
+   ""
+  ],
+  "values": [
+   "chaque année à la date d'échéance de la prime annuelle du contrat; ou, à défaut de date d ' échéance , chaque année pour la date anniversaire de la prise d'effet du contrat;",
+   "pour la date de reconduction tacite; 30 jours avant la date de reconduction tacite;",
+   "le 2e jour ouvrable suivant la date d'envoi de la lettre de résiliation, et au plus tôt à la date de reconduction du contrat;"
+  ],
+  "serialized": ": chaque année à la date d'échéance de la prime annuelle du contrat; ou, à défaut de date d ' échéance , chaque année pour la date anniversaire de la prise d'effet du contrat; | Droit de résiliation Délais de notification de la résiliation Effet de la résiliation: pour la date de reconduction tacite; 30 jours avant la date de reconduction tacite; | : le 2e jour ouvrable suivant la date d'envoi de la lettre de résiliation, et au plus tôt à la date de reconduction du contrat;",
+  "families": []
+ },
+ {
+  "contract_id": "lalux_easyprotect_2017",
+  "row_id": "t13_r3",
+  "clause_id": "conditions_administratives__resiliation__resiliation_facultative",
+  "page": 105,
+  "headers": [
+   "",
+   "Droit de résiliation Délais de notification de la résiliation Effet de la résiliation",
+   ""
+  ],
+  "values": [
+   "si la Compagnie a résilié: a. une ou plusieurs autres garanties couvertes par le contrat d'assurance; b. un autre contrat d'assurance du preneur d'assurance après sinistre;",
+   "dans le mois suivant la notification de la résiliation par la Compagnie;",
+   "à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation du présent contrat par le preneur d'assurance;"
+  ],
+  "serialized": ": si la Compagnie a résilié: a. une ou plusieurs autres garanties couvertes par le contrat d'assurance; b. un autre contrat d'assurance du preneur d'assurance après sinistre; | Droit de résiliation Délais de notification de la résiliation Effet de la résiliation: dans le mois suivant la notification de la résiliation par la Compagnie; | : à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation du présent contrat par le preneur d'assurance;",
+  "families": [
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "lalux_easyprotect_2017",
+  "row_id": "t13_r4",
+  "clause_id": "conditions_administratives__resiliation__resiliation_facultative",
+  "page": 105,
+  "headers": [
+   "",
+   "Droit de résiliation Délais de notification de la résiliation Effet de la résiliation",
+   ""
+  ],
+  "values": [
+   "en cas d'augmentation tarifaire, dans les conditions prévues au paragraphe «Augmentation tarifaire» des Conditions Administratives;",
+   "60 jours à compter de la date d'envoi de l'avis d'échéance portant information de l'augmentation tarifaire;",
+   "le 2e jour ouvrable suivant la date d'envoi de la lettre de résiliation, et au plus tôt à la date d'effet de l'adaptation tarifaire;"
+  ],
+  "serialized": ": en cas d'augmentation tarifaire, dans les conditions prévues au paragraphe «Augmentation tarifaire» des Conditions Administratives; | Droit de résiliation Délais de notification de la résiliation Effet de la résiliation: 60 jours à compter de la date d'envoi de l'avis d'échéance portant information de l'augmentation tarifaire; | : le 2e jour ouvrable suivant la date d'envoi de la lettre de résiliation, et au plus tôt à la date d'effet de l'adaptation tarifaire;",
+  "families": []
+ },
+ {
+  "contract_id": "lalux_easyprotect_2017",
+  "row_id": "t13_r5",
+  "clause_id": "conditions_administratives__resiliation__resiliation_facultative",
+  "page": 105,
+  "headers": [
+   "",
+   "Droit de résiliation Délais de notification de la résiliation Effet de la résiliation",
+   ""
+  ],
+  "values": [
+   "à défaut d'accord sur la fixation de la nouvelle prime en cas de diminution sensible et durable du risque, dans les conditions prévues à l'article B.1. du paragraphe «Déclaration à la souscription et en cours de contrat»;",
+   "dans le mois suivant: * la notification par la Compagnie de son refus de diminuer la prime, sinon après * l'écoulement du délai d'un mois suivant la demande de diminution de prime de la part du preneur d'assurance sans que les parties contractantes n'aient pu se mettre d'accord sur la fixation de la nouvelle prime;",
+   "à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation;"
+  ],
+  "serialized": ": à défaut d'accord sur la fixation de la nouvelle prime en cas de diminution sensible et durable du risque, dans les conditions prévues à l'article B.1. du paragraphe «Déclaration à la souscription et en cours de contrat»; | Droit de résiliation Délais de notification de la résiliation Effet de la résiliation: dans le mois suivant: * la notification par la Compagnie de son refus de diminuer la prime, sinon après * l'écoulement du délai d'un mois suivant la demande de diminution de prime de la part du preneur d'assurance sans que les parties contractantes n'aient pu se mettre d'accord sur la fixation de la nouvelle prime; | : à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation;",
+  "families": [
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "lalux_easyprotect_2017",
+  "row_id": "t14_r1",
+  "clause_id": "conditions_administratives__resiliation__resiliation_facultative",
+  "page": 106,
+  "headers": [
+   "",
+   "Droit de résiliation Délais de notification de la résiliation Effet de la résiliation",
+   ""
+  ],
+  "values": [
+   "chaque année à la date d'échéance de la prime annuelle du contrat; ou, à défaut de date d ' échéance ,",
+   "60 jours avant la date d'échéance de la prime annuelle du contrat;",
+   "le 2e jour ouvrable suivant la date d'envoi de la lettre de résiliation, et au plus tôt à la date d'échéance de la prime annuelle ou à la date anniversaire de la prise d'effet du contrat"
+  ],
+  "serialized": ": chaque année à la date d'échéance de la prime annuelle du contrat; ou, à défaut de date d ' échéance , | Droit de résiliation Délais de notification de la résiliation Effet de la résiliation: 60 jours avant la date d'échéance de la prime annuelle du contrat; | : le 2e jour ouvrable suivant la date d'envoi de la lettre de résiliation, et au plus tôt à la date d'échéance de la prime annuelle ou à la date anniversaire de la prise d'effet du contrat",
+  "families": []
+ },
+ {
+  "contract_id": "lalux_easyprotect_2017",
+  "row_id": "t14_r2",
+  "clause_id": "conditions_administratives__resiliation__resiliation_facultative",
+  "page": 106,
+  "headers": [
+   "",
+   "Droit de résiliation Délais de notification de la résiliation Effet de la résiliation",
+   ""
+  ],
+  "values": [
+   "chaque année pour la date anniversaire de la prise d'effet du contrat;",
+   "60 jours avant la date anniversaire de la prise d'effet du contrat; pour la date de reconduction tacite; 60 jours avant la date de reconduction tacite;",
+   "le 2e jour ouvrable suivant la date d'envoi de la lettre de résiliation, et au plus tôt à la date de reconduction du contrat;"
+  ],
+  "serialized": ": chaque année pour la date anniversaire de la prise d'effet du contrat; | Droit de résiliation Délais de notification de la résiliation Effet de la résiliation: 60 jours avant la date anniversaire de la prise d'effet du contrat; pour la date de reconduction tacite; 60 jours avant la date de reconduction tacite; | : le 2e jour ouvrable suivant la date d'envoi de la lettre de résiliation, et au plus tôt à la date de reconduction du contrat;",
+  "families": []
+ },
+ {
+  "contract_id": "lalux_easyprotect_2017",
+  "row_id": "t14_r3",
+  "clause_id": "conditions_administratives__resiliation__resiliation_facultative",
+  "page": 106,
+  "headers": [
+   "",
+   "Droit de résiliation Délais de notification de la résiliation Effet de la résiliation",
+   ""
+  ],
+  "values": [
+   "après la survenance d'un sinistre donnant lieu à indemnisation;",
+   "dans le mois du premier paiement de la prestation;",
+   "à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation;"
+  ],
+  "serialized": ": après la survenance d'un sinistre donnant lieu à indemnisation; | Droit de résiliation Délais de notification de la résiliation Effet de la résiliation: dans le mois du premier paiement de la prestation; | : à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation;",
+  "families": [
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "lalux_easyprotect_2017",
+  "row_id": "t14_r4",
+  "clause_id": "conditions_administratives__resiliation__resiliation_facultative",
+  "page": 106,
+  "headers": [
+   "",
+   "Droit de résiliation Délais de notification de la résiliation Effet de la résiliation",
+   ""
+  ],
+  "values": [
+   "en cas de manquement frauduleux du preneur d'assurance et/ou de l'assuré aux obligations qui leur incombent en cas de sinistre;",
+   "dans le mois de la découverte de la fraude;",
+   "dès la notification de la résiliation;"
+  ],
+  "serialized": ": en cas de manquement frauduleux du preneur d'assurance et/ou de l'assuré aux obligations qui leur incombent en cas de sinistre; | Droit de résiliation Délais de notification de la résiliation Effet de la résiliation: dans le mois de la découverte de la fraude; | : dès la notification de la résiliation;",
+  "families": [
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "lalux_easyprotect_2017",
+  "row_id": "t14_r5",
+  "clause_id": "conditions_administratives__resiliation__resiliation_facultative",
+  "page": 106,
+  "headers": [
+   "",
+   "Droit de résiliation Délais de notification de la résiliation Effet de la résiliation",
+   ""
+  ],
+  "values": [
+   "en cas d'omission ou inexactitude non intentionnelle dans la description du risque lors de la conclusion du contrat, ou en cas d'aggravation du risque en cours de contrat: * si la proposition de modification du contrat, faite au preneur d'assurance dans les conditions prévues au paragraphe «Déclaration à la souscription et en cours de contrat», est refusée ou n'est pas acceptée au terme d'un délai d'un mois; * si la Compagnie apporte la preuve qu'elle n'aurait en aucun cas assuré le risque;",
+   "* dans les quinze jours suivant: - le refus de la part du preneur d'assurance d'accepter cette proposition; - écoulement du délai de réflexion d'un mois, sans que le preneur d'assurance n'ait manifesté son acceptation de la proposition; * dans le mois à compter du jour où la Compagnie a eu connaissance de l'omission, de l'inexactitude ou de",
+   "* à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation; * à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation;"
+  ],
+  "serialized": ": en cas d'omission ou inexactitude non intentionnelle dans la description du risque lors de la conclusion du contrat, ou en cas d'aggravation du risque en cours de contrat: * si la proposition de modification du contrat, faite au preneur d'assurance dans les conditions prévues au paragraphe «Déclaration à la souscription et en cours de contrat», est refusée ou n'est pas acceptée au terme d'un délai d'un mois; * si la Compagnie apporte la preuve qu'elle n'aurait en aucun cas assuré le risque; | Droit de résiliation Délais de notification de la résiliation Effet de la résiliation: * dans les quinze jours suivant: - le refus de la part du preneur d'assurance d'accepter cette proposition; - écoulement du délai de réflexion d'un mois, sans que le preneur d'assurance n'ait manifesté son acceptation de la proposition; * dans le mois à compter du jour où la Compagnie a eu connaissance de l'omission, de l'inexactitude ou de | : * à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation; * à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation;",
+  "families": [
+   "sinistre_procedure",
+   "franchises_plafonds"
+  ]
+ },
+ {
+  "contract_id": "lalux_easyprotect_2017",
+  "row_id": "t14_r6",
+  "clause_id": "conditions_administratives__resiliation__resiliation_facultative",
+  "page": 106,
+  "headers": [
+   "",
+   "Droit de résiliation Délais de notification de la résiliation Effet de la résiliation",
+   ""
+  ],
+  "values": [
+   "en cas de décès du preneur d'assurance; dans les trois mois du jour où la",
+   "l'aggravation du risque; Compagnie a eu connaissance du décès;",
+   "à l'expiration d'un délai d'un mois à de la résiliation;"
+  ],
+  "serialized": ": en cas de décès du preneur d'assurance; dans les trois mois du jour où la | Droit de résiliation Délais de notification de la résiliation Effet de la résiliation: l'aggravation du risque; Compagnie a eu connaissance du décès; | : à l'expiration d'un délai d'un mois à de la résiliation;",
+  "families": []
+ },
+ {
+  "contract_id": "lalux_easyprotect_2017",
+  "row_id": "t14_r7",
+  "clause_id": "conditions_administratives__resiliation__resiliation_facultative",
+  "page": 106,
+  "headers": [
+   "",
+   "Droit de résiliation Délais de notification de la résiliation Effet de la résiliation",
+   ""
+  ],
+  "values": [
+   "en cas de décès du preneur d'assurance; dans les trois mois du jour où la",
+   "",
+   "compter du lendemain de la notification"
+  ],
+  "serialized": ": en cas de décès du preneur d'assurance; dans les trois mois du jour où la | : compter du lendemain de la notification",
+  "families": []
+ },
+ {
+  "contract_id": "lalux_easyprotect_2017",
+  "row_id": "t14_r8",
+  "clause_id": "conditions_administratives__resiliation__resiliation_facultative",
+  "page": 106,
+  "headers": [
+   "",
+   "Droit de résiliation Délais de notification de la résiliation Effet de la résiliation",
+   ""
+  ],
+  "values": [
+   "en cas de faillite du preneur d'assurance;",
+   "dans le mois suivant l'expiration d'un délai de trois mois après la déclaration en faillite;",
+   "à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation;"
+  ],
+  "serialized": ": en cas de faillite du preneur d'assurance; | Droit de résiliation Délais de notification de la résiliation Effet de la résiliation: dans le mois suivant l'expiration d'un délai de trois mois après la déclaration en faillite; | : à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation;",
+  "families": [
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "lalux_easyprotect_2017",
+  "row_id": "t14_r9",
+  "clause_id": "conditions_administratives__resiliation__resiliation_facultative",
+  "page": 106,
+  "headers": [
+   "",
+   "Droit de résiliation Délais de notification de la résiliation Effet de la résiliation",
+   ""
+  ],
+  "values": [
+   "à défaut de paiement d'une prime ou d'une fraction de prime.",
+   "selon la procédure prévue au paragraphe «Paiement de la prime».",
+   "à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation;"
+  ],
+  "serialized": ": à défaut de paiement d'une prime ou d'une fraction de prime. | Droit de résiliation Délais de notification de la résiliation Effet de la résiliation: selon la procédure prévue au paragraphe «Paiement de la prime». | : à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation;",
+  "families": []
+ },
+ {
+  "contract_id": "lalux_easyprotect_2017",
+  "row_id": "t15_r1",
+  "clause_id": "conditions_administratives__remboursement_de_la_prime__en_cas_de_resiliation",
+  "page": 107,
+  "headers": [
+   "",
+   "Droit de résiliation Délais de notification de la résiliation Effet de la résiliation",
+   ""
+  ],
+  "values": [
+   "en cas de décès du preneur d'assurance; Si la résiliation n'est pas demandée, le contrat continue sans autres formalités pour compte des ayants droit qui restent solidairement et indivisiblement tenus des obligations découlant de l'assurance et ce jusqu'au transfert de propriété du véhicule assuré ou de son immatricu\u0002 lation à un autre nom.",
+   "dans les trois mois et quarante jours du décès.",
+   "à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation."
+  ],
+  "serialized": ": en cas de décès du preneur d'assurance; Si la résiliation n'est pas demandée, le contrat continue sans autres formalités pour compte des ayants droit qui restent solidairement et indivisiblement tenus des obligations découlant de l'assurance et ce jusqu'au transfert de propriété du véhicule assuré ou de son immatricu\u0002 lation à un autre nom. | Droit de résiliation Délais de notification de la résiliation Effet de la résiliation: dans les trois mois et quarante jours du décès. | : à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation.",
+  "families": [
+   "sinistre_procedure"
+  ]
+ },
+ {
+  "contract_id": "lalux_easyprotect_2017",
+  "row_id": "t16_r1",
+  "clause_id": "conditions_administratives__remboursement_de_la_prime__en_cas_de_resiliation",
+  "page": 107,
+  "headers": [
+   "",
+   "Droit de résiliation Délais de notification de la résiliation Effet de la résiliation",
+   ""
+  ],
+  "values": [
+   "en cas de déconfiture, de faillite ou de concordat préventif de faillite du preneur d'assurance.",
+   "dans les trois mois qui suivent l'événement qui donne naissance à ce droit",
+   "à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation."
+  ],
+  "serialized": ": en cas de déconfiture, de faillite ou de concordat préventif de faillite du preneur d'assurance. | Droit de résiliation Délais de notification de la résiliation Effet de la résiliation: dans les trois mois qui suivent l'événement qui donne naissance à ce droit | : à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation.",
+  "families": [
+   "tempete"
+  ]
+ },
+ {
+  "contract_id": "lalux_easyprotect_2017",
+  "row_id": "t17_r1",
+  "clause_id": "conditions_administratives__remboursement_de_la_prime__en_cas_de_resiliation",
+  "page": 107,
+  "headers": [
+   "Droit de résiliation Délais de notification de la résiliation Effet de la résiliation",
+   ""
+  ],
+  "values": [
+   "en cas de gestion contrôlée. dans les trois mois qui suivent la décision judiciaire de mise sous gestion contrôlée.",
+   "à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation."
+  ],
+  "serialized": "Droit de résiliation Délais de notification de la résiliation Effet de la résiliation: en cas de gestion contrôlée. dans les trois mois qui suivent la décision judiciaire de mise sous gestion contrôlée. | : à l'expiration d'un délai d'un mois à compter du lendemain de la notification de la résiliation.",
+  "families": [
+   "tempete"
+  ]
+ }
+]
