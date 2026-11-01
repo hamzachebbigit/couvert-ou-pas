@@ -1,0 +1,1951 @@
+{
+ "generated_at": "2026-11-01T23:21:41+00:00",
+ "summary": {
+  "n": 75,
+  "accuracy": 0.747,
+  "per_class": {
+   "couvert": {
+    "n": 42,
+    "correct": 36,
+    "accuracy": 0.857
+   },
+   "non_couvert": {
+    "n": 13,
+    "correct": 8,
+    "accuracy": 0.615
+   },
+   "ambigu": {
+    "n": 14,
+    "correct": 7,
+    "accuracy": 0.5
+   },
+   "information_insuffisante": {
+    "n": 6,
+    "correct": 5,
+    "accuracy": 0.833
+   }
+  },
+  "false_covered": {
+   "n": 3,
+   "ids": [
+    "q17_baloise",
+    "q02_lalux",
+    "q16_lalux"
+   ]
+  },
+  "false_not_covered": {
+   "n": 1,
+   "ids": [
+    "q10_baloise"
+   ]
+  },
+  "abstention": {
+   "n": 27,
+   "rate": 0.36,
+   "justified": 16,
+   "justified_rate": 0.593
+  },
+  "citation_hit": {
+   "n": 67,
+   "of": 75,
+   "rate": 0.893
+  },
+  "confusion": {
+   "information_insuffisante": {
+    "ambigu": 1,
+    "information_insuffisante": 5
+   },
+   "non_couvert": {
+    "non_couvert": 8,
+    "ambigu": 3,
+    "information_insuffisante": 2
+   },
+   "couvert": {
+    "couvert": 36,
+    "information_insuffisante": 6
+   },
+   "ambigu": {
+    "ambigu": 7,
+    "non_couvert": 1,
+    "information_insuffisante": 3,
+    "couvert": 3
+   }
+  },
+  "errors": 0
+ },
+ "items": [
+  {
+   "id": "q01_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "On m'a volé mon vélo dans le local commun de l'immeuble, qui n'était pas fermé à clé. Suis-je couvert ?",
+   "expected_verdict": "information_insuffisante",
+   "expected_clauses": [
+    "3_1_6",
+    "3_3_1"
+   ],
+   "notes": "Garantie vol de base : le vol simple est exclu (3.1.6.2.1) et le vol dans les parties communes et locaux non fermés par une serrure de sûreté est exclu quand l'assuré n'occupe que partiellement l'immeuble (3.1.6.2.7). L'option Confort couvre le vol de vélo dans les caves et garages fermés à clé, ou en tout lieu si le vélo est attaché par un antivol à un élément ancré (3.3.1.1.2.1).",
+   "obtained_verdict": "ambigu",
+   "cited_clauses": [
+    "3_1_6",
+    "3_1_6",
+    "1_58_1",
+    "3_1_6",
+    "3_3_1",
+    "3_3_1"
+   ],
+   "citation_hit": true,
+   "confidence": 0.72,
+   "summary": "La garantie vol de base ne couvre pas ce vol dans un local commun non fermé à clé. Seule l’option Confort pourrait éventuellement intervenir si elle est souscrite et si ses conditions propres sont remplies.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q02_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "Un assuré laisse une bougie sur la table de son jardin pendant ses vacances. Avec la chaleur, la bougie fond et abîme la table. Est-ce couvert ?",
+   "expected_verdict": "non_couvert",
+   "expected_clauses": [
+    "3_1_1"
+   ],
+   "notes": "L'incendie est la destruction par des flammes (3.1.1.1.1). Les dégâts par la chaleur sans embrasement ne sont couverts que pour un événement soudain résultant de l'action subite de la chaleur ou d'un contact avec un foyer (3.1.1.1.6). Une bougie qui fond au soleil pendant les vacances n'est ni soudaine ni un foyer. La table de jardin est pourtant du contenu (1.12, 1.32), la question porte sur l'événement, pas sur le bien.",
+   "obtained_verdict": "non_couvert",
+   "cited_clauses": [
+    "1_32",
+    "1_12",
+    "3_1_1",
+    "3_1_1"
+   ],
+   "citation_hit": true,
+   "confidence": 0.72,
+   "summary": "La table de jardin peut relever du contenu assuré, mais le dommage décrit ne correspond pas à un incendie ni à un événement soudain de chaleur au sens de la clause fournie. En l’état, la fonte d’une bougie laissée au jardin pendant les vacances n’entre dans aucune garantie citée.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q03_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "Un court-circuit a mis le feu à ma cuisine, les meubles et le plafond sont noircis. Suis-je couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "3_1_1"
+   ],
+   "notes": "Incendie et périls assimilés : incendie (3.1.1.1.1) et fumées et suies (3.1.1.1.5). Les dégâts électriques (3.1.3) couvrent aussi la cause.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "3_1_1",
+    "3_1_1",
+    "3_1_1"
+   ],
+   "citation_hit": true,
+   "confidence": 0.9,
+   "summary": "Oui, l’incendie de la cuisine et les traces de fumée ou de suie sur les meubles et le plafond entrent dans la garantie incendie. La cause électrique ne retire pas la couverture puisque le dommage déclaré est le feu et ses suites.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q04_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "Mon lave-linge a fui pendant la nuit et le parquet du salon est gondolé. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "3_1_4"
+   ],
+   "notes": "Dégâts des eaux : écoulement des installations hydrauliques y compris les appareils qui y sont reliés (3.1.4.1). L'exclusion des objets non reliés (3.1.4.2.8) ne joue pas pour un lave-linge raccordé.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "3_1_4",
+    "3_1_4",
+    "3_1_4",
+    "3_1_4",
+    "3_1_4"
+   ],
+   "citation_hit": true,
+   "confidence": 0.86,
+   "summary": "Le parquet gondolé à la suite de la fuite du lave-linge relève de la garantie dégâts des eaux. Les clauses fournies ne donnent pas de franchise applicable à ce dommage.",
+   "missing_facts": [],
+   "post_checks": [
+    "arbitre trop sévère, 5 clauses de la fusion gardées"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q05_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "L'eau s'est infiltrée par la toiture pendant une forte pluie, sans tempête déclarée. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "3_1_4"
+   ],
+   "notes": "Infiltration accidentelle d'eau par les toitures (3.1.4.1). Les dégâts à la toiture elle-même (3.1.4.2.1) et le défaut d'entretien (3.1.4.2.13) restent exclus.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "3_1_4",
+    "3_1_4",
+    "3_2_2",
+    "3_1_4",
+    "3_1_4"
+   ],
+   "citation_hit": true,
+   "confidence": 0.86,
+   "summary": "Les dommages intérieurs dus à une infiltration accidentelle par la toiture relèvent de la garantie dégâts des eaux. La toiture elle-même et ses revêtements d’étanchéité ne sont pas indemnisés au titre de cette garantie.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q06_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "Des cambrioleurs ont forcé la porte d'entrée et volé un ordinateur portable et des bijoux. Quel est le plafond pour les bijoux ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "3_1_6",
+    "1_33"
+   ],
+   "notes": "Vol par effraction couvert (3.1.6.1). Les bijoux sont des objets de valeur (1.33) limités à 40 % du montant indiqué aux conditions particulières (3.1.6.3), le montant en euros dépend donc des conditions particulières.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "3_1_6",
+    "1_58_2",
+    "1_33",
+    "3_1_6",
+    "3_1_6"
+   ],
+   "citation_hit": true,
+   "confidence": 0.78,
+   "summary": "Le vol est couvert car la porte d'entrée a été forcée et les biens étaient dans le bâtiment désigné. Pour les bijoux, le plafond spécial indiqué est de 40 % si les bijoux répondent à la définition des objets de valeur et selon la formule concernée.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q07_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "On m'a volé mon téléphone dans un café en ville. Est-ce couvert par mon assurance habitation ?",
+   "expected_verdict": "non_couvert",
+   "expected_clauses": [
+    "3_1_6",
+    "1_58_4"
+   ],
+   "notes": "La garantie vol porte sur le contenu situé dans le bâtiment désigné (3.1.6.1), les vols à la tire ou à la sauvette à l'extérieur sont exclus (3.1.6.2.2). Seul le vol par agression est couvert partout dans le monde, et la question n'évoque aucune agression.",
+   "obtained_verdict": "ambigu",
+   "cited_clauses": [
+    "3_1_7",
+    "3_1_6",
+    "1_58_5",
+    "3_1_7",
+    "2_11_2"
+   ],
+   "citation_hit": true,
+   "confidence": 0.62,
+   "summary": "Le téléphone volé hors du domicile entre dans la garantie matériel multimédia. Mais les clauses de vol excluent certains vols sans effraction ou à la sauvette, ce qui crée une incertitude sur leur application à cette garantie.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q08_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "Une tempête a arraché des tuiles et l'eau a abîmé une chambre. Suis-je couvert, et y a-t-il une franchise ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "3_1_2"
+   ],
+   "notes": "Tempête à partir de 80 km/h, y compris la pluie qui pénètre par le bâtiment préalablement endommagé (3.1.2.1). Le montant de la franchise n'est pas dans les conditions générales (1.24 la définit seulement), il figure aux conditions particulières.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "3_1_2",
+    "3_1_2",
+    "1_49",
+    "3_1_4"
+   ],
+   "citation_hit": true,
+   "confidence": 0.86,
+   "summary": "Le sinistre est couvert au titre de la garantie tempête, car l’eau est entrée après que la toiture a été endommagée par la tempête. Aucune franchise n’est indiquée dans les clauses fournies.",
+   "missing_facts": [],
+   "post_checks": [
+    "citation ajustée au texte réel : 3_1_4#2"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q09_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "La grêle a cassé la verrière de la véranda. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "3_1_2",
+    "3_1_5"
+   ],
+   "notes": "La grêle est couverte au titre de tempête et grêle (3.1.2.1) et le bris accidentel des vitrages au titre du bris de vitrages (3.1.5.1).",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "3_1_2"
+   ],
+   "citation_hit": true,
+   "confidence": 0.86,
+   "summary": "La grêle fait partie de la garantie de base Tempête et grêle. La verrière de la véranda est donc couverte, sous réserve des exclusions prévues si un cas particulier non indiqué existait.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q10_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "Mon fils a cassé la vitre du voisin en jouant au ballon. Est-ce couvert ?",
+   "expected_verdict": "ambigu",
+   "expected_clauses": [
+    "4_1_1"
+   ],
+   "notes": "La responsabilité civile vie privée couvre le fait des enfants mineurs (4.1.1.5.2), mais c'est une option (4.1) dont on ignore si elle est souscrite. La RC immeuble de base (3.1.10) ne couvre pas le fait des personnes.",
+   "obtained_verdict": "ambigu",
+   "cited_clauses": [
+    "4_1_1",
+    "4_1_1",
+    "4_1_1",
+    "4_1_1",
+    "3_1_10",
+    "4_1_1"
+   ],
+   "citation_hit": true,
+   "confidence": 0.66,
+   "summary": "La vitre du voisin relève de la responsabilité civile vie privée si cette option est accordée et si votre fils entre bien dans les personnes couvertes. À défaut, les clauses de base fournies ne couvrent pas ce dommage causé en jouant au ballon.",
+   "missing_facts": [
+    "Votre fils est il mineur ou autrement assuré au sens de la garantie responsabilité civile vie privée ?"
+   ],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q11_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "Le chien a mordu un passant dans la rue. Est-ce couvert ?",
+   "expected_verdict": "ambigu",
+   "expected_clauses": [
+    "4_1_1"
+   ],
+   "notes": "Le fait des animaux domestiques est couvert par la RC vie privée (4.1.1.5.5), option dont la souscription n'est pas connue.",
+   "obtained_verdict": "ambigu",
+   "cited_clauses": [
+    "4_1_1",
+    "4_1_1",
+    "4_1_1",
+    "4_1_1",
+    "4_1_1"
+   ],
+   "citation_hit": true,
+   "confidence": 0.64,
+   "summary": "La morsure par un chien peut relever de la responsabilité civile vie privée, mais cette garantie est présentée comme une option. Il faut aussi confirmer que le chien appartenait à un assuré ou était sous sa garde à titre gratuit.",
+   "missing_facts": [
+    "Le chien appartenait il à un assuré ou était il sous sa garde à titre gratuit ?"
+   ],
+   "post_checks": [
+    "arbitre trop sévère, 5 clauses de la fusion gardées"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q12_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "Une surtension après un orage a grillé la télévision et le frigo. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "3_1_3"
+   ],
+   "notes": "Dégâts électriques : action directe de l'électricité (3.1.3.1). La chute de la foudre relève aussi de l'incendie (3.1.1.1.3).",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "3_1_3",
+    "3_1_3",
+    "3_1_3",
+    "3_1_3",
+    "2_5_2"
+   ],
+   "citation_hit": true,
+   "confidence": 0.86,
+   "summary": "La surtension qui a grillé la télévision et le frigo relève de la garantie dégâts électriques. L’indemnisation peut toutefois être refusée si le dommage relève d’une exclusion citée, par exemple l’usure, la garantie fabricant ou un appareil dont vous n’êtes pas propriétaire.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q13_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "Le congélateur est tombé en panne et j'ai perdu 300 EUR de denrées. Est-ce couvert ?",
+   "expected_verdict": "non_couvert",
+   "expected_clauses": [
+    "3_1_3",
+    "3_1_1"
+   ],
+   "notes": "La perte de denrées n'est couverte qu'après un sinistre garanti ou une panne de secteur de plus de 6 heures (3.1.1.2.1, 3.1.3.2). Une panne de l'appareil est un fonctionnement défectueux, exclu (3.1.3.2).",
+   "obtained_verdict": "non_couvert",
+   "cited_clauses": [
+    "3_1_1",
+    "3_1_1",
+    "3_1_3",
+    "3_1_3"
+   ],
+   "citation_hit": true,
+   "confidence": 0.86,
+   "summary": "La perte des denrées après la panne du congélateur n’est pas couverte d’après les clauses fournies. Le contrat ne couvre ce type de perte que dans certains cas, notamment une panne de secteur accidentelle de plus de 6 heures, ce qui n’est pas le cas indiqué.",
+   "missing_facts": [],
+   "post_checks": [
+    "arbitre trop sévère, 5 clauses de la fusion gardées"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q14_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "Un locataire a laissé une casserole sur le feu et la cuisine a brûlé. Le propriétaire est-il indemnisé ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "3_1_1"
+   ],
+   "notes": "L'incendie du bâtiment est couvert quelle que soit la faute du locataire (3.1.1.1.1). La Compagnie dispose ensuite d'un recours contre le responsable (2.18).",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "3_1_1"
+   ],
+   "citation_hit": true,
+   "confidence": 0.9,
+   "summary": "Oui, l’incendie de la cuisine entre dans la garantie incendie des biens assurés. Le fait que le feu soit parti d’une casserole laissée par le locataire ne fait pas obstacle à la garantie dans les clauses fournies.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q15_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "J'ai laissé une fenêtre ouverte pendant mon absence et on m'a volé la console de jeux. Est-ce couvert ?",
+   "expected_verdict": "information_insuffisante",
+   "expected_clauses": [
+    "3_1_6",
+    "1_58_1"
+   ],
+   "notes": "Le vol simple, sans forcement d'une fermeture, est exclu (3.1.6.2.1). Mais le vol par escalade n'est pas un vol simple (1.58.1) : si la fenêtre ouverte a été atteinte par escalade, le vol peut être couvert. Les mesures de sécurité (3.1.6.4) peuvent réduire l'indemnité.",
+   "obtained_verdict": "information_insuffisante",
+   "cited_clauses": [
+    "3_1_6",
+    "3_1_6",
+    "1_58_1",
+    "2_11_2"
+   ],
+   "citation_hit": true,
+   "confidence": 0.6,
+   "summary": "Le vol de la console n’est pas couvert si l’entrée s’est faite par une fenêtre laissée ouverte, car il s’agit d’un vol simple exclu. Il faut quand même déclarer rapidement le sinistre et déposer plainte si vous sollicitez l’assureur.",
+   "missing_facts": [
+    "y a-t-il eu effraction (porte ou fenêtre forcée) ?"
+   ],
+   "post_checks": [
+    "verdict non_couvert alors qu'une clause citée dépend d'un fait absent : rétrogradé en information_insuffisante"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q16_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "La piscine hors sol s'est déchirée et a inondé le jardin du voisin. Est-ce couvert ?",
+   "expected_verdict": "non_couvert",
+   "expected_clauses": [
+    "3_1_10",
+    "4_1_1"
+   ],
+   "notes": "La RC immeuble exclut les dommages causés aux biens par l'eau (3.1.10.3.3). La RC vie privée, si elle est souscrite, exclut les dommages d'eau ayant leur origine dans les immeubles de l'assuré (4.1.1.8.6).",
+   "obtained_verdict": "non_couvert",
+   "cited_clauses": [
+    "3_1_10",
+    "3_1_10",
+    "3_1_4",
+    "3_1_4",
+    "3_1_4"
+   ],
+   "citation_hit": true,
+   "confidence": 0.86,
+   "summary": "Le dommage au jardin du voisin n’est pas couvert par les clauses fournies. La responsabilité civile immeuble exclut les dommages aux biens causés par l’eau, et la garantie dégâts des eaux ne vise pas une piscine hors sol déchirée.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q17_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "Les panneaux solaires ont été endommagés par la grêle. Sont-ils couverts ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "3_1_2"
+   ],
+   "notes": "Les panneaux solaires et installations photovoltaïques sont couverts contre la grêle à concurrence de 50 000 € par sinistre (3.1.2.1).",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "3_1_2",
+    "1_5_5",
+    "3_1_2",
+    "3_1_2"
+   ],
+   "citation_hit": true,
+   "confidence": 0.93,
+   "summary": "Les panneaux solaires sont couverts lorsqu’ils sont endommagés par la grêle. L’indemnisation est limitée à 50 000 € maximum par sinistre.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q18_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "Un dégât des eaux vient de l'appartement du dessus. Qui paie, et dois-je déclarer ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "3_1_4",
+    "2_11_2"
+   ],
+   "notes": "Les dégâts des eaux provenant des installations des bâtiments voisins sont couverts (3.1.4.1). Le sinistre se déclare dans les 8 jours (2.11.2). La Compagnie se retourne ensuite contre le voisin responsable (2.18).",
+   "obtained_verdict": "information_insuffisante",
+   "cited_clauses": [
+    "3_1_4",
+    "3_1_4",
+    "2_11_6"
+   ],
+   "citation_hit": true,
+   "confidence": 0.72,
+   "summary": "Le dégât peut être pris en charge par votre garantie dégâts des eaux si l’eau vient d’une installation hydraulique de l’appartement du dessus, par rupture, fissure ou débordement. Déclarez le sinistre à l’assureur et ne faites pas de réparations définitives avant son accord ou sa vérification.",
+   "missing_facts": [
+    "L’eau venait elle d’une installation hydraulique de l’appartement du dessus, par rupture, fissure ou débordement ?"
+   ],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q19_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "Mon vélo électrique a été volé devant la gare, attaché à un poteau. Est-ce couvert ?",
+   "expected_verdict": "ambigu",
+   "expected_clauses": [
+    "3_3_1",
+    "3_1_6"
+   ],
+   "notes": "La garantie vol de base ne joue que dans le bâtiment désigné (3.1.6.1). L'option Confort couvre le vol d'un vélo en tout lieu au Luxembourg s'il est attaché par un antivol à un élément ancré (3.3.1.1.2.1), ce qu'un poteau est. Tout dépend de l'option, et le cycle électrique doit répondre à la définition 1.15.",
+   "obtained_verdict": "ambigu",
+   "cited_clauses": [
+    "1_56",
+    "1_58",
+    "3_1_6",
+    "3_3_1",
+    "3_3_1",
+    "3_3_1",
+    "3_3_1",
+    "3_3_1"
+   ],
+   "citation_hit": true,
+   "confidence": 0.72,
+   "summary": "La garantie vol de base ne couvre pas le vélo volé devant la gare, car le vol de biens à l’extérieur est exclu. Une option peut toutefois couvrir le vol d’un vélo hors surveillance si elle est souscrite et si les conditions prévues sont remplies.",
+   "missing_facts": [
+    "Le vélo était il attaché avec un système antivol adéquat ?",
+    "Le poteau était il solidement ancré au sol ou à un bâtiment ?",
+    "Le vol a t il eu lieu sur le territoire du Grand Duché de Luxembourg ?",
+    "Une plainte a t elle été déposée auprès de la police ou des autorités judiciaires ?"
+   ],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q20_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "Un incendie a détruit la cave et les objets qui y étaient stockés. Sont-ils couverts ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "3_1_1",
+    "1_16"
+   ],
+   "notes": "L'incendie est couvert sur les biens désignés (3.1.1.1.1), la cave est une dépendance (1.16) et le contenu s'y trouve.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "3_1_1",
+    "1_16",
+    "2_10"
+   ],
+   "citation_hit": true,
+   "confidence": 0.84,
+   "summary": "L’incendie de la cave et des objets stockés est couvert au titre de la garantie incendie. La cave est une dépendance visée par la définition fournie et aucune franchise n’est indiquée dans les clauses citées.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q21_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "Un tremblement de terre a fissuré un mur. Est-ce couvert ?",
+   "expected_verdict": "ambigu",
+   "expected_clauses": [
+    "3_2_1",
+    "2_10"
+   ],
+   "notes": "Le tremblement de terre est une garantie de l'option Sérénité Max (3.2.1), avec une franchise de 10 % minimum 1 500 €. Sans l'option, les exclusions générales excluent les cataclysmes naturels (2.10).",
+   "obtained_verdict": "ambigu",
+   "cited_clauses": [
+    "3_2_1",
+    "3_2_1",
+    "1_50",
+    "2_10",
+    "3_2_1"
+   ],
+   "citation_hit": true,
+   "confidence": 0.66,
+   "summary": "Le dommage au mur entre dans la garantie tremblement de terre, mais cette garantie est présentée comme accordée seulement si elle figure aux conditions particulières. Si cette option est bien accordée, la franchise prévue est de 10% du dommage avec un minimum de 1.500 €.",
+   "missing_facts": [],
+   "post_checks": [
+    "arbitre trop sévère, 5 clauses de la fusion gardées"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q22_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "J'ai renversé du vin sur le canapé neuf. Est-ce couvert ?",
+   "expected_verdict": "non_couvert",
+   "expected_clauses": [
+    "3_3_1"
+   ],
+   "notes": "Aucune garantie de base ne couvre une tache. L'option dommages aux biens ne vise qu'une liste d'objets (instruments, matériel de sport, bijoux, vélos), pas un canapé (3.3.1.1).",
+   "obtained_verdict": "non_couvert",
+   "cited_clauses": [
+    "2_5_2"
+   ],
+   "citation_hit": false,
+   "confidence": 0.72,
+   "summary": "Je ne vois pas de garantie fournie qui couvre une tache accidentelle de vin sur un canapé. La clause sur le mobilier indique seulement comment il est estimé lorsqu'un sinistre garanti existe.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q23_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "La maison est restée inoccupée quatre mois, puis un dégât des eaux est survenu. Est-ce couvert ?",
+   "expected_verdict": "information_insuffisante",
+   "expected_clauses": [
+    "3_1_4",
+    "1_35_1"
+   ],
+   "notes": "Les dégâts des eaux restent couverts mais l'assuré doit fermer la vanne principale au-delà de 30 jours d'inoccupation, sinon l'indemnité est réduite de moitié (3.1.4.3.1). Quatre mois dépassent aussi les 110 nuits consécutives tolérées pour une résidence principale (1.35.1).",
+   "obtained_verdict": "information_insuffisante",
+   "cited_clauses": [
+    "3_1_4",
+    "3_1_4",
+    "3_1_4",
+    "3_1_4",
+    "3_1_4",
+    "3_1_4",
+    "1_35_1"
+   ],
+   "citation_hit": true,
+   "confidence": 0.72,
+   "summary": "Je ne peux pas confirmer la prise en charge sans connaître l’origine de l’eau. L’inoccupation de quatre mois impose aussi de vérifier la fermeture de la vanne principale, car l’indemnité peut être réduite si cette obligation n’a pas été respectée et a joué dans le sinistre.",
+   "missing_facts": [
+    "D’où venait l’eau qui a causé le dégât des eaux ?"
+   ],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q24_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "Le vent a fait tomber mon arbre sur la voiture du voisin. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "3_1_10"
+   ],
+   "notes": "La RC immeuble couvre les dommages causés aux tiers par le fait du bâtiment et des terrains attenants (3.1.10.1), un arbre en fait partie, si la responsabilité de l'assuré est engagée.",
+   "obtained_verdict": "information_insuffisante",
+   "cited_clauses": [
+    "3_1_10",
+    "3_1_10",
+    "3_1_10",
+    "3_1_10",
+    "3_1_2"
+   ],
+   "citation_hit": true,
+   "confidence": 0.68,
+   "summary": "La garantie responsabilité civile immeuble peut jouer pour les dégâts à la voiture du voisin si l’arbre dépend du bâtiment assuré ou de son terrain attenant. Il manque ce point pour trancher.",
+   "missing_facts": [
+    "L’arbre se trouvait-il sur le terrain attenant au bâtiment assuré et ce terrain ne dépasse-t-il pas un hectare ?"
+   ],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q25_axa",
+   "contract_id": "axa_optihome_2025",
+   "question": "Une fuite de gaz a provoqué une explosion dans la chaudière. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "3_1_1"
+   ],
+   "notes": "L'explosion est un péril assimilé à l'incendie (3.1.1.1.2).",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "3_1_1",
+    "3_1_1",
+    "2_10"
+   ],
+   "citation_hit": true,
+   "confidence": 0.88,
+   "summary": "L’explosion fait partie des périls garantis en incendie et périls assimilés. Rien dans les clauses fournies n’exclut une explosion de chaudière causée par une fuite de gaz.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q01_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "On m'a volé mon vélo dans le local commun de l'immeuble, qui n'était pas fermé à clé. Suis-je couvert ?",
+   "expected_verdict": "non_couvert",
+   "expected_clauses": [
+    "6__a_vol_vandalisme",
+    "11__exclusions_communes_a_l_ensemble_des_garanties"
+   ],
+   "notes": "La garantie vol (optionnelle) exclut les vols des biens situés à l'extérieur des bâtiments assurés ou dans des locaux non clos, et les exclusions communes excluent les vols simples, sans effraction, violence ni menace. Un local commun non fermé à clé est un local non clos et le vol s'y fait sans effraction. Le pack équipements de mobilité durable ne joue que pour un vélo attaché par un antivol approuvé à un point d'attache fixé au sol, ce que la question ne dit pas, mais la clause principale tranche déjà.",
+   "obtained_verdict": "ambigu",
+   "cited_clauses": [
+    "12__garanties_optionnelles_objet_de_la_garantie",
+    "6__a_vol_vandalisme",
+    "6__a_vol_vandalisme",
+    "6__a_vol_vandalisme",
+    "row:t4_r8"
+   ],
+   "citation_hit": true,
+   "confidence": 0.55,
+   "summary": "Le vol du vélo ne peut être couvert que par la garantie Vol / vandalisme, qui est présentée comme optionnelle. Même si elle est souscrite, il faut savoir si le vol correspond à un des cas garantis, par exemple effraction, ruse ou larcin.",
+   "missing_facts": [
+    "Le vol a t il été commis par effraction, escalade, fausses clés, clés volées ou perdues, violences, menaces, introduction clandestine, ruse ou par une personne autorisée à se trouver dans les locaux assurés ?"
+   ],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q02_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "Un assuré laisse une bougie sur la table de son jardin pendant ses vacances. Avec la chaleur, la bougie fond et abîme la table. Est-ce couvert ?",
+   "expected_verdict": "non_couvert",
+   "expected_clauses": [
+    "5__l_incendie_et_evenements_assimiles",
+    "1__dommages_menagers"
+   ],
+   "notes": "L'incendie est une combustion avec flamme (définition). L'action subite de la chaleur n'est couverte qu'au titre des dommages ménagers, définis comme les brûlures au linge, vêtements, tapis, parquets et objets d'ameublement par excès de chaleur sans embrasement. Une bougie qui fond lentement au soleil n'est pas une action subite, et le mobilier de jardin n'est du contenu que lorsque le pack jardin le prévoit pour les événements couverts.",
+   "obtained_verdict": "ambigu",
+   "cited_clauses": [
+    "5__l_incendie_et_evenements_assimiles",
+    "5__l_incendie_et_evenements_assimiles",
+    "1__dommages_menagers",
+    "1__incendie",
+    "row:t2_r7"
+   ],
+   "citation_hit": true,
+   "confidence": 0.55,
+   "summary": "La garantie peut jouer si l’on retient qu’il s’agit d’un dommage ménager causé à un objet d’ameublement par un excès de chaleur. C’est discutable car les faits décrivent surtout une bougie qui fond au soleil et abîme la table, sans contact direct avec le feu ni chaleur subite clairement établie.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q03_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "Un court-circuit a mis le feu à ma cuisine, les meubles et le plafond sont noircis. Suis-je couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "5__l_incendie_et_evenements_assimiles"
+   ],
+   "notes": "Incendie et dégagement de fumée ou de suie sont des événements assurés de base. Le court-circuit relève en plus des dommages électriques.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "1__incendie",
+    "5__l_incendie_et_evenements_assimiles",
+    "1__mobilier",
+    "1__biens_immeubles_par_destination"
+   ],
+   "citation_hit": true,
+   "confidence": 0.88,
+   "summary": "Le court-circuit a provoqué un incendie dans la cuisine, les dommages aux meubles et au plafond relèvent de la garantie incendie. Aucune exclusion fournie ne correspond aux faits indiqués.",
+   "missing_facts": [],
+   "post_checks": [
+    "embeddings indisponibles (429 : You have no credits remaining. Add credits to continue using the API at ht), BM25 seul"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q04_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "Mon lave-linge a fui pendant la nuit et le parquet du salon est gondolé. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "5__degats_des_eaux"
+   ],
+   "notes": "Fuite ou débordement des appareils à effet d'eau situés à l'intérieur du bâtiment. Les dommages au lave-linge lui-même restent exclus.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "5__degats_des_eaux",
+    "12__garantie_objet_de_la_garantie",
+    "5__degats_des_eaux"
+   ],
+   "citation_hit": true,
+   "confidence": 0.86,
+   "summary": "La fuite du lave linge relève de la garantie dégâts des eaux pour les dommages au parquet. La réparation du lave linge lui même ne serait pas prise en charge au titre de cette garantie.",
+   "missing_facts": [],
+   "post_checks": [
+    "embeddings indisponibles (429 : You have no credits remaining. Add credits to continue using the API at ht), BM25 seul",
+    "reclassement indisponible (gpt-5.4-mini: 429 : You have no credits remaining. Add credits to continue using), fusion seule"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q05_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "L'eau s'est infiltrée par la toiture pendant une forte pluie, sans tempête déclarée. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "5__degats_des_eaux"
+   ],
+   "notes": "Les infiltrations accidentelles d'eau au travers des toitures sont couvertes. Le défaut d'entretien caractérisé et la réparation de l'élément du bâtiment à l'origine du sinistre sont exclus.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "5__degats_des_eaux",
+    "5__degats_des_eaux",
+    "5__degats_des_eaux"
+   ],
+   "citation_hit": true,
+   "confidence": 0.86,
+   "summary": "L’infiltration d’eau par la toiture relève de la garantie dégâts des eaux. L’absence de tempête déclarée ne fait pas obstacle à cette garantie dans les clauses fournies.",
+   "missing_facts": [],
+   "post_checks": [
+    "embeddings indisponibles (429 : You have no credits remaining. Add credits to continue using the API at ht), BM25 seul"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q06_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "Des cambrioleurs ont forcé la porte d'entrée et volé un ordinateur portable et des bijoux. Quel est le plafond pour les bijoux ?",
+   "expected_verdict": "ambigu",
+   "expected_clauses": [
+    "6__a_vol_vandalisme",
+    "row:t4_r5"
+   ],
+   "notes": "Le vol par effraction est couvert par la garantie vol / vandalisme, qui est optionnelle. Si elle est souscrite, les objets précieux et bijoux sont limités à 50 % de la limite prévue pour le mobilier (tableau des limites). Le verdict dépend de la souscription de l'option.",
+   "obtained_verdict": "ambigu",
+   "cited_clauses": [
+    "6__a_vol_vandalisme",
+    "6__a_vol_vandalisme",
+    "row:t4_r5",
+    "1__objets_precieux_bijoux"
+   ],
+   "citation_hit": true,
+   "confidence": 0.78,
+   "summary": "Le vol avec porte forcée entre dans la garantie Vol si cette garantie optionnelle est souscrite. Pour les bijoux, le plafond indiqué est 50 % de la limite prévue pour le mobilier.",
+   "missing_facts": [],
+   "post_checks": [
+    "citation non vérifiée retirée : 6__a_vol_vandalisme#1"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q07_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "On m'a volé mon téléphone dans un café en ville. Est-ce couvert par mon assurance habitation ?",
+   "expected_verdict": "non_couvert",
+   "expected_clauses": [
+    "6__a_vol_vandalisme",
+    "1__materiels_nomades"
+   ],
+   "notes": "La garantie vol porte sur les biens dans le bâtiment assuré et exclut les vols hors des bâtiments. Le vol à la tire d'un matériel nomade n'est couvert que si le pack Multimédia est souscrit, et l'agression sur la personne hors du domicile suppose une agression corporelle que la question n'évoque pas.",
+   "obtained_verdict": "information_insuffisante",
+   "cited_clauses": [
+    "1__materiels_nomades",
+    "4__vos_biens_mobiliers",
+    "6__a_vol_vandalisme",
+    "6__a_vol_vandalisme",
+    "6__a_vol_vandalisme"
+   ],
+   "citation_hit": true,
+   "confidence": 0.65,
+   "summary": "Le téléphone volé hors du domicile n’est pas couvert par la garantie mobilier ordinaire. Une prise en charge n’est envisageable que selon les circonstances du vol et selon le pack éventuellement souscrit.",
+   "missing_facts": [
+    "Le téléphone a t il été volé à la tire par un pickpocket ?",
+    "Avez vous subi une agression corporelle lors du vol ?"
+   ],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q08_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "Une tempête a arraché des tuiles et l'eau a abîmé une chambre. Suis-je couvert, et y a-t-il une franchise ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "5__tempete_grele_neige",
+    "1__tempete"
+   ],
+   "notes": "La tempête est couverte de base, avec le vent attesté à 80 km/h ou des dégâts aux constructions voisines. La franchise applicable figure aux conditions particulières, pas dans les conditions générales.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "5__tempete_grele_neige",
+    "5__tempete_grele_neige",
+    "1__tempete",
+    "5__degats_des_eaux",
+    "5__tempete_grele_neige"
+   ],
+   "citation_hit": true,
+   "confidence": 0.84,
+   "summary": "Le sinistre est couvert pour les tuiles arrachées par la tempête et les dommages d’eau dans la chambre. Aucune franchise n’est indiquée dans les clauses fournies.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q09_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "La grêle a cassé la verrière de la véranda. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "5__tempete_grele_neige",
+    "5__bris_des_glaces"
+   ],
+   "notes": "La grêle est un événement assuré de base et les vitrages de vérandas sont nommément couverts au titre du bris des glaces.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "5__tempete_grele_neige",
+    "5__tempete_grele_neige",
+    "1__batiment",
+    "1__batiment",
+    "5__bris_des_glaces",
+    "5__bris_des_glaces",
+    "5__tempete_grele_neige",
+    "5__bris_des_glaces"
+   ],
+   "citation_hit": true,
+   "confidence": 0.86,
+   "summary": "La casse de la verrière de la véranda par la grêle est couverte. La véranda fait partie du bâtiment et les vitrages de vérandas sont aussi visés par la garantie bris des glaces.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q10_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "Mon fils a cassé la vitre du voisin en jouant au ballon. Est-ce couvert ?",
+   "expected_verdict": "ambigu",
+   "expected_clauses": [
+    "10__a_responsabilite_civile_vie_privee"
+   ],
+   "notes": "La responsabilité civile vie privée couvre les faits de la vie privée des personnes assurées, enfants compris, mais elle figure parmi les responsabilités civiles optionnelles. La RC de base du fait des biens assurés ne vise pas le fait d'un enfant.",
+   "obtained_verdict": "non_couvert",
+   "cited_clauses": [
+    "5__bris_des_glaces",
+    "9__a_responsabilites_civiles_du_fait_des_biens_assu",
+    "9__a_responsabilites_civiles_du_fait_des_biens_assu"
+   ],
+   "citation_hit": false,
+   "confidence": 0.86,
+   "summary": "La vitre du voisin cassée par un ballon n’entre pas dans le bris des glaces, qui vise les vitrages du bâtiment assuré. Les clauses fournies ne donnent pas de garantie responsabilité civile vie privée applicable à ce fait.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q11_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "Le chien a mordu un passant dans la rue. Est-ce couvert ?",
+   "expected_verdict": "ambigu",
+   "expected_clauses": [
+    "10__a_responsabilite_civile_vie_privee",
+    "11"
+   ],
+   "notes": "Les animaux domestiques communs sont couverts par la RC vie privée, optionnelle, sauf les chiens dangereux au sens de la loi de 2008 qui exigent la garantie spécifique. Le verdict dépend de l'option et de la catégorie du chien.",
+   "obtained_verdict": "information_insuffisante",
+   "cited_clauses": [
+    "10__a_responsabilite_civile_vie_privee",
+    "10__a_responsabilite_civile_vie_privee",
+    "10__responsabilite_civile_chiens_dangereux",
+    "1__chiens_dangereux",
+    "1__chiens_dangereux",
+    "row:t5_r13"
+   ],
+   "citation_hit": true,
+   "confidence": 0.72,
+   "summary": "La morsure d’un passant par un chien peut relever de la responsabilité civile vie privée si le chien est un animal domestique commun. Si le chien relève des chiens dangereux, la réponse dépend de l’option prévue pour ces chiens et de la catégorie exacte du chien.",
+   "missing_facts": [
+    "Votre chien relève t il de la définition des chiens dangereux du contrat ?",
+    "S’il relève des chiens dangereux, fait il partie des chiens toujours exclus par la définition du contrat ?"
+   ],
+   "post_checks": [
+    "citation ajustée au texte réel : 10__responsabilite_civile_chiens_dangereux"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q12_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "Une surtension après un orage a grillé la télévision et le frigo. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "5__les_dommages_electriques"
+   ],
+   "notes": "Les dommages électriques aux appareils ménagers sont couverts de base, hors résistances, lampes, tubes et usure.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "5__les_dommages_electriques",
+    "1__appareils_menagers",
+    "5__les_dommages_electriques",
+    "13__nature_des_biens_age_du_bien"
+   ],
+   "citation_hit": true,
+   "confidence": 0.86,
+   "summary": "La surtension relève de la garantie dommages électriques pour des appareils ménagers comme le frigo et la télévision, sous réserve qu’ils soient dans les locaux garantis. L’indemnisation dépendra de l’âge des appareils et aucune franchise n’est indiquée dans les clauses fournies.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q13_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "Le congélateur est tombé en panne et j'ai perdu 300 EUR de denrées. Est-ce couvert ?",
+   "expected_verdict": "ambigu",
+   "expected_clauses": [
+    "6__h_pack_cave_a_vin_denrees_alimentaires"
+   ],
+   "notes": "La perte de denrées après un arrêt accidentel du congélateur n'est couverte que si le pack cave à vin / denrées alimentaires est souscrit, et pas si la panne vient de l'usure. Rien dans les garanties de base ne couvre les denrées.",
+   "obtained_verdict": "ambigu",
+   "cited_clauses": [
+    "6__h_pack_cave_a_vin_denrees_alimentaires",
+    "6__h_pack_cave_a_vin_denrees_alimentaires",
+    "6__h_pack_cave_a_vin_denrees_alimentaires",
+    "6__h_pack_cave_a_vin_denrees_alimentaires",
+    "12__garanties_optionnelles_objet_de_la_garantie",
+    "12__garanties_optionnelles_objet_de_la_garantie",
+    "row:t4_r17"
+   ],
+   "citation_hit": true,
+   "confidence": 0.66,
+   "summary": "La perte des denrées peut relever du pack cave à vin et denrées alimentaires, mais ce pack est indiqué comme optionnel. Il faut aussi que le congélateur soit au lieu d’assurance et que la panne ne soit pas liée à l’usure ou au mauvais entretien.",
+   "missing_facts": [
+    "Le congélateur se trouvait il au lieu d’assurance ?"
+   ],
+   "post_checks": [
+    "arbitre trop sévère, 5 clauses de la fusion gardées"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q14_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "Un locataire a laissé une casserole sur le feu et la cuisine a brûlé. Le propriétaire est-il indemnisé ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "5__l_incendie_et_evenements_assimiles",
+    "9__a_responsabilites_civiles_du_fait_des_biens_assu"
+   ],
+   "notes": "L'incendie du bâtiment est couvert de base pour le propriétaire assuré, quelle que soit la faute du locataire. Le recours des locataires et la responsabilité du locataire relèvent de la RC du fait des biens assurés.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "1__incendie",
+    "5__l_incendie_et_evenements_assimiles",
+    "9__a_responsabilites_civiles_du_fait_des_biens_assu",
+    "9__a_responsabilites_civiles_du_fait_des_biens_assu"
+   ],
+   "citation_hit": true,
+   "confidence": 0.86,
+   "summary": "L’incendie de la cuisine entre dans la garantie incendie des biens assurés. La faute du locataire n’est pas une exclusion dans les clauses fournies.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q15_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "J'ai laissé une fenêtre ouverte pendant mon absence et on m'a volé la console de jeux. Est-ce couvert ?",
+   "expected_verdict": "non_couvert",
+   "expected_clauses": [
+    "6__a_vol_vandalisme",
+    "11__exclusions_communes_a_l_ensemble_des_garanties"
+   ],
+   "notes": "En cas d'absence, les fenêtres doivent être fermées (mesures de sécurité) et le vol sans effraction, violence ni menace est un vol simple exclu. Au mieux, si une escalade était prouvée, l'indemnité serait réduite de 30 % pour inobservation des mesures.",
+   "obtained_verdict": "information_insuffisante",
+   "cited_clauses": [
+    "6__a_vol_vandalisme",
+    "6__a_vol_vandalisme",
+    "6__a_vol_vandalisme",
+    "6__a_vol_vandalisme",
+    "6__a_vol_vandalisme",
+    "row:t4_r3"
+   ],
+   "citation_hit": true,
+   "confidence": 0.55,
+   "summary": "Le vol peut relever de la garantie Vol si le voleur est entré selon un des modes prévus et si la console était dans le bâtiment assuré. La fenêtre laissée ouverte pendant l’absence entraîne au moins une réduction de 30 pour cent si le sinistre est dû à cette inobservation, et la garantie Vol est présentée comme optionnelle.",
+   "missing_facts": [
+    "La console se trouvait-elle dans le bâtiment assuré au moment du vol ?",
+    "Le voleur s’est-il introduit clandestinement, par ruse, par effraction, par escalade, avec de fausses clés ou des clés volées ou perdues, ou avec violences ou menaces ?"
+   ],
+   "post_checks": [
+    "citation non vérifiée retirée : 6__a_vol_vandalisme#1"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q16_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "La piscine hors sol s'est déchirée et a inondé le jardin du voisin. Est-ce couvert ?",
+   "expected_verdict": "non_couvert",
+   "expected_clauses": [
+    "9__a_responsabilites_civiles_du_fait_des_biens_assu",
+    "11"
+   ],
+   "notes": "La RC propriétaire d'immeuble vise les bâtiments et piscines mais exclut les conséquences d'un dégât des eaux, et les exclusions RC écartent les dommages d'eau ayant pris naissance dans les locaux de l'assuré. Le recours des voisins ne joue que pour incendie, explosion, dégâts des eaux ou gel nés dans les bâtiments assurés, pas pour une piscine hors sol qui se déchire.",
+   "obtained_verdict": "non_couvert",
+   "cited_clauses": [
+    "9__a_responsabilites_civiles_du_fait_des_biens_assu",
+    "9__a_responsabilites_civiles_du_fait_des_biens_assu",
+    "9__a_responsabilites_civiles_du_fait_des_biens_assu"
+   ],
+   "citation_hit": true,
+   "confidence": 0.82,
+   "summary": "Non, les dégâts au jardin du voisin ne sont pas couverts au vu des clauses fournies. La garantie voisins et tiers vise les dégâts des eaux nés dans les bâtiments assurés, et la garantie propriétaire d’immeuble exclut les dégâts des eaux.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q17_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "Les panneaux solaires ont été endommagés par la grêle. Sont-ils couverts ?",
+   "expected_verdict": "ambigu",
+   "expected_clauses": [
+    "6__i_pack_energie_renouvelable",
+    "5__bris_des_glaces"
+   ],
+   "notes": "Les panneaux solaires sont couverts par le pack énergie renouvelable, optionnel, et le bris des glaces les exclut sauf si ce pack est souscrit. Tout dépend de l'option.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "5__tempete_grele_neige",
+    "5__tempete_grele_neige",
+    "1__batiment",
+    "1__batiment",
+    "5__tempete_grele_neige"
+   ],
+   "citation_hit": false,
+   "confidence": 0.86,
+   "summary": "Les panneaux solaires font partie du bâtiment assuré selon les clauses fournies. Les dommages matériels causés par la grêle aux biens assurés sont donc couverts, sauf application d’une exclusion comme un défaut d’entretien.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q18_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "Un dégât des eaux vient de l'appartement du dessus. Qui paie, et dois-je déclarer ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "5__degats_des_eaux",
+    "9__a_responsabilites_civiles_du_fait_des_biens_assu"
+   ],
+   "notes": "Les dégâts des eaux subis par les biens assurés sont couverts de base, quelle que soit l'origine dans l'immeuble. L'assureur du voisin répond au titre du recours des voisins. La déclaration suit les formalités du chapitre indemnisation.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "5__degats_des_eaux",
+    "5__degats_des_eaux",
+    "9__a_responsabilites_civiles_du_fait_des_biens_assu"
+   ],
+   "citation_hit": true,
+   "confidence": 0.82,
+   "summary": "Vos dommages relèvent de la garantie dégâts des eaux si l'eau vient d'une fuite, rupture, engorgement ou débordement dans le bâtiment. Déclarez le sinistre à votre assureur, qui indemnisera selon le contrat et pourra ensuite exercer un recours si un tiers est responsable.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q19_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "Mon vélo électrique a été volé devant la gare, attaché à un poteau. Est-ce couvert ?",
+   "expected_verdict": "ambigu",
+   "expected_clauses": [
+    "6__f_pack_equipements_de_mobilite_durable",
+    "1__antivol_approuve"
+   ],
+   "notes": "Le vol d'un vélo à assistance électrique dans un espace public n'est couvert que par le pack équipements de mobilité durable, à condition d'un antivol approuvé (SRA ou FUB 2 roues) relié par le cadre à un point d'attache fixé au sol. L'option et la nature de l'antivol ne sont pas connues.",
+   "obtained_verdict": "ambigu",
+   "cited_clauses": [
+    "1__objets_de_mobilite_durable",
+    "6__a_vol_vandalisme",
+    "6__a_vol_vandalisme",
+    "6__f_pack_equipements_de_mobilite_durable",
+    "6__f_pack_equipements_de_mobilite_durable",
+    "6__f_pack_equipements_de_mobilite_durable"
+   ],
+   "citation_hit": true,
+   "confidence": 0.73,
+   "summary": "Le vol devant la gare n’entre pas dans la garantie vol classique, qui vise les biens dans le bâtiment assuré et exclut les biens à l’extérieur. Le pack équipements de mobilité durable pourrait couvrir un vélo électrique dehors, mais il est présenté comme optionnel et impose un antivol approuvé relié par le cadre à un point fixe.",
+   "missing_facts": [
+    "Le vélo était il sécurisé par un antivol approuvé relié par le cadre à un point d’attache fixé au sol ?"
+   ],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q20_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "Un incendie a détruit la cave et les objets qui y étaient stockés. Sont-ils couverts ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "5__l_incendie_et_evenements_assimiles",
+    "1__contenu"
+   ],
+   "notes": "L'incendie est couvert sur les biens assurés et le contenu se trouve à l'intérieur du bâtiment assuré, cave comprise. Seuls les objets de valeur et bijoux sont exclus dans les dépendances.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "5__l_incendie_et_evenements_assimiles",
+    "1__incendie",
+    "1__risque_accessoire",
+    "4__vos_biens_mobiliers",
+    "5__l_incendie_et_evenements_assimiles"
+   ],
+   "citation_hit": true,
+   "confidence": 0.86,
+   "summary": "L’incendie fait partie des événements garantis pour les biens assurés, et la cave est traitée comme une annexe assurée en l’absence de clause contraire. Les objets mobiliers stockés dans la cave sont couverts s’ils ne relèvent pas des biens exclus, la franchise n’est pas précisée dans les clauses fournies.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q21_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "Un tremblement de terre a fissuré un mur. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "5__tempete_grele_neige",
+    "1__tremblement_de_terre"
+   ],
+   "notes": "Le tremblement de terre figure parmi les événements de base de la garantie tempête, grêle, neige, à condition d'une magnitude d'au moins 4 reconnue par un organisme officiel et de dommages dans les environs.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "5__tempete_grele_neige",
+    "1__tremblement_de_terre",
+    "1__batiment",
+    "5__tempete_grele_neige"
+   ],
+   "citation_hit": true,
+   "confidence": 0.86,
+   "summary": "Le tremblement de terre fait partie des dommages garantis, sous réserve qu’il réponde à la définition contractuelle du séisme. Aucune franchise ni plafond applicable ne figure dans les clauses fournies.",
+   "missing_facts": [],
+   "post_checks": [
+    "arbitre trop sévère, 5 clauses de la fusion gardées"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q22_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "J'ai renversé du vin sur le canapé neuf. Est-ce couvert ?",
+   "expected_verdict": "non_couvert",
+   "expected_clauses": [
+    "5__l_incendie_et_evenements_assimiles",
+    "6__d_pack_multimedia"
+   ],
+   "notes": "Aucune garantie de base ne couvre une tache de vin sur un meuble, et les packs accidentels ne visent que des biens énumérés (multimédia, mobilité, loisirs).",
+   "obtained_verdict": "non_couvert",
+   "cited_clauses": [
+    "row:t4_r17",
+    "6__h_pack_cave_a_vin_denrees_alimentaires"
+   ],
+   "citation_hit": false,
+   "confidence": 0.72,
+   "summary": "Avec les seules clauses fournies, je ne vois pas de garantie qui couvre une tache de vin sur un canapé. Les packs cités concernent d’autres catégories de biens ou de situations.",
+   "missing_facts": [],
+   "post_checks": [
+    "arbitre trop sévère, 5 clauses de la fusion gardées",
+    "citation ajustée au texte réel : row:t4_r17"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q23_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "La maison est restée inoccupée quatre mois, puis un dégât des eaux est survenu. Est-ce couvert ?",
+   "expected_verdict": "information_insuffisante",
+   "expected_clauses": [
+    "5__gel",
+    "5__degats_des_eaux",
+    "11__exclusions_communes_a_l_ensemble_des_garanties"
+   ],
+   "notes": "Les dégâts des eaux restent couverts pendant une inoccupation, mais s'il s'agit de gel l'assuré devait mettre le chauffage hors gel au-delà de trois jours d'absence (réduction de 30 %) et vidanger ou couper l'eau dans un logement libre de toute occupation. Les bâtiments totalement inoccupés sont exclus seulement pour cause de réparation ou transformation.",
+   "obtained_verdict": "information_insuffisante",
+   "cited_clauses": [
+    "5__degats_des_eaux",
+    "5__degats_des_eaux",
+    "5__degats_des_eaux",
+    "1__periode_d_inhabitation"
+   ],
+   "citation_hit": true,
+   "confidence": 0.76,
+   "summary": "Le contrat couvre certains dégâts des eaux, mais il faut connaître l’origine de l’eau. L’inoccupation de quatre mois n’est pas, dans les clauses fournies, une exclusion du dégât des eaux.",
+   "missing_facts": [
+    "D’où vient l’eau à l’origine du dégât des eaux ?"
+   ],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q24_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "Le vent a fait tomber mon arbre sur la voiture du voisin. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "9__a_responsabilites_civiles_du_fait_des_biens_assu"
+   ],
+   "notes": "La RC propriétaire d'immeuble prend en charge les dommages causés aux tiers du fait des cours et terrains situés à l'adresse du risque, un arbre en fait partie, si la responsabilité est établie.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "9__a_responsabilites_civiles_du_fait_des_biens_assu",
+    "9__a_responsabilites_civiles_du_fait_des_biens_assu",
+    "9__a_responsabilites_civiles_du_fait_des_biens_assu",
+    "row:t3_r3"
+   ],
+   "citation_hit": true,
+   "confidence": 0.86,
+   "summary": "La responsabilité civile du fait des biens assurés peut prendre en charge les dommages causés à la voiture du voisin par un arbre situé à l’adresse assurée. La garantie tempête sur vos biens n’est pas nécessaire pour couvrir la voiture du voisin.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q25_baloise",
+   "contract_id": "baloise_home2_2024",
+   "question": "Une fuite de gaz a provoqué une explosion dans la chaudière. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "5__l_incendie_et_evenements_assimiles"
+   ],
+   "notes": "L'explosion est un événement assuré de base.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "5__l_incendie_et_evenements_assimiles",
+    "5__l_incendie_et_evenements_assimiles"
+   ],
+   "citation_hit": true,
+   "confidence": 0.9,
+   "summary": "L’explosion fait partie des événements garantis au titre de l’incendie et événements assimilés. La fuite de gaz dans la chaudière ne fait pas entrer le sinistre dans l’exclusion citée, qui vise les chauffages utilisant d’autres combustibles que le mazout, le gaz ou l’électricité.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q01_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "On m'a volé mon vélo dans le local commun de l'immeuble, qui n'était pas fermé à clé. Suis-je couvert ?",
+   "expected_verdict": "information_insuffisante",
+   "expected_clauses": [
+    "1_1_10",
+    "1_1_12",
+    "1_1_13"
+   ],
+   "notes": "La formule Sécurité couvre le vol par effraction ou escalade, mais aussi par intrusion clandestine dans les locaux sans effraction. Un local commun non fermé n'exclut donc pas le vol, mais l'assuré doit employer tous les moyens de fermeture existants, sinon l'indemnité est réduite. Les exclusions ne visent que les objets de valeur dans les caves et greniers des immeubles collectifs et les objets laissés dans les cours et jardins.",
+   "obtained_verdict": "information_insuffisante",
+   "cited_clauses": [
+    "1_1_10",
+    "1_1_10",
+    "1_1_12",
+    "1_1_12",
+    "1_1_12"
+   ],
+   "citation_hit": true,
+   "confidence": 0.72,
+   "summary": "Le vol du vélo peut être garanti, mais seulement si le vol entre dans l’une des circonstances prévues par la garantie Vol. Le fait que le local commun n’était pas fermé à clé peut aussi entraîner une réduction d’indemnité si cela a contribué au vol.",
+   "missing_facts": [
+    "Le voleur s’est-il introduit clandestinement dans le local commun, ou le vol a-t-il eu lieu avec effraction, fausses clés, clés volées ou perdues, ou agression ?"
+   ],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q02_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "Un assuré laisse une bougie sur la table de son jardin pendant ses vacances. Avec la chaleur, la bougie fond et abîme la table. Est-ce couvert ?",
+   "expected_verdict": "ambigu",
+   "expected_clauses": [
+    "1_1_1"
+   ],
+   "notes": "L'incendie suppose une combustion vive, mais le point 11 couvre les dégâts ménagers suite à un excès de chaleur sans embrasement ou au contact d'une lumière ou d'un foyer, hors objets posés sur un foyer. Une bougie fondue par le soleil peut se lire comme un excès de chaleur sans embrasement, ou comme un simple dommage sans événement couvert. Le statut d'une table de jardin, hors du bâtiment, n'est pas tranché dans la formule Sécurité (la formule Confort ne l'étend qu'au vol et à la tempête).",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "1_1_1",
+    "II__5__1"
+   ],
+   "citation_hit": true,
+   "confidence": 0.82,
+   "summary": "La table est couverte au titre des dégâts ménagers causés par un excès de chaleur sans embrasement. Aucune exclusion fournie ne vise clairement le fait de laisser une bougie sur la table, sauf si les faits révélaient une faute lourde ou un acte intentionnel.",
+   "missing_facts": [],
+   "post_checks": [
+    "arbitre trop sévère, 5 clauses de la fusion gardées"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q03_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "Un court-circuit a mis le feu à ma cuisine, les meubles et le plafond sont noircis. Suis-je couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "1_1_1"
+   ],
+   "notes": "L'incendie par embrasement et les dommages de l'électricité sont couverts dans la formule Sécurité, les dégâts de fumée en sont la suite directe.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "1_1_1",
+    "1_1_1",
+    "1_1_1"
+   ],
+   "citation_hit": true,
+   "confidence": 0.93,
+   "summary": "L’incendie de la cuisine et les traces de fumée sur les meubles et le plafond relèvent de la garantie incendie. Les clauses fournies ne mentionnent pas de franchise applicable.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q04_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "Mon lave-linge a fui pendant la nuit et le parquet du salon est gondolé. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "1_1_6"
+   ],
+   "notes": "Les fuites et débordements accidentels des machines à laver sont nommément couverts.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "1_1_6",
+    "1_1_6",
+    "1_1_6",
+    "1_1_9"
+   ],
+   "citation_hit": true,
+   "confidence": 0.86,
+   "summary": "Le dégât au parquet est couvert au titre des dégâts des eaux, car la fuite vient du lave linge. Aucune exclusion fournie ne ressort des faits indiqués.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q05_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "L'eau s'est infiltrée par la toiture pendant une forte pluie, sans tempête déclarée. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "1_1_6",
+    "1_1_9"
+   ],
+   "notes": "L'infiltration d'eau à travers les toitures est couverte. Les entrées d'eau par des ouvertures et le manque d'entretien manifeste sont exclus.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "1_1_6",
+    "1_1_20",
+    "1_1_9",
+    "1_1_9"
+   ],
+   "citation_hit": true,
+   "confidence": 0.88,
+   "summary": "L’infiltration par la toiture relève de la garantie dégâts des eaux. L’absence de tempête déclarée ne bloque pas cette garantie.",
+   "missing_facts": [],
+   "post_checks": [
+    "arbitre trop sévère, 5 clauses de la fusion gardées"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q06_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "Des cambrioleurs ont forcé la porte d'entrée et volé un ordinateur portable et des bijoux. Quel est le plafond pour les bijoux ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "1_1_10",
+    "II__stipulations_generales_en_assurance_habitation__etendue_et_stipulations_generales_en_assurance_d__mobilier"
+   ],
+   "notes": "Vol par effraction couvert. Les objets de valeur sont limités à 40 % de la somme assurée sur mobilier, et les bijoux à 20 % de cette somme.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "definitions__habitation__assurances_de_choses",
+    "II__stipulations_generales_en_assurance_habitation__etendue_et_stipulations_generales_en_assurance_d__mobilier",
+    "II__stipulations_generales_en_assurance_habitation__etendue_et_stipulations_generales_en_assurance_d__mobilier"
+   ],
+   "citation_hit": true,
+   "confidence": 0.82,
+   "summary": "Le vol avec porte forcée relève de la garantie vol par effraction. Pour les bijoux entrant dans la définition des objets de valeur, le plafond est de 20 % de la somme assurée sur Mobilier.",
+   "missing_facts": [],
+   "post_checks": [
+    "arbitre trop sévère, 5 clauses de la fusion gardées",
+    "citation ajustée au texte réel : definitions__habitation__assurances_de_choses"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q07_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "On m'a volé mon téléphone dans un café en ville. Est-ce couvert par mon assurance habitation ?",
+   "expected_verdict": "ambigu",
+   "expected_clauses": [
+    "1_3_7",
+    "1_1_10"
+   ],
+   "notes": "La formule Sécurité ne couvre que le vol dans les locaux. La formule Performance couvre les effets personnels volés dans le monde entier, sauf s'ils sont laissés sans surveillance dans un lieu public. Tout dépend de la formule souscrite et des circonstances du vol.",
+   "obtained_verdict": "information_insuffisante",
+   "cited_clauses": [
+    "7_3_1",
+    "7_3_1",
+    "7_3_2",
+    "7_3_1",
+    "7_3_1"
+   ],
+   "citation_hit": false,
+   "confidence": 0.6,
+   "summary": "Le vol du téléphone portable est couvert dans le monde entier et 24h sur 24, sous réserve qu’il n’ait pas été laissé sans surveillance dans ce café. Il faudra déposer plainte immédiatement et l’indemnisation est plafonnée à 284 EUR indice 100.",
+   "missing_facts": [
+    "y a-t-il eu effraction (porte ou fenêtre forcée) ?"
+   ],
+   "post_checks": [
+    "verdict couvert alors qu'une clause citée dépend d'un fait absent : rétrogradé en information_insuffisante"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q08_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "Une tempête a arraché des tuiles et l'eau a abîmé une chambre. Suis-je couvert, et y a-t-il une franchise ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "1_1_20"
+   ],
+   "notes": "La tempête est couverte (vent au-delà de 100 km/h attesté, ou dégâts à plusieurs bâtiments alentour), ainsi que les dommages de mouille par la pluie dans les 48 heures après la destruction du toit. La franchise éventuelle figure aux conditions particulières.",
+   "obtained_verdict": "information_insuffisante",
+   "cited_clauses": [
+    "1_1_20",
+    "1_1_20",
+    "1_1_20",
+    "1_1_23",
+    "1_1_22"
+   ],
+   "citation_hit": true,
+   "confidence": 0.74,
+   "summary": "Les tuiles arrachées par la tempête relèvent de la garantie périls climatiques, sous réserve des critères de vent prévus au contrat. Pour les dégâts d’eau dans la chambre, il faut savoir si l’eau est entrée dans les 48 heures après la destruction partielle du bâtiment, et aucune franchise tempête n’est indiquée dans les clauses fournies.",
+   "missing_facts": [
+    "Les dégâts d’eau dans la chambre sont-ils survenus dans les 48 heures après l’arrachement des tuiles par la tempête ?"
+   ],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q09_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "La grêle a cassé la verrière de la véranda. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "1_1_16",
+    "1_1_20"
+   ],
+   "notes": "Les vitrages extérieurs sont couverts au titre du bris des glaces, et la grêle au titre des périls climatiques. L'exclusion des vitrages extérieurs en périls climatiques ne joue pas quand le bris est pris en charge par le bris des glaces.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "1_1_16",
+    "1_1_20",
+    "1_1_23"
+   ],
+   "citation_hit": true,
+   "confidence": 0.86,
+   "summary": "La verrière de la véranda est couverte au titre du bris de glaces des vitrages extérieurs du bâtiment. Aucune franchise n'est indiquée dans les clauses fournies.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q10_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "Mon fils a cassé la vitre du voisin en jouant au ballon. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "4_1"
+   ],
+   "notes": "La responsabilité civile familiale couvre les dommages causés par les enfants de l'assuré en leur qualité de simple particulier.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "4_1",
+    "4_1",
+    "II__stipulations_generales_en_assurance_habitation__II__stipulations_generales_en_assurance_habitation__etendue_et_stipulations_generales_en_assurance_d__tiers",
+    "II__stipulations_generales_en_assurance_habitation__II__stipulations_generales_en_assurance_habitation__etendue_et_stipulations_generales_en_assurance_d__tiers"
+   ],
+   "citation_hit": true,
+   "confidence": 0.86,
+   "summary": "Le dommage causé à la vitre du voisin par votre fils en jouant relève de la responsabilité civile familiale. Le voisin est un tiers et le contrat prévoit un plafond global de 12 000 000 EUR par sinistre.",
+   "missing_facts": [],
+   "post_checks": [
+    "arbitre trop sévère, 5 clauses de la fusion gardées"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q11_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "Le chien a mordu un passant dans la rue. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "4_1"
+   ],
+   "notes": "La responsabilité civile familiale couvre l'assuré en tant que détenteur ou gardien d'animaux domestiques non tenus à des fins professionnelles.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "4_1",
+    "4_1",
+    "II__stipulations_generales_en_assurance_habitation__II__stipulations_generales_en_assurance_habitation__etendue_et_stipulations_generales_en_assurance_d__tiers",
+    "4_2",
+    "II__stipulations_generales_en_assurance_habitation__II__stipulations_generales_en_assurance_habitation__etendue_et_stipulations_generales_en_assurance_d__tiers"
+   ],
+   "citation_hit": true,
+   "confidence": 0.9,
+   "summary": "La morsure du passant par le chien relève de la responsabilité civile pour animaux domestiques. Aucune exclusion fournie ne vise un chien domestique détenu à titre privé.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q12_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "Une surtension après un orage a grillé la télévision et le frigo. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "1_1_1"
+   ],
+   "notes": "Les dommages électriques aux appareils électriques et électroniques du mobilier sont couverts, avec une réduction forfaitaire par année d'âge.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "1_1_1",
+    "definitions__habitation__appareils_audiovisuels_non_portables",
+    "definitions__habitation__appareils_electromenagers",
+    "1_1_1",
+    "1_1_1"
+   ],
+   "citation_hit": true,
+   "confidence": 0.86,
+   "summary": "La surtension relève des dommages électriques garantis pour les appareils électriques et électroniques du mobilier assuré. La télévision et le frigo sont donc couverts, sous réserve des exclusions indiquées pour certaines pièces ou causes.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q13_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "Le congélateur est tombé en panne et j'ai perdu 300 EUR de denrées. Est-ce couvert ?",
+   "expected_verdict": "non_couvert",
+   "expected_clauses": [
+    "1_1_1",
+    "1_3_5"
+   ],
+   "notes": "Aucune formule ne couvre les denrées. La formule Performance couvre le bris de l'appareil électroménager lui-même, pas son contenu.",
+   "obtained_verdict": "non_couvert",
+   "cited_clauses": [
+    "definitions__habitation__appareils_electromenagers",
+    "1_3_5"
+   ],
+   "citation_hit": true,
+   "confidence": 0.84,
+   "summary": "Les denrées perdues ne sont pas couvertes par les clauses fournies. La garantie citée vise le bris ou le vol des appareils électroménagers, pas la perte de nourriture après une panne.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q14_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "Un locataire a laissé une casserole sur le feu et la cuisine a brûlé. Le propriétaire est-il indemnisé ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "1_1_1"
+   ],
+   "notes": "L'incendie du bâtiment assuré est couvert quelle que soit la faute du locataire. La Compagnie peut se retourner contre le responsable (subrogation et recours).",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "1_1_1"
+   ],
+   "citation_hit": true,
+   "confidence": 0.9,
+   "summary": "L’incendie de la cuisine entre dans la garantie incendie des dommages matériels. Le fait que le feu ait été causé par un locataire qui a laissé une casserole sur le feu ne fait pas apparaître d’exclusion dans les clauses fournies.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q15_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "J'ai laissé une fenêtre ouverte pendant mon absence et on m'a volé la console de jeux. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "1_1_10",
+    "1_1_12"
+   ],
+   "notes": "Le vol par intrusion clandestine sans effraction ni escalade est couvert. L'assuré devait employer tous les moyens de fermeture existants : la fenêtre ouverte entraîne une réduction de l'indemnité dans la limite du préjudice subi par la Compagnie, pas un refus.",
+   "obtained_verdict": "information_insuffisante",
+   "cited_clauses": [
+    "1_1_10",
+    "1_1_10",
+    "1_1_12",
+    "1_1_12",
+    "1_1_12"
+   ],
+   "citation_hit": true,
+   "confidence": 0.72,
+   "summary": "Le vol peut être pris en charge s’il a eu lieu dans les locaux assurés, même sans effraction, au titre de l’intrusion clandestine. La fenêtre laissée ouverte peut toutefois entraîner une réduction de l’indemnité.",
+   "missing_facts": [
+    "La console a-t-elle été volée dans les locaux de l’habitation assurée ?"
+   ],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q16_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "La piscine hors sol s'est déchirée et a inondé le jardin du voisin. Est-ce couvert ?",
+   "expected_verdict": "ambigu",
+   "expected_clauses": [
+    "4_1"
+   ],
+   "notes": "La responsabilité civile familiale couvre les dommages de la vie privée et ceux causés par l'habitation et ses jardins, mais le point sur l'eau ne vise que les ruptures de conduites d'eau. Deux lectures : responsabilité générale du fait des biens, ou dommage d'eau hors du cas prévu.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "II__stipulations_generales_en_assurance_habitation__II__stipulations_generales_en_assurance_habitation__etendue_et_stipulations_generales_en_assurance_d__tiers",
+    "II__stipulations_generales_en_assurance_habitation__II__stipulations_generales_en_assurance_habitation__etendue_et_stipulations_generales_en_assurance_d__tiers",
+    "1_1_9"
+   ],
+   "citation_hit": false,
+   "confidence": 0.83,
+   "summary": "Le dommage au jardin du voisin relève de la responsabilité civile pour les dommages causés aux tiers ou à leurs biens. La garantie est plafonnée à 12 000 000 EUR par sinistre selon la clause fournie.",
+   "missing_facts": [],
+   "post_checks": [
+    "arbitre trop sévère, 5 clauses de la fusion gardées"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q17_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "Les panneaux solaires ont été endommagés par la grêle. Sont-ils couverts ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "1_1_20",
+    "definitions__habitation__batiment_assurance_habitation_privee_et_individu"
+   ],
+   "notes": "Les panneaux solaires font partie du bâtiment par définition, et la grêle est un péril climatique couvert.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "1_1_20",
+    "1_1_20",
+    "II__stipulations_generales_en_assurance_habitation__etendue_et_stipulations_generales_en_assurance_d__batiment",
+    "1_1_23"
+   ],
+   "citation_hit": true,
+   "confidence": 0.86,
+   "summary": "Les panneaux solaires font partie du bâtiment assuré et la grêle est un événement garanti. Aucune exclusion fournie ne vise clairement ce dommage.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q18_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "Un dégât des eaux vient de l'appartement du dessus. Qui paie, et dois-je déclarer ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "1_1_6",
+    "conditions_administratives__declaration_en_cas_de_sinistre"
+   ],
+   "notes": "Les fuites des conduites et appareils à effet d'eau sont couvertes, sans condition sur l'appartement d'origine. La déclaration suit les conditions administratives, et la Compagnie exerce son recours contre le responsable.",
+   "obtained_verdict": "information_insuffisante",
+   "cited_clauses": [
+    "1_1_6",
+    "1_1_6",
+    "conditions_administratives__declaration_en_cas_de_sinistre"
+   ],
+   "citation_hit": true,
+   "confidence": 0.74,
+   "summary": "Il faut déclarer le sinistre à votre assureur si les dommages entrent dans la garantie dégâts des eaux. La prise en charge dépend de la cause précise de l’eau venant de l’appartement du dessus.",
+   "missing_facts": [
+    "Quelle est la cause précise de l’eau venant de l’appartement du dessus ?"
+   ],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q19_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "Mon vélo électrique a été volé devant la gare, attaché à un poteau. Est-ce couvert ?",
+   "expected_verdict": "ambigu",
+   "expected_clauses": [
+    "1_3_7"
+   ],
+   "notes": "La formule Sécurité ne couvre pas le vol hors des locaux. La formule Performance couvre les effets personnels, et les bicyclettes restent assurées si elles sont attachées par un antivol à un objet solide, dans la limite de 420 EUR à l'indice 100. Tout dépend de la formule souscrite.",
+   "obtained_verdict": "information_insuffisante",
+   "cited_clauses": [
+    "1_1_10",
+    "7_3",
+    "7_3",
+    "definitions__habitation__cycle_electrique"
+   ],
+   "citation_hit": false,
+   "confidence": 0.72,
+   "summary": "Le vol devant la gare peut être pris en charge par l’assurance cycles seulement si le vélo répond à la définition contractuelle et s’il était attaché avec un antivol mécanique adéquat à un objet solide. La garantie vol habitation de base ne suffit pas ici car elle vise le vol dans des locaux ou par agression.",
+   "missing_facts": [
+    "Le vélo était-il attaché au poteau à l’aide d’un système mécanique antivol adéquat empêchant valablement son enlèvement ?",
+    "Le vélo électrique a-t-il une puissance nominale continue maximale de 0,5 KW et une vitesse maximale par construction de 25 km/h ?"
+   ],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q20_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "Un incendie a détruit la cave et les objets qui y étaient stockés. Sont-ils couverts ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "1_1_1",
+    "definitions__habitation__batiment_assurance_habitation_privee_et_individu"
+   ],
+   "notes": "Le bâtiment comprend ses annexes et dépendances, et le mobilier qui s'y trouve est couvert contre l'incendie.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "1_1_1",
+    "II__stipulations_generales_en_assurance_habitation__etendue_et_stipulations_generales_en_assurance_d__mobilier",
+    "II__stipulations_generales_en_assurance_habitation__etendue_et_stipulations_generales_en_assurance_d__mobilier"
+   ],
+   "citation_hit": true,
+   "confidence": 0.86,
+   "summary": "L’incendie est une garantie de base et couvre les dommages matériels. La cave et les objets stockés sont donc couverts, sous réserve des limites prévues pour certains biens comme les objets de valeur.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q21_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "Un tremblement de terre a fissuré un mur. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "1_1_20"
+   ],
+   "notes": "Le tremblement de terre est un péril climatique couvert, à condition d'être reconnu officiellement avec une magnitude d'au moins 5 et d'avoir causé des dommages dans l'environnement.",
+   "obtained_verdict": "information_insuffisante",
+   "cited_clauses": [
+    "1_1_20",
+    "1_1_20",
+    "1_1_23",
+    "1_1_22"
+   ],
+   "citation_hit": true,
+   "confidence": 0.72,
+   "summary": "Le tremblement de terre fait partie des périls climatiques garantis, sous réserve des conditions de reconnaissance et de magnitude prévues au contrat. Il faut savoir si le mur fissuré est un mur du bâtiment ou un mur d’enceinte, car les murs d’enceinte sont exclus.",
+   "missing_facts": [
+    "Le mur fissuré est il un mur du bâtiment assuré ou un mur d’enceinte ?"
+   ],
+   "post_checks": [
+    "citation ajustée au texte réel : 1_1_20"
+   ],
+   "cache_hit": true
+  },
+  {
+   "id": "q22_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "J'ai renversé du vin sur le canapé neuf. Est-ce couvert ?",
+   "expected_verdict": "non_couvert",
+   "expected_clauses": [
+    "1_3_5",
+    "1_1_1"
+   ],
+   "notes": "Aucun événement couvert : la formule Performance ne couvre le bris que du matériel informatique, électroménager et audiovisuel.",
+   "obtained_verdict": "non_couvert",
+   "cited_clauses": [
+    "II__stipulations_generales_en_assurance_habitation__etendue_et_stipulations_generales_en_assurance_d__mobilier",
+    "definitions__habitation__dommage_materiel",
+    "1_3_1"
+   ],
+   "citation_hit": false,
+   "confidence": 0.78,
+   "summary": "Avec les seules clauses fournies, le canapé relève du mobilier et la tache peut être un dommage matériel. En revanche, aucune garantie fournie ne couvre le vin renversé accidentellement sur votre propre canapé.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q23_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "La maison est restée inoccupée quatre mois, puis un dégât des eaux est survenu. Est-ce couvert ?",
+   "expected_verdict": "information_insuffisante",
+   "expected_clauses": [
+    "1_1_9",
+    "1_1_6"
+   ],
+   "notes": "Les dégâts des eaux restent couverts, mais sont exclus ceux qui résultent de l'inoccupation du bâtiment et d'un manque de précaution manifeste. Le verdict dépend des précautions prises.",
+   "obtained_verdict": "information_insuffisante",
+   "cited_clauses": [
+    "1_1_6",
+    "1_1_9"
+   ],
+   "citation_hit": true,
+   "confidence": 0.72,
+   "summary": "Le dégât des eaux peut être garanti seulement s’il vient d’une cause prévue au contrat. L’inoccupation peut aussi exclure la prise en charge si le dommage en résulte et s’il y a eu un manque de précaution manifeste.",
+   "missing_facts": [
+    "D’où vient l’eau ayant causé le dégât des eaux ?",
+    "Le dommage résulte t il de l’inoccupation du bâtiment et d’un manque de précaution manifeste ?"
+   ],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q24_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "Le vent a fait tomber mon arbre sur la voiture du voisin. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "4_5",
+    "4_1"
+   ],
+   "notes": "La responsabilité civile immeubles vise les dommages causés par les jardins et arbres faisant partie de l'immeuble, et la responsabilité civile familiale ceux causés par l'habitation et ses jardins.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "4_5",
+    "4_5",
+    "II__stipulations_generales_en_assurance_habitation__II__stipulations_generales_en_assurance_habitation__etendue_et_stipulations_generales_en_assurance_d__tiers",
+    "II__stipulations_generales_en_assurance_habitation__II__stipulations_generales_en_assurance_habitation__etendue_et_stipulations_generales_en_assurance_d__tiers"
+   ],
+   "citation_hit": true,
+   "confidence": 0.9,
+   "summary": "La chute de votre arbre sur la voiture du voisin relève de la responsabilité civile liée à l'immeuble. Le voisin est un tiers et les dommages à son véhicule sont donc pris en charge dans la limite prévue.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  },
+  {
+   "id": "q25_lalux",
+   "contract_id": "lalux_easyprotect_2017",
+   "question": "Une fuite de gaz a provoqué une explosion dans la chaudière. Est-ce couvert ?",
+   "expected_verdict": "couvert",
+   "expected_clauses": [
+    "1_1_1"
+   ],
+   "notes": "Les explosions et implosions de toute nature sont couvertes.",
+   "obtained_verdict": "couvert",
+   "cited_clauses": [
+    "1_1_1",
+    "1_1_1"
+   ],
+   "citation_hit": true,
+   "confidence": 0.93,
+   "summary": "L’explosion de la chaudière entre dans la garantie incendie du contrat. Les clauses fournies ne prévoient pas d’exclusion applicable à ce dommage aux biens assurés.",
+   "missing_facts": [],
+   "post_checks": [],
+   "cache_hit": true
+  }
+ ]
+}

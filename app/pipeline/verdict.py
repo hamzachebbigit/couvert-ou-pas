@@ -104,9 +104,11 @@ def post_check(verdict: Verdict, parsed: ParsedQuestion, chosen: list[RetrievedC
     kept: list[CitedClause] = []
     allowed = {c.clause_id for c in chosen} | {c.clause_id.split("#")[0] for c in chosen}
     for cited in verdict.cited:
-        if cited.clause_id not in allowed:
+        resolved = _resolve_cited_id(cited.clause_id, allowed)
+        if resolved is None:
             trace.post_checks.append(f"citation hors clauses fournies retirée : {cited.clause_id}")
             continue
+        cited = cited.model_copy(update={"clause_id": resolved})
         text, clause = clause_text_for(cited.clause_id, chosen, lookup)
         ok, fixed = verify_quote(cited.quote, text)
         if not ok:
@@ -123,6 +125,7 @@ def post_check(verdict: Verdict, parsed: ParsedQuestion, chosen: list[RetrievedC
     for field_name in ("cap", "deductible"):
         value: Cited | None = getattr(verdict, field_name)
         if value and value.quote and value.clause_id:
+            value.clause_id = _resolve_cited_id(value.clause_id, allowed) or value.clause_id
             text, _ = clause_text_for(value.clause_id, chosen, lookup)
             ok, fixed = verify_quote(value.quote, text)
             if ok:
@@ -160,6 +163,15 @@ def post_check(verdict: Verdict, parsed: ParsedQuestion, chosen: list[RetrievedC
         verdict.alternative_reading = "Le contrat se lit de deux façons sur ce point, voir le raisonnement."
     verdict.confidence = max(0.0, min(1.0, verdict.confidence))
     return verdict
+
+
+def _resolve_cited_id(clause_id: str, allowed: set[str]) -> str | None:
+    """L'identifiant tel que le modèle l'a écrit, ou sa forme réelle quand il a oublié le préfixe d'une rangée de tableau."""
+    base = clause_id.split("#")[0]
+    for candidate in (clause_id, f"row:{clause_id}", base, f"row:{base}"):
+        if candidate in allowed:
+            return candidate
+    return None
 
 
 def _gated_facts(parsed: ParsedQuestion, verdict: Verdict, chosen: list[RetrievedClause], lookup: dict[str, Clause]) -> list[str]:

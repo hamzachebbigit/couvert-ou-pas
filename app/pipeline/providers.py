@@ -24,8 +24,10 @@ Task = Literal["verdict", "cheap"]
 EMBED_BATCH = 100
 EMBED_DIM = 768
 MAX_OUTPUT_TOKENS = 16384
-# Effort de raisonnement demandé au modèle par tâche. Sondé sur le jeu annoté : l'effort moyen
-# triple le temps du verdict (35 à 80 s contre 10 à 20 s) sans changer les verdicts, l'effort bas suffit.
+# Effort de raisonnement demandé au modèle par tâche. Mesuré sur dix questions du jeu annoté qui
+# changeaient de verdict d'une passe à l'autre : le modèle courant le plus récent à effort bas en
+# juge sept sur dix en 9 à 24 s, le précédent n'y arrive qu'à effort moyen en 37 à 62 s, et l'effort
+# moyen sur le plus récent fait moins bien que l'effort bas. L'effort bas partout.
 REASONING_BY_TASK: dict[str, str] = {"verdict": "low", "cheap": "low"}
 
 

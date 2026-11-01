@@ -88,7 +88,7 @@ QUERY_TERMS: dict[str, str] = {
     "vol": "vol effraction",
     "tempete": "tempête vent",
     "grele": "grêle",
-    "catnat": "catastrophe naturelle inondation tremblement de terre",
+    "catnat": "catastrophe naturelle inondation tremblement de terre périls climatiques",
     "bris_glace": "bris de vitrage verre",
     "rc": "responsabilité civile tiers dommages causés",
     "dommages_electriques": "dégâts électriques électricité appareils électriques",
@@ -96,6 +96,25 @@ QUERY_TERMS: dict[str, str] = {
     "dommages_accidentels": "dommages accidentels",
     "inoccupation": "inoccupation inoccupé",
 }
+
+# Familles voisines, cherchées ensemble : un contrat range le tremblement de terre sous la garantie
+# tempête ou sous les « périls climatiques », un autre sous les catastrophes naturelles. Sans ce
+# voisinage, le filtre cachait la seule clause qui couvrait le séisme.
+RELATED_FAMILIES: dict[str, tuple[str, ...]] = {
+    "catnat": ("tempete",),
+    "tempete": ("catnat",),
+}
+
+
+def expand_families(families: list[str]) -> list[str]:
+    """Les familles de la question et leurs voisines, sans doublon, dans l'ordre d'apparition."""
+    expanded: list[str] = []
+    for family in families:
+        for candidate in (family, *RELATED_FAMILIES.get(family, ())):
+            if candidate not in expanded:
+                expanded.append(candidate)
+    return expanded
+
 
 # Faits qu'un événement exige en général. Remplis par des règles, pas par le modèle.
 FACTS_NEEDED_BY_FAMILY: dict[str, tuple[str, ...]] = {

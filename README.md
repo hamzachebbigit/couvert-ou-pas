@@ -24,7 +24,7 @@ Quatre briques et un dispatcher.
 3. Recherche, filtre d'abord. Les clauses sont filtrées par contrat et par famille de garantie, puis cherchées par mots-clés (BM25 avec racinisation française) et par embeddings, fusionnées par rang réciproque, et reclassées par un arbitre qui note chaque finaliste de 0 à 3 en un seul appel. Les définitions de l'événement et les exclusions générales sont toujours ajoutées, déclarées et non découvertes.
 4. Verdict typé. Un seul appel au modèle renvoie un objet structuré : verdict, raisonnement, clauses citées, faits manquants, plafond, franchise, confiance. Le code vérifie ensuite que chaque citation est un extrait exact de la clause, retire celles qui ne le sont pas, suspend tout verdict assuré qui ne tient plus sur aucune clause, et rétrograde un « couvert » dès qu'une clause citée dépend d'un fait que la question ne donne pas (effraction, antivol, local fermé à clé).
 
-Deux modèles standard de la plateforme OpenAI, pas de modèle de la classe Pro : le modèle courant pour le verdict et sa version mini pour la lecture de la question, le reclassement et l'extraction, tous deux avec un effort de raisonnement bas. Sondé sur les questions du brief, l'effort moyen triplait le temps du verdict sans changer les verdicts, et le modèle mini tombait dans le piège de la bougie. Les embeddings viennent du petit modèle d'embeddings, réduits à 768 dimensions. Les identifiants exacts sont choisis par `scripts/pick_models.py`, qui liste et sonde les modèles que la clé peut appeler, et un modèle en panne passe au palier suivant. Une question coûte environ cinq centimes. Les réponses sont mises en cache, les questions du jeu annoté sont précalculées, et un plafond quotidien borne les questions nouvelles.
+Deux modèles standard de la plateforme OpenAI, pas de modèle de la classe Pro : le modèle courant le plus récent pour le verdict et le modèle mini pour la lecture de la question, le reclassement et l'extraction, tous deux avec un effort de raisonnement bas. Le choix est mesuré, pas supposé. Sur dix questions du jeu annoté dont le verdict changeait d'une passe à l'autre, le modèle courant à effort bas en juge sept en 9 à 24 secondes, le modèle précédent n'y arrive qu'à effort moyen en 37 à 62 secondes, l'effort moyen sur le modèle courant fait moins bien que l'effort bas, et le modèle mini tombe dans le piège de la bougie. Les embeddings viennent du petit modèle d'embeddings, réduits à 768 dimensions. Les identifiants exacts sont choisis par `scripts/pick_models.py`, qui liste et sonde les modèles que la clé peut appeler, et un modèle en panne passe au palier suivant. Une question coûte moins de dix centimes. Les réponses sont mises en cache, les questions du jeu annoté sont précalculées, et un plafond quotidien borne les questions nouvelles.
 
 ## Les contrats
 
@@ -38,7 +38,21 @@ Les conditions easyPROTECT couvrent plusieurs branches, seules les parties habit
 
 ## Évaluation
 
-À COMPLÉTER APRÈS LA PREMIÈRE ÉVALUATION : nombre de questions, exactitude par classe, taux de citation correcte, faux « couvert » et faux « non couvert » comptés séparément, taux d'abstention et abstentions justifiées. Les mêmes chiffres sont dans l'onglet Évaluation de l'application, calculés par `scripts/evaluate.py` depuis `data/eval/results.json`.
+Le jeu annoté compte 75 questions : les 25 sinistres du brief, posés à chacun des trois contrats, avec un verdict attendu et les clauses à citer, écrits à la main en lisant les conditions. Dernière passe complète, modèle de verdict à effort bas, chiffres identiques à l'onglet Évaluation de l'application (calculés par `scripts/evaluate.py` depuis `data/eval/results.json`) :
+
+| Mesure | Résultat |
+|---|---|
+| Verdict exact | 56 sur 75 (74,7 %) |
+| Couvert | 36 sur 42 (85,7 %) |
+| Non couvert | 8 sur 13 (61,5 %) |
+| Ambigu | 7 sur 14 (50,0 %) |
+| Information insuffisante | 5 sur 6 (83,3 %) |
+| Au moins une clause attendue citée | 67 sur 75 (89,3 %) |
+| Faux « couvert » | 3 sur 75 |
+| Faux « non couvert » | 1 sur 75 |
+| Abstentions (ambigu ou information insuffisante) | 27 sur 75, dont 16 justifiées par le jeu annoté |
+
+Les deux erreurs qui coûtent cher sont rares et toutes connues : les trois faux « couvert » sont des cas que le jeu annoté classe « ambigu » (panneaux solaires grêlés chez Baloise, bougie fondue et piscine hors sol chez Lalux), jamais un sinistre exclu, et le seul faux « non couvert » est la vitre du voisin cassée au ballon chez Baloise, où la responsabilité civile familiale n'a pas été retrouvée. Le reste des erreurs est de la prudence excessive : onze fois le système s'abstient là où le jeu annoté tranche. Six sinistres couverts ressortent « information insuffisante » parce que le modèle réclame un fait qu'une question réelle ne donnerait pas (la mouille est-elle survenue dans les 48 heures après la tempête, le mur fissuré est-il un mur d'enceinte, le terrain fait-il moins d'un hectare), et cinq sinistres exclus ressortent « ambigu » ou « information insuffisante » parce que le modèle laisse ouverte une circonstance que la question exclut déjà (le vol dans un café ou dans un local commun ouvert n'est pas une effraction). Une question posée plusieurs fois donne le même verdict dans la grande majorité des cas, mais pas toujours : entre deux passes complètes à effort bas, une dizaine de verdicts changent. Le cache rend la démonstration stable, et l'onglet Évaluation montre la passe qui est servie.
 
 Ce qui a échoué en route, et ce qui a été changé :
 

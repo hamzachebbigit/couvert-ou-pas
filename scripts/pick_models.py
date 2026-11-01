@@ -3,9 +3,9 @@
     python scripts/pick_models.py
 
 Rien n'est deviné : les identifiants viennent de la réponse de l'API. Le script
-propose le modèle standard le plus récent pour le verdict, sa version mini
-pour la lecture de la question, le reclassement et l'extraction, et le petit
-modèle d'embeddings, puis vérifie chacun par un appel minuscule.
+propose le modèle standard le plus récent pour le verdict, le modèle mini le
+plus récent pour la lecture de la question, le reclassement et l'extraction,
+et le petit modèle d'embeddings, puis vérifie chacun par un appel minuscule.
 """
 
 from __future__ import annotations
@@ -40,11 +40,11 @@ def main() -> int:
     for name in embeds:
         print(f"  {name}")
 
-    # Une seule famille : la version la plus récente qui existe à la fois en modèle courant et en mini,
-    # pour que les deux tâches partagent le même comportement. Chaque candidat est ensuite sondé.
-    versions = {v for v, mini in standard.values() if mini} & {v for v, mini in standard.values() if not mini}
-    full = sorted((n for n, (v, mini) in standard.items() if not mini and v in versions), key=lambda n: standard[n][0], reverse=True)
-    minis = sorted((n for n, (v, mini) in standard.items() if mini and v in versions), key=lambda n: standard[n][0], reverse=True)
+    # Le modèle courant le plus récent pour le verdict, le mini le plus récent pour le reste : mesuré sur
+    # le jeu annoté, le modèle le plus récent à effort bas vaut le précédent à effort moyen, trois fois
+    # plus vite. Chaque candidat est ensuite sondé, le plus récent n'étant pas toujours celui qui répond.
+    full = sorted((n for n, (_, mini) in standard.items() if not mini), key=lambda n: standard[n][0], reverse=True)
+    minis = sorted((n for n, (_, mini) in standard.items() if mini), key=lambda n: standard[n][0], reverse=True)
     print("\nSondage des candidats (un appel chacun) :")
     verdict = _first_answering(full) or _first_answering(minis)
     cheap = _first_answering(minis) or verdict

@@ -16,7 +16,7 @@ from __future__ import annotations
 import json
 import re
 
-from .families import QUERY_TERMS, fold
+from .families import QUERY_TERMS, expand_families, fold
 from .index import Index, Unit
 from .models import ParsedQuestion, RetrievedClause, Trace
 from .prompts import load_prompt
@@ -31,7 +31,7 @@ MIN_COUNT = 5
 
 def retrieve(router: Router, index: Index, contract_id: str, question: str, parsed: ParsedQuestion, trace: Trace) -> list[RetrievedClause]:
     """Renvoie les clauses retenues pour le verdict, scores compris."""
-    families = list(dict.fromkeys([*parsed.event_family, *ALWAYS_FAMILIES]))
+    families = list(dict.fromkeys([*expand_families(parsed.event_family), *ALWAYS_FAMILIES]))
     positions = index.candidates(contract_id, families)
     trace.candidates_after_filter = len(positions)
     units = index.units[contract_id]
@@ -133,10 +133,10 @@ def _is_number(value: object) -> bool:
 
 
 def _always_included(units: list[Unit], parsed: ParsedQuestion, chosen: list[RetrievedClause]) -> list[RetrievedClause]:
-    """La définition de l'événement et les exclusions générales, si elles manquent."""
+    """La définition de l'événement, de l'objet ou du lieu, et les exclusions générales, si elles manquent."""
     present = {c.clause_id for c in chosen}
     extras: list[RetrievedClause] = []
-    terms = [fold(t) for t in [parsed.event, parsed.object or ""] if t]
+    terms = [fold(t) for t in [parsed.event, parsed.object or "", parsed.place or ""] if t]
     terms = [t for t in terms if len(t) >= 3]
 
     def add(unit: Unit) -> None:
