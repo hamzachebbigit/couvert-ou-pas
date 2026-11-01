@@ -18,7 +18,7 @@ def test_number_of_rejects_words_and_ordinals():
 
 
 def test_clean_text_strips_symbol_glyphs_and_keeps_hyphens():
-    assert clean_text("ab  c\u200Bd e-f") == "a b c d e-f"
+    assert clean_text("a\uf0a3b  c\u200Bd e-f") == "a b c d e-f"
 
 
 def test_split_long_keeps_short_text_whole_and_splits_long_text_at_sentences():
