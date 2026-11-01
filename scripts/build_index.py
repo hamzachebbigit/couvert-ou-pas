@@ -1,6 +1,6 @@
 """Construit data/index.db à partir des contrats parsés.
 
-    python scripts/build_index.py            # avec embeddings (clé Gemini requise)
+    python scripts/build_index.py            # avec embeddings (clé du fournisseur requise)
     python scripts/build_index.py --no-embeddings
 """
 

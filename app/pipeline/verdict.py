@@ -208,7 +208,7 @@ def analyse(router: Router, index: Index, cache: Cache, contract_id: str, questi
     if contract_id not in index.units:
         raise AnalysisError("Contrat inconnu.")
     version = prompt_version()
-    model_tag = router.config.model_verdict or router.config.secondary_model
+    model_tag = router.config.model_verdict
     key = cache_key(contract_id, question, version, model_tag)
     cached = cache.get(key)
     lookup = index.clause_lookup(contract_id)
@@ -236,7 +236,7 @@ def analyse(router: Router, index: Index, cache: Cache, contract_id: str, questi
         with watch.stage("verdict"):
             verdict, model = _call_verdict(router, question, parsed, status, chosen)
             trace.models["verdict"] = model
-            if router.config.model_verdict and model != f"gemini:{router.config.model_verdict}":
+            if router.config.model_verdict and model != router.config.model_verdict:
                 trace.post_checks.append(f"modèle de verdict indisponible, réponse du modèle de repli {model}")
         with watch.stage("vérifications"):
             verdict = post_check(verdict, parsed, chosen, lookup, trace)

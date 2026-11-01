@@ -140,8 +140,8 @@ class Index:
     def build(self, contract_ids: list[str], embed: "callable | None" = None, embed_model: str = "", resume: bool = False) -> None:
         """Construit l'index et l'enregistre dans SQLite, un contrat à la fois.
 
-        Chaque contrat est validé dès qu'il est indexé : un quota atteint au
-        troisième contrat ne défait pas les deux premiers. Avec `resume`, les
+        Chaque contrat est validé dès qu'il est indexé : une panne du fournisseur
+        au troisième contrat ne défait pas les deux premiers. Avec `resume`, les
         contrats déjà vectorisés avec le même modèle sont laissés tels quels.
         """
         self.db_path.parent.mkdir(parents=True, exist_ok=True)
@@ -167,13 +167,12 @@ class Index:
             units = units_from_parsed(contract_id, clauses, rows)
             vectors: list[tuple[str, str, bytes]] = []
             if embed is not None:
-                # Les unités réduites à un titre n'ont pas de vecteur : BM25 les retrouve par leurs mots,
-                # et chaque vecteur compte dans le quota journalier du palier gratuit.
+                # Les unités réduites à un titre n'ont pas de vecteur : BM25 les retrouve par leurs mots.
                 worth = [u for u in units if len(u.text) >= MIN_EMBED_CHARS]
                 try:
                     matrix = embed([f"{u.path}\n{u.text[:3000]}" for u in worth])
                     vectors = [(u.contract_id, u.unit_id, np.asarray(matrix[i], dtype=np.float32).tobytes()) for i, u in enumerate(worth)]
-                except Exception as error:  # noqa: BLE001 : un quota atteint n'efface pas le texte indexé
+                except Exception as error:  # noqa: BLE001 : une panne du fournisseur n'efface pas le texte indexé
                     print(f"{contract_id} : embeddings indisponibles ({str(error)[:80]}), unités écrites sans vecteur, relancer avec --resume")
             conn.execute("DELETE FROM units WHERE contract_id = ?", (contract_id,))
             conn.execute("DELETE FROM vectors WHERE contract_id = ?", (contract_id,))

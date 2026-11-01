@@ -1,9 +1,8 @@
-"""Fournisseurs de modèles derrière une seule interface, avec repli.
+"""Appels au fournisseur de modèles derrière une seule interface, avec repli.
 
-Le fournisseur principal est Gemini. Une clé épuisée passe à la clé suivante,
-un modèle en erreur passe au palier inférieur, et un fournisseur exposant une
-API de complétion de chat prend le relais si une clé est configurée. L'appelant ne
-voit qu'une fonction : `generate_json(task, system, user)`.
+Un modèle en erreur passe au palier inférieur, une limite de débit est
+attendue sur le délai que la réponse annonce, et l'appelant ne voit qu'une
+fonction : `generate_json(task, system, user)`.
 """
 
 from __future__ import annotations
@@ -20,22 +19,23 @@ import numpy as np
 
 from .settings import Settings, settings
 
-GEMINI_BASE = "https://generativelanguage.googleapis.com/v1beta"
+OPENAI_BASE = "https://api.openai.com/v1"
 Task = Literal["verdict", "cheap"]
-EMBED_BATCH = 40
-EMBED_BATCH_SPACING_S = 30
-# Niveau de réflexion demandé au modèle par tâche : le verdict mérite une réflexion moyenne,
-# la lecture de la question et le reclassement n'en ont pas besoin.
-THINKING_BY_TASK: dict[str, str] = {"verdict": "medium", "cheap": "low"}
+EMBED_BATCH = 100
+EMBED_DIM = 768
+MAX_OUTPUT_TOKENS = 16384
+# Effort de raisonnement demandé au modèle par tâche. Sondé sur le jeu annoté : l'effort moyen
+# triple le temps du verdict (35 à 80 s contre 10 à 20 s) sans changer les verdicts, l'effort bas suffit.
+REASONING_BY_TASK: dict[str, str] = {"verdict": "low", "cheap": "low"}
 
 
 class ProviderError(RuntimeError):
-    """Aucun fournisseur n'a pu répondre."""
+    """Le fournisseur n'a pas pu répondre."""
 
 
 @dataclass
 class Pacer:
-    """Espace les appels d'une clé pour rester sous la limite par minute."""
+    """Espace les appels d'un modèle pour rester sous la limite par minute."""
 
     rpm: int
     _last: float = 0.0
@@ -52,33 +52,26 @@ class Pacer:
 
 
 def _retry_delay(response: httpx.Response, default: float) -> float:
-    """Le délai demandé par une réponse 429 (RetryInfo ou phrase « retry in »), borné à 75 s."""
+    """Le délai demandé par une réponse 429 (en-tête Retry-After, en secondes ou en millisecondes), borné à 75 s."""
+    header = response.headers.get("retry-after-ms") or response.headers.get("retry-after")
+    if header:
+        try:
+            value = float(header)
+            return min(75.0, value / 1000 if "retry-after-ms" in response.headers else value) + 0.5
+        except ValueError:
+            pass
+    match = re.search(r"try again in ([\d.]+)(ms|s)", response.text)
+    if match:
+        value = float(match.group(1)) / (1000 if match.group(2) == "ms" else 1)
+        return min(75.0, value) + 0.5
+    return default
+
+
+def _error_message(response: httpx.Response) -> str:
     try:
-        data = response.json()
+        return str(response.json().get("error", {}).get("message", ""))
     except ValueError:
-        return default
-    for detail in data.get("error", {}).get("details", []):
-        if str(detail.get("@type", "")).endswith("RetryInfo"):
-            match = re.match(r"([\d.]+)s", str(detail.get("retryDelay", "")))
-            if match:
-                return min(75.0, float(match.group(1)) + 1.0)
-    match = re.search(r"retry in ([\d.]+)s", data.get("error", {}).get("message", ""))
-    return min(75.0, float(match.group(1)) + 1.0) if match else default
-
-
-def _quota_hint(response: httpx.Response) -> str:
-    """Le nom du quota touché, pour le journal, sans le reste du message."""
-    try:
-        message = response.json().get("error", {}).get("message", "")
-    except ValueError:
-        return ""
-    match = re.search(r"metric: ([\w./]+)", message)
-    return match.group(1).rsplit("/", 1)[-1] if match else message[:80]
-
-
-def _daily_quota(response: httpx.Response) -> bool:
-    """Vrai quand le 429 porte sur un quota journalier : attendre ne sert à rien."""
-    return "PerDay" in response.text
+        return response.text[:200]
 
 
 def _strip_json(text: str) -> str:
@@ -88,142 +81,98 @@ def _strip_json(text: str) -> str:
     return match.group(1) if match else text
 
 
-class GeminiProvider:
-    """Appels REST à Gemini : génération JSON et embeddings."""
+class OpenAIProvider:
+    """Appels REST : complétion de chat en mode JSON et embeddings."""
 
-    def __init__(self, keys: tuple[str, ...], rpm: int) -> None:
-        self.keys = keys
+    def __init__(self, api_key: str, rpm: int) -> None:
+        self.api_key = api_key
         self.rpm = rpm
-        self.pacers: dict[tuple[int, str], Pacer] = {}
-        self.client = httpx.Client(timeout=120)
+        self.pacers: dict[str, Pacer] = {}
+        self.client = httpx.Client(base_url=OPENAI_BASE, headers={"Authorization": f"Bearer {api_key}"}, timeout=180)
 
-    def _pacer(self, key_index: int, path: str) -> Pacer:
-        """Un rythme par clé ET par modèle : les quotas par minute sont comptés par modèle."""
-        model = path.split(":", 1)[0]
-        return self.pacers.setdefault((key_index, model), Pacer(self.rpm))
+    def _pacer(self, model: str) -> Pacer:
+        """Un rythme par modèle : les limites par minute sont comptées par modèle."""
+        return self.pacers.setdefault(model, Pacer(self.rpm))
 
     def _post(self, path: str, body: dict[str, Any]) -> dict[str, Any]:
-        """Tente chaque clé à tour de rôle, avec une attente sur 429.
+        """Un appel avec reprise : attente annoncée sur 429, pause croissante sur 5xx.
 
-        Le palier gratuit compte chaque texte d'un lot d'embeddings comme une
-        requête (100 par minute) : la réponse 429 porte le délai à respecter,
-        il est lu et attendu plutôt que deviné.
+        Un paramètre que le modèle ne prend pas (effort de raisonnement sur un
+        modèle sans raisonnement, température sur un modèle qui l'impose) est
+        retiré et l'appel repart tel quel.
         """
         last: Exception | None = None
-        for index, key in enumerate(self.keys):
-            for attempt in range(4):
-                self._pacer(index, path).wait()
-                try:
-                    response = self.client.post(f"{GEMINI_BASE}/{path}", params={"key": key}, json=body)
-                except httpx.HTTPError as error:
-                    last = error
-                    time.sleep(2 * (attempt + 1))
+        for attempt in range(5):
+            self._pacer(str(body.get("model", ""))).wait()
+            try:
+                response = self.client.post(path, json=body)
+            except httpx.HTTPError as error:
+                last = error
+                time.sleep(2 * (attempt + 1))
+                continue
+            if response.status_code == 429:
+                last = ProviderError(f"429 : {_error_message(response)[:120]}")
+                time.sleep(_retry_delay(response, default=min(30, 5 * (attempt + 1))))
+                continue
+            if response.status_code >= 500:
+                last = ProviderError(f"{response.status_code} {response.text[:200]}")
+                time.sleep((3, 8, 15, 25, 40)[attempt])
+                continue
+            if response.status_code == 400:
+                message = _error_message(response)
+                if "reasoning_effort" in message and body.pop("reasoning_effort", None) is not None:
+                    body.setdefault("temperature", 0.0)
                     continue
-                if response.status_code == 429:
-                    last = ProviderError(f"429 sur la clé {index + 1} : {_quota_hint(response)}")
-                    if _daily_quota(response):
-                        break  # quota du jour épuisé sur cette clé : passer à la suivante
-                    time.sleep(_retry_delay(response, default=min(20, 5 * (attempt + 1))))
+                if "temperature" in message and body.pop("temperature", None) is not None:
                     continue
-                if response.status_code >= 500:
-                    last = ProviderError(f"{response.status_code} {response.text[:200]}")
-                    time.sleep((5, 12, 25, 40)[attempt])  # une pointe de charge dure souvent une minute
-                    continue
-                if response.status_code == 400 and "thinking" in response.text.lower() and body.get("generationConfig", {}).pop("thinkingConfig", None):
-                    continue  # ce modèle ne prend pas de niveau de réflexion : même appel sans
-                if response.status_code >= 400:
-                    raise ProviderError(f"{response.status_code} {response.text[:300]}")
-                return response.json()
+            if response.status_code >= 400:
+                raise ProviderError(f"{response.status_code} {_error_message(response)[:300]}")
+            return response.json()
         raise ProviderError(str(last))
 
-    def generate_json(self, model: str, system: str, user: str, temperature: float = 0.0, thinking: str = "") -> dict[str, Any]:
+    def generate_json(self, model: str, system: str, user: str, temperature: float = 0.0, reasoning: str = "") -> dict[str, Any]:
         """Un appel en mode JSON.
 
-        Le budget de sortie compte les jetons de réflexion : avec 4 096 jetons, la
-        réflexion par défaut du modèle de verdict mangeait tout et le JSON arrivait
-        tronqué. Le budget est large et le niveau de réflexion est choisi par tâche.
+        Le budget de sortie compte les jetons de raisonnement : il est large, et
+        une réponse coupée par ce budget est une erreur, jamais un JSON partiel
+        rafistolé. Un modèle qui raisonne n'accepte pas de température, elle
+        n'est envoyée qu'en l'absence d'effort de raisonnement.
         """
-        body = {
-            "system_instruction": {"parts": [{"text": system}]},
-            "contents": [{"role": "user", "parts": [{"text": user}]}],
-            "generationConfig": {
-                "temperature": temperature,
-                "responseMimeType": "application/json",
-                "maxOutputTokens": 16384,
-            },
+        body: dict[str, Any] = {
+            "model": model,
+            "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],
+            "response_format": {"type": "json_object"},
+            "max_completion_tokens": MAX_OUTPUT_TOKENS,
         }
-        if thinking:
-            body["generationConfig"]["thinkingConfig"] = {"thinkingLevel": thinking}
-        data = self._post(f"models/{model}:generateContent", body)
-        candidates = data.get("candidates") or []
-        if not candidates:
+        if reasoning:
+            body["reasoning_effort"] = reasoning
+        else:
+            body["temperature"] = temperature
+        data = self._post("/chat/completions", body)
+        choices = data.get("choices") or []
+        if not choices:
             raise ProviderError(f"réponse vide : {json.dumps(data)[:300]}")
-        if candidates[0].get("finishReason") == "MAX_TOKENS":
-            raise ProviderError("réponse tronquée (MAX_TOKENS)")
-        parts = candidates[0].get("content", {}).get("parts", [])
-        text = "".join(p.get("text", "") for p in parts if not p.get("thought"))
+        if choices[0].get("finish_reason") == "length":
+            raise ProviderError("réponse tronquée (budget de sortie atteint)")
+        text = choices[0].get("message", {}).get("content") or ""
         return json.loads(_strip_json(text))
 
-    def embed(self, model: str, texts: list[str], task_type: str, dim: int = 768) -> np.ndarray:
-        """Embeddings par lots, normalisés pour une similarité cosinus.
-
-        Le palier gratuit compte chaque texte du lot (100 par minute, les lots
-        refusés compris) : des lots de 40 espacés de 30 s restent sous la limite.
-        """
+    def embed(self, model: str, texts: list[str], dim: int = EMBED_DIM) -> np.ndarray:
+        """Embeddings par lots, normalisés pour une similarité cosinus."""
         vectors: list[list[float]] = []
         for start in range(0, len(texts), EMBED_BATCH):
-            if start:
-                time.sleep(EMBED_BATCH_SPACING_S)
             chunk = texts[start : start + EMBED_BATCH]
-            body = {
-                "requests": [
-                    {
-                        "model": f"models/{model}",
-                        "content": {"parts": [{"text": text}]},
-                        "taskType": task_type,
-                        "outputDimensionality": dim,
-                    }
-                    for text in chunk
-                ]
-            }
-            data = self._post(f"models/{model}:batchEmbedContents", body)
-            vectors.extend(item["values"] for item in data["embeddings"])
+            data = self._post("/embeddings", {"model": model, "input": chunk, "dimensions": dim})
+            items = sorted(data["data"], key=lambda item: item["index"])
+            vectors.extend(item["embedding"] for item in items)
         matrix = np.asarray(vectors, dtype=np.float32)
         norms = np.linalg.norm(matrix, axis=1, keepdims=True)
         return matrix / np.maximum(norms, 1e-9)
 
-    def list_models(self) -> list[dict[str, Any]]:
-        self.pacers[0].wait()
-        response = self.client.get(f"{GEMINI_BASE}/models", params={"key": self.keys[0], "pageSize": 200})
+    def list_models(self) -> list[str]:
+        response = self.client.get("/models")
         response.raise_for_status()
-        return response.json().get("models", [])
-
-
-class ChatCompletionsProvider:
-    """Génération JSON via un service exposant le point d'entrée chat/completions."""
-
-    def __init__(self, base_url: str, api_key: str, model: str) -> None:
-        self.base_url = base_url
-        self.api_key = api_key
-        self.model = model
-        self.client = httpx.Client(timeout=90)
-
-    def generate_json(self, system: str, user: str, temperature: float = 0.0) -> dict[str, Any]:
-        body = {
-            "model": self.model,
-            "temperature": temperature,
-            "response_format": {"type": "json_object"},
-            "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],
-        }
-        response = self.client.post(
-            f"{self.base_url}/chat/completions",
-            headers={"Authorization": f"Bearer {self.api_key}"},
-            json=body,
-        )
-        if response.status_code >= 400:
-            raise ProviderError(f"{response.status_code} {response.text[:300]}")
-        text = response.json()["choices"][0]["message"]["content"]
-        return json.loads(_strip_json(text))
+        return sorted(m["id"] for m in response.json().get("data", []))
 
 
 class Router:
@@ -231,15 +180,10 @@ class Router:
 
     def __init__(self, config: Settings) -> None:
         self.config = config
-        self.gemini = GeminiProvider(config.gemini_keys, config.gemini_rpm) if config.gemini_keys else None
-        self.secondary = (
-            ChatCompletionsProvider(config.secondary_base_url, config.secondary_api_key, config.secondary_model)
-            if config.secondary_api_key and config.secondary_base_url and config.secondary_model
-            else None
-        )
+        self.provider = OpenAIProvider(config.openai_api_key, config.openai_rpm) if config.openai_api_key else None
 
     def _ladder(self, task: Task) -> list[str]:
-        """Les modèles Gemini à essayer, du plus adapté au plus modeste."""
+        """Les modèles à essayer, du plus adapté au plus modeste."""
         if task == "verdict":
             ladder = [self.config.model_verdict, self.config.model_cheap]
         else:
@@ -252,24 +196,21 @@ class Router:
 
     def generate_json(self, task: Task, system: str, user: str, temperature: float = 0.0) -> tuple[dict[str, Any], str]:
         """Renvoie le JSON et le nom du modèle qui a répondu."""
+        if not self.provider:
+            raise ProviderError("aucun fournisseur configuré")
         errors: list[str] = []
-        if self.gemini:
-            for model in self._ladder(task):
-                try:
-                    return self.gemini.generate_json(model, system, user, temperature, THINKING_BY_TASK[task]), f"gemini:{model}"
-                except (ProviderError, json.JSONDecodeError, KeyError) as error:
-                    errors.append(f"{model}: {error}")
-        if self.secondary:
+        for model in self._ladder(task):
             try:
-                return self.secondary.generate_json(system, user, temperature), f"secondary:{self.secondary.model}"
+                return self.provider.generate_json(model, system, user, temperature, REASONING_BY_TASK[task]), model
             except (ProviderError, json.JSONDecodeError, KeyError) as error:
-                errors.append(f"secondary: {error}")
-        raise ProviderError(" | ".join(errors) or "aucun fournisseur configuré")
+                errors.append(f"{model}: {error}")
+        raise ProviderError(" | ".join(errors) or "aucun modèle configuré")
 
     def embed(self, texts: list[str], task_type: str = "RETRIEVAL_DOCUMENT") -> np.ndarray:
-        if not self.gemini or not self.config.model_embed:
+        """Vecteurs des textes. `task_type` distingue documents et requêtes pour les fournisseurs qui le lisent."""
+        if not self.provider or not self.config.model_embed:
             raise ProviderError("aucun modèle d'embeddings configuré")
-        return self.gemini.embed(self.config.model_embed, texts, task_type)
+        return self.provider.embed(self.config.model_embed, texts)
 
     @property
     def embed_model(self) -> str:

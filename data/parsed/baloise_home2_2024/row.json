@@ -19,16 +19,16 @@
   "inoccupation"
  ],
  "theft_conditions": {
-  "value": "effraction, escalade, usage de fausses clés ou clés volées, violences ou menaces, introduction clandestine ou ruse, ou larcins",
+  "value": "effraction escalade fausses clés violences menaces ruse larcins et vol à la tire pour les nomades",
   "page": 15,
   "clause_id": "6__a_vol_vandalisme",
-  "quote": "La disparition, la destruction, la détérioration résultant d’un vol ou tentative de vol par : • effraction, escalade, usage de fausse clés ou de clés volées ou perdues, • violences ou menaces, • introduction clandestine ou par ruse, • larcins, c’est à dire les vols commis par des personnes autorisées à se trouver dans les locaux assurés"
+  "quote": "par : • effraction, escalade, usage de fausse clés ou de clés volées ou perdues, • violences ou menaces, • introduction clandestine ou par ruse, • larcins, c’est à dire les vols commis par des personnes autorisées à se trouver dans les locaux assurés, • vol à la tire (pickpockets) des matériels nomades lorsque le pack Multimédia pour les matériels nomades est souscrit."
  },
  "theft_common_areas": {
-  "value": "les objets de valeur, les objets précieux et les espèces ne sont pas assurés dans les dépendances et les risques inhabités",
-  "page": 12,
+  "value": "dans les dépendances les objets de valeur bijoux et valeurs espèces sont exclus",
+  "page": 11,
   "clause_id": "4__vos_biens_mobiliers",
-  "quote": "Les objets de valeur, les objets précieux / bijoux et les valeurs / espèces ne sont pas assurés dans les dépendances et les risques inhabités"
+  "quote": "Les objets de valeur, les objets précieux / bijoux et les valeurs / espèces ne sont pas assurés dans les dépendances et les risques inhabités,"
  },
  "bike_cap": {
   "value": null,
@@ -43,28 +43,28 @@
   "quote": null
  },
  "deductible_general": {
-  "value": null,
-  "page": null,
+  "value": "franchise déduite de l indemnité et restant à charge",
+  "page": 6,
+  "clause_id": "1__franchise",
+  "quote": "Montant déduit de l’indemnité et restant à votre charge."
+ },
+ "unoccupancy_limit": {
+  "value": "plus de trois jours pour la garantie gel, avec réduction d indemnité",
+  "page": 14,
+  "clause_id": "5__gel",
+  "quote": "En cas d’inoccupation temporaire de plus de trois jours, vous devez, pendant la période hivernale, mettre votre installation de chauffage en position «hors gel», sans quoi nous procéderons à une réduction de 30% de l’indemnité"
+ },
+ "heat_without_fire_excluded": {
+  "value": "dommages ménagers couverts, excès de chaleur sans embrasement et contact avec appareil de chauffage ou d’éclairage",
+  "page": 6,
   "clause_id": null,
   "quote": null
  },
- "unoccupancy_limit": {
-  "value": "inoccupation supérieure à trois jours entraînant une réduction de l'indemnité pour les dommages consécutifs au gel",
-  "page": 14,
-  "clause_id": "5__gel",
-  "quote": "En cas d’inoccupation temporaire de plus de trois jours, vous devez, pendant la période hivernale, mettre votre installation de chauffage en position «hors gel», sans quoi nous procéderons à une réduction de 30% de l’indemnité à laquelle vous pouvez prétendre pour les dommages consécutifs au gel."
- },
- "heat_without_fire_excluded": {
-  "value": "Les dommages ménagers par excès de chaleur sans embrasement sont couverts dans la limite de 5% du contenu assuré.",
-  "page": 33,
-  "clause_id": "12__limite_exprime_par_evenement_sinistre",
-  "quote": "Garantie: Incendie | Objet de la garantie: Dommages ménagers | Limite (exprimé par évènement sinistre): 5% du contenu assuré avec un maximum de 5 000 euros"
- },
  "contents_outside_building": {
-  "value": "Le mobilier de jardin et divers équipements extérieurs sont couverts si le pack jardin piscine est souscrit.",
-  "page": 20,
-  "clause_id": "6__g_pack_jardin_piscine",
-  "quote": "Lorsque les dommages résultent d’un événement couvert par votre contrat, les dommages matériels directs causés aux biens, appartenant à l’assuré, limitativement énumérés dans la liste ci-après et dans la limite prév"
+  "value": "en principe exclus, sauf mobilier de jardin et quelques biens couverts par le pack jardin piscine",
+  "page": 5,
+  "clause_id": null,
+  "quote": null
  },
  "accidental_damage_option": {
   "value": null,
@@ -74,28 +74,34 @@
  },
  "notable_exclusions": [
   {
-   "value": "dommages intentionnellement causés ou provoqués par l'assuré ou avec sa complicité",
+   "value": "dommages intentionnels causés ou provoqués par l assuré",
    "page": 31,
    "clause_id": "11__exclusions_communes_a_l_ensemble_des_garanties",
-   "quote": "Sont exclus les dommages : • intentionnellement causés ou provoqués par vous ou avec votre complicité"
+   "quote": "intentionnellement causés ou provoqués par vous ou avec votre complicité"
   },
   {
-   "value": "dommages causés ou subis par les édifices menaçant ruine ou totalement inoccupés",
+   "value": "édifices menaçant ruine totalement inoccupés ou destinés à la démolition",
    "page": 31,
    "clause_id": "11__exclusions_communes_a_l_ensemble_des_garanties",
-   "quote": "• causés ou subis par les édifices menaçant ruine, HOME - Conditions générales 31 | 48 totalement inoccupés ou destinés à la démolition"
+   "quote": null
   },
   {
-   "value": "dommages dus à des amendes ou des sanctions pécuniaires à caractère pénalisant",
+   "value": "amendes frais et dépens d une instance pénale et sanctions pécuniaires",
    "page": 31,
    "clause_id": "11__exclusions_communes_a_l_ensemble_des_garanties",
-   "quote": "• dus à des amendes, des frais et dépens d’une instance pénale ainsi que toute sanction pécuniaire ayant un caractère pénalisant"
+   "quote": "dus à des amendes, des frais et dépens d’une instance pénale ainsi que toute sanction pécuniaire ayant un caractère pénalisant"
   },
   {
-   "value": "dommages résultant d'un défaut de réparation ou d'entretien caractérisé et connu",
+   "value": "défaut de réparation ou d entretien caractérisé connu de l assuré",
    "page": 31,
    "clause_id": "11__exclusions_communes_a_l_ensemble_des_garanties",
-   "quote": "• résultant d’un défaut de réparation ou d’entretien caractérisé, connu de vous et vous incombant, sauf cas de force majeure."
+   "quote": "résultant d’un défaut de réparation ou d’entretien caractérisé, connu de vous et vous incombant, sauf cas de force majeure"
+  },
+  {
+   "value": "limitation de couverture si sanctions internationales applicables",
+   "page": 32,
+   "clause_id": "11__limitation_des_sanctions_et_clause_d_exclusion",
+   "quote": "L’assureur n’est pas tenu d’accorder une couverture d’assurance et l’assureur n’est pas tenu de payer une réclamation ou de fournir une prestation"
   }
  ]
 }

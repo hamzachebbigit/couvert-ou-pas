@@ -9,7 +9,6 @@
   "degats_eaux",
   "vol",
   "tempete",
-  "grele",
   "catnat",
   "bris_glace",
   "rc",
@@ -20,16 +19,16 @@
   "inoccupation"
  ],
  "theft_conditions": {
-  "value": "effraction ou escalade des locaux, usage de fausses clés, intrusion clandestine ou agression avec violence",
+  "value": "vol couvert par effraction, escalade, fausses clés, intrusion clandestine ou agression",
   "page": 32,
   "clause_id": "1_1_10",
   "quote": "Est garanti le vol par effraction ou par agression. La Compagnie couvre le Mobilier contre les disparitions, destructions et détériorations résultant d’un vol ou d’une tentative de vol se déroulant dans les circonstances suivantes: l par effraction ou escalade des locaux renfermant les biens assurés ou à usage de fausses clés, de clés volées ou perdues; l par intrusion clandestine dans les locaux"
  },
  "theft_common_areas": {
-  "value": "le vol des objets de valeur et de l'argent est exclu dans les annexes, dépendances, caves et greniers des immeubles à habitations multiples",
+  "value": "exclu pour les objets de valeur et l’argent dans les annexes, dépendances, caves et greniers des immeubles à habitations multiples",
   "page": 33,
   "clause_id": "1_1_13",
-  "quote": "5. des objets de valeur et de l’argent déposés dans les annexes et dépendances, ainsi que dans les caves et greniers des immeubles à habitations multiples"
+  "quote": "5. des objets de valeur et de l’argent déposés dans les annexes et dépendances, ainsi que dans les caves et greniers des immeubles à habitations multiples ;"
  },
  "bike_cap": {
   "value": null,
@@ -38,71 +37,71 @@
   "quote": null
  },
  "jewellery_cap": {
-  "value": "la garantie pour l'ensemble des objets de valeur est limitée à 40 % de la somme assurée sur mobilier sans dépasser 20 % pour les bijoux",
-  "page": 27,
+  "value": "20 % de la somme assurée sur Mobilier",
+  "page": 28,
   "clause_id": "II__stipulations_generales_en_assurance_habitation__etendue_et_stipulations_generales_en_assurance_d__mobilier",
   "quote": "La garantie pour l’ensemble des objets de valeur ainsi définis est limitée à un maximum de 40 % de la somme assurée sur Mobilier, sans toutefois dépasser pour les bijoux 20 % de la somme assurée sur Mobilier."
  },
  "deductible_general": {
-  "value": "Franchise générale non précisée dans les clauses fournies, franchise spécifique de 165 EUR pour les tremblements de terre",
-  "page": 56,
-  "clause_id": "1_24",
-  "quote": "Toutefois, en cas de dommages causés aux Biens assurés suite à un tremblement de terre, l’assuré devra prendre à sa charge une franchise de 165 EUR à l’indice 100 (indice de construction) par sinistre"
+  "value": "franchises stipulées au contrat",
+  "page": 30,
+  "clause_id": "II__stipulations_generales_en_assurance_habitation__stipulations_generales_sommes_assurees_en_assura",
+  "quote": "sous réserve de l’application des franchises stipulées par le contrat d’assurance."
  },
  "unoccupancy_limit": {
-  "value": "Inoccupation tolérée jusqu'à 45 jours consécutifs au maximum pour la garantie vol",
+  "value": "vol exclu si l’inoccupation des locaux dépasse 45 jours consécutifs",
   "page": 33,
   "clause_id": "1_1_13",
   "quote": "commis pendant l’inoccupation des locaux, lorsque celle-ci dépasse 45 jours consécutifs"
  },
  "heat_without_fire_excluded": {
-  "value": "les dégâts ménagers par excès de chaleur sans embrasement sont couverts sauf les simples rétrécissements et déformations de textiles",
+  "value": "dommages par dégagement de chaleur sans embrasement couverts en incendie, sauf textiles rétrécis ou objets posés dans un foyer",
   "page": 30,
   "clause_id": "1_1_1",
-  "quote": "les dégâts ménagers suite à un excès de chaleur sans embrasement ou suite à un rapprochement ou contact d’une lumière ou d’un foyer, à l’exclusion toutefois, des simples rétrécissements et déformations de textiles ou des dommages survenus aux objets jetés ou posés dans ou sur un foyer"
+  "quote": "11. les dégâts ménagers suite à un excès de chaleur sans embrasement ou suite à un rapprochement ou contact d’une lumière ou d’un foyer, à l’exclusion toutefois, des simples rétrécissements et déformations de textiles ou des dommages survenus aux objets jetés ou posés dans ou sur un foyer ;"
  },
  "contents_outside_building": {
-  "value": "le mobilier de jardin et les plantations situés sur le terrain privatif sont couverts en cas de vol sous conditions",
-  "page": 36,
-  "clause_id": "1_2_3",
-  "quote": null
+  "value": "biens hors bâtiment exclus sauf mobilier de jardin et plantations en formule Confort vol",
+  "page": 35,
+  "clause_id": "1_1_23",
+  "quote": "3. les objets déposés hors du bâtiment dans les cours et jardins ;"
  },
  "accidental_damage_option": {
-  "value": null,
-  "page": null,
-  "clause_id": null,
+  "value": "option tous risques relative aux biens existante avec exclusions communes et garanties de base selon le risque assuré",
+  "page": 59,
+  "clause_id": "8",
   "quote": null
  },
  "notable_exclusions": [
   {
-   "value": "Vols commis par les membres de la famille ou les personnes vivant en communauté domestique",
+   "value": "vols commis par les membres de la famille ou les personnes vivant en communauté domestique",
    "page": 33,
    "clause_id": "1_1_13",
    "quote": "dont seraient auteurs ou complices les membres de la famille du preneur d’assurance visés par l’article 462 du Code Pénal ou les personnes vivant en communauté domestique avec lui"
   },
   {
-   "value": "Dommages matériels résultant d'entrées d'eaux pluviales par des ouvertures ou des travaux",
-   "page": 53,
-   "clause_id": "1_9",
-   "quote": "d’entrées d’eaux pluviales, de neige ou de glace par des ouvertures fermées ou non, telles que portes, fenêtres, soupiraux, lucarnes"
+   "value": "vols commis par le personnel sauf hors fonctions avec effraction",
+   "page": 33,
+   "clause_id": "1_1_13",
+   "quote": "commis par le personnel du preneur d’assurance, sauf s’ils sont commis en dehors de leurs fonctions et à condition qu’il y ait effraction"
   },
   {
-   "value": "Dommages matériels dus à l'humidité ou à la condensation",
-   "page": 53,
-   "clause_id": "1_9",
-   "quote": "de l’humidité ou condensation"
+   "value": "vols d’objets déposés hors du bâtiment dans les cours et jardins",
+   "page": 33,
+   "clause_id": "1_1_13",
+   "quote": "des objets déposés hors le Bâtiment dans les cours et jardins"
   },
   {
-   "value": "Dommages matériels causés par un manque d'entretien manifeste ou un défaut de réparations",
-   "page": 53,
-   "clause_id": "1_9",
-   "quote": "d’un manque d’entretien manifeste ou d’un défaut de réparations indispensables"
+   "value": "vols d’objets de valeur et d’argent dans les annexes dépendances caves et greniers",
+   "page": 33,
+   "clause_id": "1_1_13",
+   "quote": "des objets de valeur et de l’argent déposés dans les annexes et dépendances, ainsi que dans les caves et greniers des immeubles à habitations multiples"
   },
   {
-   "value": "Indemnité pour dépréciation ou moins-value exclue en cas de règlement du sinistre",
-   "page": 103,
-   "clause_id": "conditions_administratives__reglement_du_sinistre__famille",
-   "quote": "La Compagnie ne peut avoir à supporter d'autres indemnités que celles stipulées à la présente assurance, notamment toute indemnité pour dépréciation ou moins-value est exclue."
+   "value": "dommages dus à l’inoccupation du bâtiment et à un manque de précaution manifeste",
+   "page": 32,
+   "clause_id": "1_1_9",
+   "quote": "de l’inoccupation du bâtiment et dus à un manque de précaution manifeste"
   }
  ]
 }
